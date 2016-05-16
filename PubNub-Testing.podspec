@@ -32,6 +32,7 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'PubNub-Testing/Classes/**/*'
   s.dependency 'PubNub', '~> 4.3'
+  s.frameworks = 'XCTest'
   
   # s.resource_bundles = {
   #   'PubNub-Testing' => ['PubNub-Testing/Assets/*.png']
