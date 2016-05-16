@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "PubNub-Testing"
   s.version          = "0.1.0"
-  s.summary          = "A short description of PubNub-Testing."
+  s.summary          = "A simple testing pod for PubNub"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,21 +18,21 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This contains all helper methods for testing PubNub. It is abstracted into its own Cocoapod for use in other projects.
                        DESC
 
-  s.homepage         = "https://github.com/pubnub/PubNub-Testing"
+  s.homepage         = "https://github.com/pubnub/objective-c-testing"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Jordan Zucker" => "jordan.zucker@gmail.com" }
-  s.source           = { :git => "https://github.com/pubnub/PubNub-Testing.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/pubnub/objective-c-testing.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'PubNub-Testing/Classes/**/*'
   s.dependency 'PubNub', '~> 4.3'
-  s.frameworks = 'XCTest'
+  s.framework = 'XCTest'
   
   # s.resource_bundles = {
   #   'PubNub-Testing' => ['PubNub-Testing/Assets/*.png']
