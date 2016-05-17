@@ -20,9 +20,9 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		6DCC5318579056E0AADA80F4 /* Pods_PubNub_Testing_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCCB8EAB722BE267539042D3 /* Pods_PubNub_Testing_Tests.framework */; };
 		768CDD2879F90F8A8EEC95FD /* Pods_PubNub_Testing_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E53CB66A93F4FF22AD6CBBD /* Pods_PubNub_Testing_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		C11BA79EC53A1A450AC91589 /* Pods_PubNub_Testing_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCCB8EAB722BE267539042D3 /* Pods_PubNub_Testing_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,8 @@
 /* Begin PBXFileReference section */
 		29F3F45633EBD327AE5DCDBF /* PubNub-Testing.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "PubNub-Testing.podspec"; path = "../PubNub-Testing.podspec"; sourceTree = "<group>"; };
 		3E53CB66A93F4FF22AD6CBBD /* Pods_PubNub_Testing_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PubNub_Testing_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5C5365F1E7CA3A639B0354 /* Pods-PubNub-Testing_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubNub-Testing_Tests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PubNub-Testing_Tests/Pods-PubNub-Testing_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		556A3632E4130EE0AC8734A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		5A5BDC665898869875729987 /* Pods-PubNub-Testing_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubNub-Testing_Tests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PubNub-Testing_Tests/Pods-PubNub-Testing_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PubNub-Testing_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PubNub-Testing_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,9 +59,9 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		7E411F98D1B1B66515D64E24 /* Pods-PubNub-Testing_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubNub-Testing_Tests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PubNub-Testing_Tests/Pods-PubNub-Testing_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		85790E11EA63F639AC757331 /* Pods-PubNub-Testing_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubNub-Testing_Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PubNub-Testing_Example/Pods-PubNub-Testing_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		9BED7D9CD47B63BE98290DB1 /* Pods-PubNub-Testing_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubNub-Testing_Tests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PubNub-Testing_Tests/Pods-PubNub-Testing_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A6F0961DA5792575D6291D7C /* Pods-PubNub-Testing_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubNub-Testing_Example.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PubNub-Testing_Example/Pods-PubNub-Testing_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BB24A8AD8ECD8617872FEA30 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CCCB8EAB722BE267539042D3 /* Pods_PubNub_Testing_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PubNub_Testing_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				6DCC5318579056E0AADA80F4 /* Pods_PubNub_Testing_Tests.framework in Frameworks */,
+				C11BA79EC53A1A450AC91589 /* Pods_PubNub_Testing_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +98,8 @@
 			children = (
 				A6F0961DA5792575D6291D7C /* Pods-PubNub-Testing_Example.debug.xcconfig */,
 				85790E11EA63F639AC757331 /* Pods-PubNub-Testing_Example.release.xcconfig */,
-				5A5BDC665898869875729987 /* Pods-PubNub-Testing_Tests.debug.xcconfig */,
-				9BED7D9CD47B63BE98290DB1 /* Pods-PubNub-Testing_Tests.release.xcconfig */,
+				7E411F98D1B1B66515D64E24 /* Pods-PubNub-Testing_Tests.debug.xcconfig */,
+				3E5C5365F1E7CA3A639B0354 /* Pods-PubNub-Testing_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -220,12 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "PubNub-Testing_Tests" */;
 			buildPhases = (
-				4E3AB55B318D46972FCD5262 /* 📦 Check Pods Manifest.lock */,
+				0A4F2A707D7EEF0979B85A72 /* 📦 Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				3D3632E9306C87FF9DF82230 /* 📦 Embed Pods Frameworks */,
-				AF9DA7723881F7DCB90BD358 /* 📦 Copy Pods Resources */,
+				C56A02F8427F7D78DB04AC48 /* 📦 Embed Pods Frameworks */,
+				0233F9CB9577DE3370A3190E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,6 +293,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0233F9CB9577DE3370A3190E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PubNub-Testing_Tests/Pods-PubNub-Testing_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A4F2A707D7EEF0979B85A72 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		151C2CBFC9C05E7B00FB791B /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,7 +338,7 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PubNub-Testing_Example/Pods-PubNub-Testing_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D3632E9306C87FF9DF82230 /* 📦 Embed Pods Frameworks */ = {
+		C56A02F8427F7D78DB04AC48 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,36 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PubNub-Testing_Tests/Pods-PubNub-Testing_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4E3AB55B318D46972FCD5262 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AF9DA7723881F7DCB90BD358 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PubNub-Testing_Tests/Pods-PubNub-Testing_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE4FFDA3D4C55C1B476809B9 /* 📦 Check Pods Manifest.lock */ = {
@@ -541,7 +541,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A5BDC665898869875729987 /* Pods-PubNub-Testing_Tests.debug.xcconfig */;
+			baseConfigurationReference = 7E411F98D1B1B66515D64E24 /* Pods-PubNub-Testing_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -565,7 +565,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BED7D9CD47B63BE98290DB1 /* Pods-PubNub-Testing_Tests.release.xcconfig */;
+			baseConfigurationReference = 3E5C5365F1E7CA3A639B0354 /* Pods-PubNub-Testing_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
