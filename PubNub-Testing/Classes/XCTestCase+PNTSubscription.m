@@ -15,11 +15,12 @@
 @property (nonatomic, strong, readwrite) NSArray<NSString *> *expectedChannelGroups;
 @property (nonatomic, assign, readwrite) PNOperationType expectedOperation;
 @property (nonatomic, assign, readwrite) PNStatusCategory expectedStatusCategory;
+@property (nonatomic, assign, readwrite) PNTTestSubscribeComparisonType comparisonType;
 @end
 
 @implementation PNTTestSubscribeStatus
 
-- (instancetype)initWithClient:(PubNub *)client expectedTimeToken:(NSNumber *)timeToken expectedOperation:(PNOperationType)operation expectedCategory:(PNStatusCategory)category expectedChannels:(NSArray<NSString *> *)channels expectedChannelGroups:(NSArray<NSString *> *)channelGroups {
+- (instancetype)initWithClient:(PubNub *)client expectedTimeToken:(NSNumber *)timeToken expectedOperation:(PNOperationType)operation expectedCategory:(PNStatusCategory)category expectedChannels:(NSArray<NSString *> *)channels expectedChannelGroups:(NSArray<NSString *> *)channelGroups comparisonType:(PNTTestSubscribeComparisonType)comparisonType {
     self = [super init];
     if (self) {
         _client = client;
@@ -28,20 +29,21 @@
         _expectedChannelGroups = channelGroups;
         _expectedOperation = operation;
         _expectedStatusCategory = category;
+        _comparisonType = comparisonType;
     }
     return self;
 }
 
-+ (instancetype)expectedConnectStatusWithClient:(PubNub *)client expectedTimeToken:(NSNumber *)timeToken expectedChannels:(NSArray<NSString *> *)channels {
-    return [self expectedConnectStatusWithClient:client expectedTimeToken:timeToken expectedChannels:channels expectedChannelGroups:nil];
++ (instancetype)expectedConnectStatusWithClient:(PubNub *)client expectedTimeToken:(NSNumber *)timeToken expectedChannels:(NSArray<NSString *> *)channels comparisonType:(PNTTestSubscribeComparisonType)comparisonType{
+    return [self expectedConnectStatusWithClient:client expectedTimeToken:timeToken expectedChannels:channels expectedChannelGroups:nil comparisonType:comparisonType];
 }
 
-+ (instancetype)expectedConnectStatusWithClient:(PubNub *)client expectedTimeToken:(NSNumber *)timeToken expectedChannelGroups:(NSArray<NSString *> *)channelGroups {
-    return [self expectedConnectStatusWithClient:client expectedTimeToken:timeToken expectedChannels:nil expectedChannelGroups:channelGroups];
++ (instancetype)expectedConnectStatusWithClient:(PubNub *)client expectedTimeToken:(NSNumber *)timeToken expectedChannelGroups:(NSArray<NSString *> *)channelGroups comparisonType:(PNTTestSubscribeComparisonType)comparisonType{
+    return [self expectedConnectStatusWithClient:client expectedTimeToken:timeToken expectedChannels:nil expectedChannelGroups:channelGroups comparisonType:comparisonType];
 }
 
-+ (instancetype)expectedConnectStatusWithClient:(PubNub *)client expectedTimeToken:(NSNumber *)timeToken expectedChannels:(NSArray<NSString *> *)channels expectedChannelGroups:(NSArray<NSString *> *)channelGroups {
-    return [[self alloc] initWithClient:client expectedTimeToken:timeToken expectedOperation:PNSubscribeOperation expectedCategory:PNConnectedCategory expectedChannels:channels expectedChannelGroups:channelGroups];
++ (instancetype)expectedConnectStatusWithClient:(PubNub *)client expectedTimeToken:(NSNumber *)timeToken expectedChannels:(NSArray<NSString *> *)channels expectedChannelGroups:(NSArray<NSString *> *)channelGroups comparisonType:(PNTTestSubscribeComparisonType)comparisonType{
+    return [[self alloc] initWithClient:client expectedTimeToken:timeToken expectedOperation:PNSubscribeOperation expectedCategory:PNConnectedCategory expectedChannels:channels expectedChannelGroups:channelGroups comparisonType:comparisonType];
 }
 
 - (NSSet<NSString *> *)expectedChannelsSet {

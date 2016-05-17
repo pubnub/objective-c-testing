@@ -22,14 +22,14 @@ PODS:
   - OHHTTPStubs/NSURLSession (5.0.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (5.0.0)
-  - PubNub (4.3.2):
-    - CocoaLumberjack (= 2.3)
-    - PubNub/Core (= 4.3.2)
-  - PubNub-Testing (0.3.0):
+  - PubNub (4.3.3):
+    - CocoaLumberjack (= 2.3.0)
+    - PubNub/Core (= 4.3.3)
+  - PubNub-Testing (0.4.0):
     - BeKindRewind
     - PubNub
-  - PubNub/Core (4.3.2):
-    - CocoaLumberjack (= 2.3)
+  - PubNub/Core (4.3.3):
+    - CocoaLumberjack (= 2.3.0)
 
 DEPENDENCIES:
   - PubNub-Testing (from `.`)
@@ -42,8 +42,8 @@ SPEC CHECKSUMS:
   BeKindRewind: cbd74e2ef5d7d64eb8284336a2cdefe9b7f7d540
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   OHHTTPStubs: a5d2e9eea07869d42ec03338325f398bc520e159
-  PubNub: 69a5b61086a14a9952d3d969e3c1794e9100c95c
-  PubNub-Testing: e3723823cc6dcb420dff7332aa062f1e036a952b
+  PubNub: 51acd937c947d931a75d2caef654fd12f7573e09
+  PubNub-Testing: 381635ee26118d7042799a2e975b670ca82f969c
 
 PODFILE CHECKSUM: 72091c408598c35c9081718d217297fc0168491d
 
