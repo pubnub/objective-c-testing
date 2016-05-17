@@ -10,7 +10,7 @@ PODS:
   - PubNub (4.3.2):
     - CocoaLumberjack (= 2.3)
     - PubNub/Core (= 4.3.2)
-  - PubNub-Testing (0.1.0):
+  - PubNub-Testing (0.1.1):
     - PubNub (~> 4.3)
   - PubNub/Core (4.3.2):
     - CocoaLumberjack (= 2.3)
@@ -25,7 +25,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   PubNub: 69a5b61086a14a9952d3d969e3c1794e9100c95c
-  PubNub-Testing: 14ea2b6f29e23edf390893caf4334a8cf1b42ba2
+  PubNub-Testing: 306e0f6671c7aa14cce1d4d97218f92d8e1650ea
 
 PODFILE CHECKSUM: 72091c408598c35c9081718d217297fc0168491d
 
