@@ -30,11 +30,17 @@
     return [[self alloc] initPublishStatusWithClient:client statusCode:400 isError:YES timeToken:timeToken];
 }
 
-- (void)PNT_assertWithPubNubObject:(PNResult *)result {
-    [super PNT_assertWithPubNubObject:result];
-    XCTAssertTrue([result isKindOfClass:[PNPublishStatus class]]);
-    PNPublishStatus *status = (PNPublishStatus *)result;
-    XCTAssertEqualObjects(self.timetoken, status.data.timetoken);
+- (NSArray<NSString *> *)keysToAssert {
+    return @[
+             @"timetoken"
+             ];
 }
+
+//- (void)PNT_assertWithPubNubObject:(PNResult *)result {
+//    [super PNT_assertWithPubNubObject:result];
+//    XCTAssertTrue([result isKindOfClass:[PNPublishStatus class]]);
+//    PNPublishStatus *status = (PNPublishStatus *)result;
+//    XCTAssertEqualObjects(self.timetoken, status.data.timetoken);
+//}
 
 @end

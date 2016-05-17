@@ -31,10 +31,18 @@
     return [[self alloc] initWithClient:client statusCode:statusCode operation:operationType];
 }
 
-- (void)PNT_assertWithPubNubObject:(PNResult *)result {
+- (BOOL)PNT_assertsTrueWithPubNubObject:(PNResult *)result {
+    
     XCTAssertNotNil(result, @"Can't pass in a nil PNResult to compare");
     XCTAssertEqual(self.statusCode, result.statusCode);
     XCTAssertEqual(self.operation, result.operation);
+}
+
+- (NSArray<NSString *> *)keysToAssert {
+    return @[
+             @"statusCode",
+             @"operation",
+             ];
 }
 
 @end

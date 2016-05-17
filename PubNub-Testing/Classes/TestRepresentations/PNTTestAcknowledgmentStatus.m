@@ -19,10 +19,16 @@
     return [[self alloc] initAcknowledgmentStatusWithClient:client statusCode:statusCode operation:operationType isError:isError];
 }
 
-- (void)PNT_assertWithPubNubObject:(PNResult *)result {
-    [super PNT_assertWithPubNubObject:result];
-    XCTAssertTrue([result isKindOfClass:[PNAcknowledgmentStatus class]]);
-    PNAcknowledgmentStatus *status = (PNAcknowledgmentStatus *)result;
+- (NSArray<NSString *> *)keysToAssert {
+    return @[
+             @"class"
+             ];
 }
+
+//- (void)PNT_assertWithPubNubObject:(PNResult *)result {
+//    [super PNT_assertWithPubNubObject:result];
+//    XCTAssertTrue([result isKindOfClass:[PNAcknowledgmentStatus class]]);
+//    PNAcknowledgmentStatus *status = (PNAcknowledgmentStatus *)result;
+//}
 
 @end

@@ -29,12 +29,21 @@
     return [[self alloc] initWithClient:client statusCode:statusCode operation:operationType category:category isError:isError];
 }
 
-- (void)PNT_assertWithPubNubObject:(PNResult *)result {
-    [super PNT_assertWithPubNubObject:result];
-    XCTAssertTrue([result isKindOfClass:[PNStatus class]]);
-    PNStatus *status = (PNStatus *)result;
-    XCTAssertEqual(self.category, status.category);
-    XCTAssertEqual(self.isError, status.isError);
+- (NSArray<NSString *> *)keysToAssert {
+    return @[
+             @"category",
+             @"error"
+             ];
 }
+
+//- (void)PNT_assertWithPubNubObject:(PNResult *)result {
+//    [super PNT_assertWithPubNubObject:result];
+//    XCTAssertTrue([result isKindOfClass:[PNStatus class]]);
+//    PNStatus *status = (PNStatus *)result;
+//    XCTAssertEqual(self.category, status.category);
+//    XCTAssertEqual(self.isError, status.isError);
+//}
+
+
 
 @end
