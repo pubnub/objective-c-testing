@@ -20,6 +20,11 @@ _Pragma("clang diagnostic ignored  \"-Wshadow\""); \
 __strong __typeof__(__var) __var = __var ## _weak_; \
 _Pragma("clang diagnostic pop") \
 
+typedef NS_ENUM(NSUInteger, PNTTestSubscribeComparisonType) {
+    PNTTestSubscribeComparisonTypeMatchExactly,
+    PNTTestSubscribeComparisonTypeContains,
+};
+
 static NSTimeInterval const kPNTDefaultTimeout = 5.0;
 static NSTimeInterval const kPNTPublishTimeout = kPNTDefaultTimeout;
 static NSTimeInterval const kPNTSizeOfMessageTimeout = kPNTDefaultTimeout;
