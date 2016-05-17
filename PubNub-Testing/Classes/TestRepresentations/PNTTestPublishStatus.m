@@ -17,7 +17,7 @@
 - (instancetype)initPublishStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError timeToken:(NSNumber *)timeToken {
     self = [super initAcknowledgmentStatusWithClient:client statusCode:statusCode operation:PNPublishOperation isError:isError];
     if (self) {
-        _timetoken = _timetoken;
+        _timetoken = timetoken;
     }
     return self;
 }
