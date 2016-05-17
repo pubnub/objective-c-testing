@@ -39,6 +39,7 @@
 		29F3F45633EBD327AE5DCDBF /* PubNub-Testing.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "PubNub-Testing.podspec"; path = "../PubNub-Testing.podspec"; sourceTree = "<group>"; };
 		3E53CB66A93F4FF22AD6CBBD /* Pods_PubNub_Testing_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PubNub_Testing_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E5C5365F1E7CA3A639B0354 /* Pods-PubNub-Testing_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PubNub-Testing_Tests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PubNub-Testing_Tests/Pods-PubNub-Testing_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		51422F0C1CEAB3ED005071E4 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		556A3632E4130EE0AC8734A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PubNub-Testing_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PubNub-Testing_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -188,6 +189,7 @@
 			children = (
 				29F3F45633EBD327AE5DCDBF /* PubNub-Testing.podspec */,
 				BB24A8AD8ECD8617872FEA30 /* README.md */,
+				51422F0C1CEAB3ED005071E4 /* CHANGELOG.md */,
 				556A3632E4130EE0AC8734A1 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
