@@ -29,6 +29,7 @@ This contains all helper methods for testing PubNub. It is abstracted into its o
 
   s.source_files = 'PubNub-Testing/Classes/**/*'
   s.dependency 'PubNub'
+  s.dependency 'BeKindRewind'
   s.framework = 'XCTest'
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(PLATFORM_DIR)/Developer/Library/Frameworks' }
 end
