@@ -12,7 +12,7 @@
 
 @implementation XCTestCase (PNPublish)
 
-- (PNPublishCompletionBlock)PNT_assertWithExpectedPublishStatus:(PNTTestPublishStatus *)expectedPublishStatus; {
+- (PNPublishCompletionBlock)PNT_completionWithExpectedPublishStatus:(PNTTestPublishStatus *)expectedPublishStatus; {
     XCTAssertNotNil(expectedPublishStatus);
     __block XCTestExpectation *publishExpectation = [self expectationWithDescription:@"publish"];
     return ^void (PNPublishStatus *status) {

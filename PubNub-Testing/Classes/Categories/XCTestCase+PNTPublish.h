@@ -13,6 +13,6 @@
 
 @interface XCTestCase (PNTPublish)
 
-- (PNPublishCompletionBlock)PNT_assertWithExpectedPublishStatus:(PNTTestPublishStatus *)expectedPublishStatus;
+- (PNPublishCompletionBlock)PNT_completionWithExpectedPublishStatus:(PNTTestPublishStatus *)expectedPublishStatus;
 
 @end
