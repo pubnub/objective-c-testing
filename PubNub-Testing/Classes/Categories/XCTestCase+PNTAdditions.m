@@ -12,22 +12,15 @@
 
 @implementation XCTestCase (PNTAdditions)
 
-- (BOOL)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult {
+- (void)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult {
     XCTAssertNotNil(expectedResult);
     XCTAssertNotNil(actualResult);
     NSArray<NSString *> *keys = [expectedResult keysToAssert];
-    __block NSMutableArray *expectedValues = [NSMutableArray array];
-    __block NSMutableArray *actualValues = [NSMutableArray array];
-    [keys bk_each:^(id obj) {
-        NSString *key = (NSString *)obj;
-        [expectedValues addObject:[expectedResult valueForKey:key]];
-        [actualValues addObject:[actualResult valueForKey:key]];
+    [keys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        id expectedValue = [expectedResult valueForKey:obj];
+        id actualValue = [actualResult valueForKey:obj];
+        XCTAssertEqualObjects(expectedValue, actualValue);
     }];
-    return [expectedValues.copy bk_corresponds:actualValues.copy withBlock:^BOOL(id obj1, id obj2) {
-        XCTAssertEqualObjects(obj1, obj2);
-        return [obj1 isEqual:obj2];
-    }];
-    
 }
 
 @end

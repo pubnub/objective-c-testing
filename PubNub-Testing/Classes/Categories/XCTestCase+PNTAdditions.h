@@ -11,6 +11,6 @@
 
 @interface XCTestCase (PNTAdditions)
 
-- (BOOL)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult;
+- (void)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult;
 
 @end
