@@ -25,7 +25,7 @@ PODS:
   - PubNub (4.3.2):
     - CocoaLumberjack (= 2.3)
     - PubNub/Core (= 4.3.2)
-  - PubNub-Testing (0.2.0):
+  - PubNub-Testing (0.3.0):
     - BeKindRewind
     - PubNub
   - PubNub/Core (4.3.2):
@@ -43,7 +43,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   OHHTTPStubs: a5d2e9eea07869d42ec03338325f398bc520e159
   PubNub: 69a5b61086a14a9952d3d969e3c1794e9100c95c
-  PubNub-Testing: 3569a6f05bcf94dea7e37c269d566bc8365ef07b
+  PubNub-Testing: e3723823cc6dcb420dff7332aa062f1e036a952b
 
 PODFILE CHECKSUM: 72091c408598c35c9081718d217297fc0168491d
 
