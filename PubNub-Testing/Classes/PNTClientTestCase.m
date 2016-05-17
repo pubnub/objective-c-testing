@@ -6,6 +6,7 @@
 //
 //
 
+#import "PNTDeviceIndependentMatcher.h"
 #import "PNTClientTestCase.h"
 
 @interface PNTClientTestCase ()
@@ -26,6 +27,20 @@
 - (void)tearDown {
     self.client = nil;
     [super tearDown];
+}
+
+- (BKRTestConfiguration *)testConfiguration {
+    BKRTestConfiguration *defaultConfiguration = [super testConfiguration];
+    defaultConfiguration.matcherClass = [PNTDeviceIndependentMatcher class];
+    defaultConfiguration.beginRecordingBlock = nil;
+    defaultConfiguration.endRecordingBlock = nil;
+    defaultConfiguration.shouldSaveEmptyCassette = YES;
+    defaultConfiguration.tearDownExpectationTimeout = 60.0;
+    defaultConfiguration.requestMatchingFailedBlock = ^void (NSURLRequest *request) {
+        NSLog(@"Failed to match request: %@", request);
+        XCTFail(@"Failed to match request: %@", request);
+    };
+    return defaultConfiguration;
 }
 
 - (PNConfiguration *)clientConfiguration {

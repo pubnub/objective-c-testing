@@ -12,6 +12,9 @@
 // Constants
 #import "PNTTestConstants.h"
 
+// Matchers
+#import "PNTDeviceIndependentMatcher.h"
+
 // Test Case Subclasses
 #import "PNTClientTestCase.h"
 #import "PNTSubscribeLoopTestCase.h"

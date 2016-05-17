@@ -6,11 +6,11 @@
 //
 //
 
-#import <XCTest/XCTest.h>
+#import <BeKindRewind/BeKindRewind.h>
 #import <PubNub/PubNub.h>
 #import "PNTTestConstants.h"
 
-@interface PNTClientTestCase : XCTestCase
+@interface PNTClientTestCase : BKRTestCase
 
 @property (nonatomic, strong, readonly) PNConfiguration *configuration;
 @property (nonatomic, strong, readonly) PubNub *client;
