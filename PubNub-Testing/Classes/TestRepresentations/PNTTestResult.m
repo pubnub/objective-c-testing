@@ -31,6 +31,10 @@
     return [[self alloc] initWithClient:client statusCode:statusCode operation:operationType];
 }
 
+- (NSArray<NSString *> *)currentKeysWithSuperKeys {
+    
+}
+
 - (BOOL)PNT_assertsTrueWithPubNubObject:(PNResult *)result {
     
     XCTAssertNotNil(result, @"Can't pass in a nil PNResult to compare");

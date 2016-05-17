@@ -19,11 +19,13 @@
     return [[self alloc] initAcknowledgmentStatusWithClient:client statusCode:statusCode operation:operationType isError:isError];
 }
 
-- (NSArray<NSString *> *)keysToAssert {
-    return @[
-             @"class"
-             ];
-}
+//- (NSArray<NSString *> *)keysToAssert {
+//    NSMutableArray *superKeys = [super keysToAssert].mutableCopy;
+//    [superKeys addObjectsFromArray:@[
+//                                     @"class",
+//                                     ]];
+//    return superKeys.copy;
+//}
 
 //- (void)PNT_assertWithPubNubObject:(PNResult *)result {
 //    [super PNT_assertWithPubNubObject:result];

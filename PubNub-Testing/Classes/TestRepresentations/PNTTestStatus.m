@@ -30,10 +30,12 @@
 }
 
 - (NSArray<NSString *> *)keysToAssert {
-    return @[
-             @"category",
-             @"error"
-             ];
+    NSMutableArray *superKeys = [super keysToAssert].mutableCopy;
+    [superKeys addObjectsFromArray:@[
+                                     @"category",
+                                     @"error"
+                                     ]];
+    return superKeys.copy;
 }
 
 //- (void)PNT_assertWithPubNubObject:(PNResult *)result {

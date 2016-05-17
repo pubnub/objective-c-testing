@@ -13,6 +13,7 @@
 
 //- (BOOL)PNT_assertsTrueWithPubNubObject:(PNResult *)result;
 - (NSArray<NSString *> *)keysToAssert;
+- (id)valueForKey:(NSString *)key;
 
 @end
 
@@ -25,5 +26,7 @@
 - (instancetype)initWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType;
 
 + (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType;
+
+- (NSArray<NSString *> *)allKeysToAssert;
 
 @end

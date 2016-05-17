@@ -31,9 +31,11 @@
 }
 
 - (NSArray<NSString *> *)keysToAssert {
-    return @[
-             @"timetoken"
-             ];
+    NSMutableArray *superKeys = [super keysToAssert].mutableCopy;
+    [superKeys addObjectsFromArray:@[
+                                     @"timetoken",
+                                     ]];
+    return superKeys.copy;
 }
 
 //- (void)PNT_assertWithPubNubObject:(PNResult *)result {
