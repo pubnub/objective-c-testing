@@ -1,13 +1,15 @@
-project 'Example/PubNub-Testing'
+project 'Tests/Tests'
 workspace 'PubNub-Testing'
 use_frameworks!
 
-target 'PubNub-Testing_Example' do
+target 'PNT-Tests-iOS-ObjC' do
   pod 'PubNub-Testing', :path => '.'
+end
 
-  target 'PubNub-Testing_Tests' do
-    inherit! :search_paths
+target 'PNT-Tests-tvOS-ObjC' do
+    pod 'PubNub-Testing', :path => '.'
+end
 
-    
-  end
+target 'PNT-Tests-OSX-ObjC' do
+    pod 'PubNub-Testing', :path => '.'
 end

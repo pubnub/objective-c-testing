@@ -38,11 +38,4 @@
     return superKeys.copy;
 }
 
-//- (void)PNT_assertWithPubNubObject:(PNResult *)result {
-//    [super PNT_assertWithPubNubObject:result];
-//    XCTAssertTrue([result isKindOfClass:[PNPublishStatus class]]);
-//    PNPublishStatus *status = (PNPublishStatus *)result;
-//    XCTAssertEqualObjects(self.timetoken, status.data.timetoken);
-//}
-
 @end

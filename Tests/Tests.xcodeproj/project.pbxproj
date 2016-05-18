@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		012A0B4260DFB231D03D4CC5 /* Pods_PNT_Tests_tvOS_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD03AB7CB61B534271E5334F /* Pods_PNT_Tests_tvOS_ObjC.framework */; };
+		34B6F73FDD423FE3DC710101 /* Pods_PNT_Tests_iOS_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F540D5040B3CCA311AA7F995 /* Pods_PNT_Tests_iOS_ObjC.framework */; };
+		51EDD2CC1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2CB1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m */; };
+		51EDD2D81CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2D71CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m */; };
+		51EDD2E41CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2E31CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m */; };
+		FC49CD9680C4CBF43CFDF419 /* Pods_PNT_Tests_OSX_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82D403031D54074EF664776 /* Pods_PNT_Tests_OSX_ObjC.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3CCCFA30C810BF0D49DB1542 /* Pods-PNT-Tests-tvOS-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-tvOS-ObjC.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-tvOS-ObjC/Pods-PNT-Tests-tvOS-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		4787E6FDADF6AE63FC2C0EEF /* Pods-PNT-Tests-tvOS-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-tvOS-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-tvOS-ObjC/Pods-PNT-Tests-tvOS-ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		47A2FD9D0C53DBC00BCE9117 /* Pods-PNT-Tests-iOS-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-iOS-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-iOS-ObjC/Pods-PNT-Tests-iOS-ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		4F90F982F3CBF8F44576F314 /* Pods-PNT-Tests-OSX-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-OSX-ObjC.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-OSX-ObjC/Pods-PNT-Tests-OSX-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		51EDD2C91CECD47D00F559F7 /* PNT-Tests-iOS-ObjC.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNT-Tests-iOS-ObjC.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51EDD2CB1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNT_Tests_iOS_ObjC.m; sourceTree = "<group>"; };
+		51EDD2CD1CECD47D00F559F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51EDD2D51CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNT-Tests-tvOS-ObjC.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51EDD2D71CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNT_Tests_tvOS_ObjC.m; sourceTree = "<group>"; };
+		51EDD2D91CECD49E00F559F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51EDD2E11CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNT-Tests-OSX-ObjC.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51EDD2E31CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNT_Tests_OSX_ObjC.m; sourceTree = "<group>"; };
+		51EDD2E51CECD4AF00F559F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6949EFB16A2A1D902FC87CC8 /* Pods-PNT-Tests-OSX-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-OSX-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-OSX-ObjC/Pods-PNT-Tests-OSX-ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		8AA34D05AAD748F5AB91C363 /* Pods-PNT-Tests-iOS-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-iOS-ObjC.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-iOS-ObjC/Pods-PNT-Tests-iOS-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		A82D403031D54074EF664776 /* Pods_PNT_Tests_OSX_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNT_Tests_OSX_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD03AB7CB61B534271E5334F /* Pods_PNT_Tests_tvOS_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNT_Tests_tvOS_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F540D5040B3CCA311AA7F995 /* Pods_PNT_Tests_iOS_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNT_Tests_iOS_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51EDD2C61CECD47D00F559F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34B6F73FDD423FE3DC710101 /* Pods_PNT_Tests_iOS_ObjC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51EDD2D21CECD49E00F559F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012A0B4260DFB231D03D4CC5 /* Pods_PNT_Tests_tvOS_ObjC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51EDD2DE1CECD4AF00F559F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC49CD9680C4CBF43CFDF419 /* Pods_PNT_Tests_OSX_ObjC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35B3139F9C4E61037C491A43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F90F982F3CBF8F44576F314 /* Pods-PNT-Tests-OSX-ObjC.debug.xcconfig */,
+				6949EFB16A2A1D902FC87CC8 /* Pods-PNT-Tests-OSX-ObjC.release.xcconfig */,
+				8AA34D05AAD748F5AB91C363 /* Pods-PNT-Tests-iOS-ObjC.debug.xcconfig */,
+				47A2FD9D0C53DBC00BCE9117 /* Pods-PNT-Tests-iOS-ObjC.release.xcconfig */,
+				3CCCFA30C810BF0D49DB1542 /* Pods-PNT-Tests-tvOS-ObjC.debug.xcconfig */,
+				4787E6FDADF6AE63FC2C0EEF /* Pods-PNT-Tests-tvOS-ObjC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		51EDD2A21CECD38900F559F7 = {
+			isa = PBXGroup;
+			children = (
+				51EDD2CA1CECD47D00F559F7 /* PNT-Tests-iOS-ObjC */,
+				51EDD2D61CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC */,
+				51EDD2E21CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC */,
+				51EDD2AC1CECD38900F559F7 /* Products */,
+				35B3139F9C4E61037C491A43 /* Pods */,
+				905F1C0B24F6C06211E1067A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		51EDD2AC1CECD38900F559F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51EDD2C91CECD47D00F559F7 /* PNT-Tests-iOS-ObjC.xctest */,
+				51EDD2D51CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC.xctest */,
+				51EDD2E11CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51EDD2CA1CECD47D00F559F7 /* PNT-Tests-iOS-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				51EDD2CB1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m */,
+				51EDD2CD1CECD47D00F559F7 /* Info.plist */,
+			);
+			path = "PNT-Tests-iOS-ObjC";
+			sourceTree = "<group>";
+		};
+		51EDD2D61CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				51EDD2D71CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m */,
+				51EDD2D91CECD49E00F559F7 /* Info.plist */,
+			);
+			path = "PNT-Tests-tvOS-ObjC";
+			sourceTree = "<group>";
+		};
+		51EDD2E21CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				51EDD2E31CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m */,
+				51EDD2E51CECD4AF00F559F7 /* Info.plist */,
+			);
+			path = "PNT-Tests-OSX-ObjC";
+			sourceTree = "<group>";
+		};
+		905F1C0B24F6C06211E1067A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A82D403031D54074EF664776 /* Pods_PNT_Tests_OSX_ObjC.framework */,
+				F540D5040B3CCA311AA7F995 /* Pods_PNT_Tests_iOS_ObjC.framework */,
+				CD03AB7CB61B534271E5334F /* Pods_PNT_Tests_tvOS_ObjC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51EDD2C81CECD47D00F559F7 /* PNT-Tests-iOS-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51EDD2CE1CECD47D00F559F7 /* Build configuration list for PBXNativeTarget "PNT-Tests-iOS-ObjC" */;
+			buildPhases = (
+				EA618F9CA446D769327009B9 /* 📦 Check Pods Manifest.lock */,
+				51EDD2C51CECD47D00F559F7 /* Sources */,
+				51EDD2C61CECD47D00F559F7 /* Frameworks */,
+				51EDD2C71CECD47D00F559F7 /* Resources */,
+				7E949C31CA4D491EE13335A1 /* 📦 Embed Pods Frameworks */,
+				0AC7B6DE370DED1F77AFC0AC /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PNT-Tests-iOS-ObjC";
+			productName = "PNT-Tests-iOS-ObjC";
+			productReference = 51EDD2C91CECD47D00F559F7 /* PNT-Tests-iOS-ObjC.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		51EDD2D41CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51EDD2DA1CECD49E00F559F7 /* Build configuration list for PBXNativeTarget "PNT-Tests-tvOS-ObjC" */;
+			buildPhases = (
+				32596870F607745D2F07AC02 /* 📦 Check Pods Manifest.lock */,
+				51EDD2D11CECD49E00F559F7 /* Sources */,
+				51EDD2D21CECD49E00F559F7 /* Frameworks */,
+				51EDD2D31CECD49E00F559F7 /* Resources */,
+				3DA0B39E6A7588E4B033696E /* 📦 Embed Pods Frameworks */,
+				92465A0EF31BB15F944EA1C0 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PNT-Tests-tvOS-ObjC";
+			productName = "PNT-Tests-tvOS-ObjC";
+			productReference = 51EDD2D51CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		51EDD2E01CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51EDD2E61CECD4AF00F559F7 /* Build configuration list for PBXNativeTarget "PNT-Tests-OSX-ObjC" */;
+			buildPhases = (
+				8ABDEE63E576B8D084DC799A /* 📦 Check Pods Manifest.lock */,
+				51EDD2DD1CECD4AF00F559F7 /* Sources */,
+				51EDD2DE1CECD4AF00F559F7 /* Frameworks */,
+				51EDD2DF1CECD4AF00F559F7 /* Resources */,
+				57C4509AA2587310BC4327FE /* 📦 Embed Pods Frameworks */,
+				E379C8D438649B73A5130FBF /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PNT-Tests-OSX-ObjC";
+			productName = "PNT-Tests-OSX-ObjC";
+			productReference = 51EDD2E11CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51EDD2A31CECD38900F559F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jordan Zucker";
+				TargetAttributes = {
+					51EDD2C81CECD47D00F559F7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 76QPBMFFV2;
+					};
+					51EDD2D41CECD49E00F559F7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 76QPBMFFV2;
+					};
+					51EDD2E01CECD4AF00F559F7 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 51EDD2A61CECD38900F559F7 /* Build configuration list for PBXProject "Tests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51EDD2A21CECD38900F559F7;
+			productRefGroup = 51EDD2AC1CECD38900F559F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51EDD2C81CECD47D00F559F7 /* PNT-Tests-iOS-ObjC */,
+				51EDD2D41CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC */,
+				51EDD2E01CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51EDD2C71CECD47D00F559F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51EDD2D31CECD49E00F559F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51EDD2DF1CECD4AF00F559F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AC7B6DE370DED1F77AFC0AC /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PNT-Tests-iOS-ObjC/Pods-PNT-Tests-iOS-ObjC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32596870F607745D2F07AC02 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3DA0B39E6A7588E4B033696E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PNT-Tests-tvOS-ObjC/Pods-PNT-Tests-tvOS-ObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57C4509AA2587310BC4327FE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PNT-Tests-OSX-ObjC/Pods-PNT-Tests-OSX-ObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E949C31CA4D491EE13335A1 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PNT-Tests-iOS-ObjC/Pods-PNT-Tests-iOS-ObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ABDEE63E576B8D084DC799A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		92465A0EF31BB15F944EA1C0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PNT-Tests-tvOS-ObjC/Pods-PNT-Tests-tvOS-ObjC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E379C8D438649B73A5130FBF /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PNT-Tests-OSX-ObjC/Pods-PNT-Tests-OSX-ObjC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA618F9CA446D769327009B9 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51EDD2C51CECD47D00F559F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51EDD2CC1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51EDD2D11CECD49E00F559F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51EDD2D81CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51EDD2DD1CECD4AF00F559F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51EDD2E41CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		51EDD2C01CECD38900F559F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51EDD2C11CECD38900F559F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		51EDD2CF1CECD47D00F559F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA34D05AAD748F5AB91C363 /* Pods-PNT-Tests-iOS-ObjC.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "PNT-Tests-iOS-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stanera.PNT-Tests-iOS-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		51EDD2D01CECD47D00F559F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A2FD9D0C53DBC00BCE9117 /* Pods-PNT-Tests-iOS-ObjC.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "PNT-Tests-iOS-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stanera.PNT-Tests-iOS-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		51EDD2DB1CECD49E00F559F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CCCFA30C810BF0D49DB1542 /* Pods-PNT-Tests-tvOS-ObjC.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "PNT-Tests-tvOS-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stanera.PNT-Tests-tvOS-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		51EDD2DC1CECD49E00F559F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4787E6FDADF6AE63FC2C0EEF /* Pods-PNT-Tests-tvOS-ObjC.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "PNT-Tests-tvOS-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stanera.PNT-Tests-tvOS-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		51EDD2E71CECD4AF00F559F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F90F982F3CBF8F44576F314 /* Pods-PNT-Tests-OSX-ObjC.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "PNT-Tests-OSX-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "stanera.PNT-Tests-OSX-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		51EDD2E81CECD4AF00F559F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6949EFB16A2A1D902FC87CC8 /* Pods-PNT-Tests-OSX-ObjC.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "PNT-Tests-OSX-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "stanera.PNT-Tests-OSX-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51EDD2A61CECD38900F559F7 /* Build configuration list for PBXProject "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51EDD2C01CECD38900F559F7 /* Debug */,
+				51EDD2C11CECD38900F559F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51EDD2CE1CECD47D00F559F7 /* Build configuration list for PBXNativeTarget "PNT-Tests-iOS-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51EDD2CF1CECD47D00F559F7 /* Debug */,
+				51EDD2D01CECD47D00F559F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51EDD2DA1CECD49E00F559F7 /* Build configuration list for PBXNativeTarget "PNT-Tests-tvOS-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51EDD2DB1CECD49E00F559F7 /* Debug */,
+				51EDD2DC1CECD49E00F559F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51EDD2E61CECD4AF00F559F7 /* Build configuration list for PBXNativeTarget "PNT-Tests-OSX-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51EDD2E71CECD4AF00F559F7 /* Debug */,
+				51EDD2E81CECD4AF00F559F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51EDD2A31CECD38900F559F7 /* Project object */;
+}
