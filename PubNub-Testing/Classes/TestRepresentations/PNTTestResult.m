@@ -31,10 +31,6 @@
     return [[self alloc] initWithClient:client statusCode:statusCode operation:operationType];
 }
 
-- (NSArray<NSString *> *)currentKeysWithSuperKeys {
-    
-}
-
 - (BOOL)PNT_assertsTrueWithPubNubObject:(PNResult *)result {
     
     XCTAssertNotNil(result, @"Can't pass in a nil PNResult to compare");
@@ -54,6 +50,10 @@
     NSString *pubNubClassName = [testClassName stringByReplacingOccurrencesOfString:@"TTest" withString:@""];
     NSLog(@"%s: %@", __PRETTY_FUNCTION__, pubNubClassName);
     return pubNubClassName;
+}
+
++ (Class)PubNubClass {
+    return NSClassFromString([self PubNubClassName]);
 }
 
 

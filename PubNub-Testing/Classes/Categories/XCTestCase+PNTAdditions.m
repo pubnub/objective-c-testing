@@ -18,8 +18,8 @@
     NSArray<NSString *> *keys = [expectedResult keysToAssert];
     [keys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         id expectedValue = [expectedResult valueForKey:obj];
-        Class PubNubClassName = [expectedResult.class PubNubClassName];
-        XCTAssertTrue([actualResult isKindOfClass:PubNubClassName]);
+        Class PubNubClass = [expectedResult.class PubNubClass];
+        XCTAssertTrue([actualResult isKindOfClass:PubNubClass]);
         id castedResult = (id)actualResult;
 //        PubNubClassName *castedActualResult = objc_dynamic_cast(actualResult, PubNubClassName);
 //        PubNubClassName castedActualValue = (PubNubClassName )actualResult;

@@ -27,8 +27,8 @@
 
 + (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType;
 
-- (NSArray<NSString *> *)allKeysToAssert;
-
 + (NSString *)PubNubClassName;
+
++ (Class)PubNubClass;
 
 @end
