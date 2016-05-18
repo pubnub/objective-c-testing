@@ -29,4 +29,6 @@
 
 - (NSArray<NSString *> *)allKeysToAssert;
 
++ (NSString *)PubNubClassName;
+
 @end

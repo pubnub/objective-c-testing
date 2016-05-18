@@ -33,7 +33,7 @@
 - (NSArray<NSString *> *)keysToAssert {
     NSMutableArray *superKeys = [super keysToAssert].mutableCopy;
     [superKeys addObjectsFromArray:@[
-                                     @"timetoken",
+                                     @"data.timetoken",
                                      ]];
     return superKeys.copy;
 }

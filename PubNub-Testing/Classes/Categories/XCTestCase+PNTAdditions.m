@@ -17,6 +17,9 @@
     NSArray<NSString *> *keys = [expectedResult keysToAssert];
     [keys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         id expectedValue = [expectedResult valueForKey:obj];
+        Class PubNubClassName = [expectedResult.class PubNubClassName];
+        XCTAssertTrue([actualResult isKindOfClass:PubNubClassName]);
+//        PubNubClassName castedActualValue = (PubNubClassName )actualResult;
         id actualValue = [actualResult valueForKey:obj];
         XCTAssertEqualObjects(expectedValue, actualValue);
     }];
