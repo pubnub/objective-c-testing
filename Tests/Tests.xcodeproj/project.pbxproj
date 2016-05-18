@@ -9,9 +9,17 @@
 /* Begin PBXBuildFile section */
 		012A0B4260DFB231D03D4CC5 /* Pods_PNT_Tests_tvOS_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD03AB7CB61B534271E5334F /* Pods_PNT_Tests_tvOS_ObjC.framework */; };
 		34B6F73FDD423FE3DC710101 /* Pods_PNT_Tests_iOS_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F540D5040B3CCA311AA7F995 /* Pods_PNT_Tests_iOS_ObjC.framework */; };
-		51EDD2CC1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2CB1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m */; };
-		51EDD2D81CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2D71CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m */; };
-		51EDD2E41CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2E31CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m */; };
+		51EDD2EB1CECD86800F559F7 /* HistoryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2EA1CECD86800F559F7 /* HistoryTestCase.m */; };
+		51EDD2EC1CECD86800F559F7 /* HistoryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2EA1CECD86800F559F7 /* HistoryTestCase.m */; };
+		51EDD2F21CECD8D300F559F7 /* PublishTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2F11CECD8D300F559F7 /* PublishTestCase.m */; };
+		51EDD2F31CECD8D300F559F7 /* PublishTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2F11CECD8D300F559F7 /* PublishTestCase.m */; };
+		51EDD2F41CECD8D300F559F7 /* PublishTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD2F11CECD8D300F559F7 /* PublishTestCase.m */; };
+		51EDD3181CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51EDD3161CECDC5500F559F7 /* HistoryTestCase.bundle */; };
+		51EDD3191CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51EDD3161CECDC5500F559F7 /* HistoryTestCase.bundle */; };
+		51EDD31A1CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51EDD3161CECDC5500F559F7 /* HistoryTestCase.bundle */; };
+		51EDD31B1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51EDD3171CECDC5500F559F7 /* PublishTestCase.bundle */; };
+		51EDD31C1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51EDD3171CECDC5500F559F7 /* PublishTestCase.bundle */; };
+		51EDD31D1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51EDD3171CECDC5500F559F7 /* PublishTestCase.bundle */; };
 		FC49CD9680C4CBF43CFDF419 /* Pods_PNT_Tests_OSX_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82D403031D54074EF664776 /* Pods_PNT_Tests_OSX_ObjC.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,14 +29,15 @@
 		47A2FD9D0C53DBC00BCE9117 /* Pods-PNT-Tests-iOS-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-iOS-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-iOS-ObjC/Pods-PNT-Tests-iOS-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		4F90F982F3CBF8F44576F314 /* Pods-PNT-Tests-OSX-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-OSX-ObjC.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-OSX-ObjC/Pods-PNT-Tests-OSX-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		51EDD2C91CECD47D00F559F7 /* PNT-Tests-iOS-ObjC.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNT-Tests-iOS-ObjC.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51EDD2CB1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNT_Tests_iOS_ObjC.m; sourceTree = "<group>"; };
 		51EDD2CD1CECD47D00F559F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EDD2D51CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNT-Tests-tvOS-ObjC.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51EDD2D71CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNT_Tests_tvOS_ObjC.m; sourceTree = "<group>"; };
 		51EDD2D91CECD49E00F559F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EDD2E11CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNT-Tests-OSX-ObjC.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51EDD2E31CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNT_Tests_OSX_ObjC.m; sourceTree = "<group>"; };
 		51EDD2E51CECD4AF00F559F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51EDD2EA1CECD86800F559F7 /* HistoryTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryTestCase.m; path = Tests/TestCases/HistoryTestCase.m; sourceTree = "<group>"; };
+		51EDD2F11CECD8D300F559F7 /* PublishTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PublishTestCase.m; path = Tests/TestCases/PublishTestCase.m; sourceTree = "<group>"; };
+		51EDD3161CECDC5500F559F7 /* HistoryTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = HistoryTestCase.bundle; path = Tests/Fixtures/HistoryTestCase.bundle; sourceTree = "<group>"; };
+		51EDD3171CECDC5500F559F7 /* PublishTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PublishTestCase.bundle; path = Tests/Fixtures/PublishTestCase.bundle; sourceTree = "<group>"; };
 		6949EFB16A2A1D902FC87CC8 /* Pods-PNT-Tests-OSX-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-OSX-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-OSX-ObjC/Pods-PNT-Tests-OSX-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		8AA34D05AAD748F5AB91C363 /* Pods-PNT-Tests-iOS-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-iOS-ObjC.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-iOS-ObjC/Pods-PNT-Tests-iOS-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		A82D403031D54074EF664776 /* Pods_PNT_Tests_OSX_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNT_Tests_OSX_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +89,8 @@
 		51EDD2A21CECD38900F559F7 = {
 			isa = PBXGroup;
 			children = (
+				51EDD2E91CECD83500F559F7 /* TestCases */,
+				51EDD2F51CECDB5900F559F7 /* Fixtures */,
 				51EDD2CA1CECD47D00F559F7 /* PNT-Tests-iOS-ObjC */,
 				51EDD2D61CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC */,
 				51EDD2E21CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC */,
@@ -102,7 +113,6 @@
 		51EDD2CA1CECD47D00F559F7 /* PNT-Tests-iOS-ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				51EDD2CB1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m */,
 				51EDD2CD1CECD47D00F559F7 /* Info.plist */,
 			);
 			path = "PNT-Tests-iOS-ObjC";
@@ -111,7 +121,6 @@
 		51EDD2D61CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				51EDD2D71CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m */,
 				51EDD2D91CECD49E00F559F7 /* Info.plist */,
 			);
 			path = "PNT-Tests-tvOS-ObjC";
@@ -120,10 +129,27 @@
 		51EDD2E21CECD4AF00F559F7 /* PNT-Tests-OSX-ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				51EDD2E31CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m */,
 				51EDD2E51CECD4AF00F559F7 /* Info.plist */,
 			);
 			path = "PNT-Tests-OSX-ObjC";
+			sourceTree = "<group>";
+		};
+		51EDD2E91CECD83500F559F7 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				51EDD2EA1CECD86800F559F7 /* HistoryTestCase.m */,
+				51EDD2F11CECD8D300F559F7 /* PublishTestCase.m */,
+			);
+			name = TestCases;
+			sourceTree = "<group>";
+		};
+		51EDD2F51CECDB5900F559F7 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				51EDD3161CECDC5500F559F7 /* HistoryTestCase.bundle */,
+				51EDD3171CECDC5500F559F7 /* PublishTestCase.bundle */,
+			);
+			name = Fixtures;
 			sourceTree = "<group>";
 		};
 		905F1C0B24F6C06211E1067A /* Frameworks */ = {
@@ -246,6 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EDD3181CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */,
+				51EDD31B1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +281,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EDD3191CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */,
+				51EDD31C1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +290,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EDD31A1CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */,
+				51EDD31D1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51EDD2CC1CECD47D00F559F7 /* PNT_Tests_iOS_ObjC.m in Sources */,
+				51EDD2F21CECD8D300F559F7 /* PublishTestCase.m in Sources */,
+				51EDD2EB1CECD86800F559F7 /* HistoryTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +449,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51EDD2D81CECD49E00F559F7 /* PNT_Tests_tvOS_ObjC.m in Sources */,
+				51EDD2F31CECD8D300F559F7 /* PublishTestCase.m in Sources */,
+				51EDD2EC1CECD86800F559F7 /* HistoryTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51EDD2E41CECD4AF00F559F7 /* PNT_Tests_OSX_ObjC.m in Sources */,
+				51EDD2F41CECD8D300F559F7 /* PublishTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
