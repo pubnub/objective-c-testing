@@ -1,9 +1,9 @@
 # PubNub-Testing
 
-[![CI Status](http://img.shields.io/travis/Jordan Zucker/PubNub-Testing.svg?style=flat)](https://travis-ci.org/Jordan Zucker/PubNub-Testing)
 [![Version](https://img.shields.io/cocoapods/v/PubNub-Testing.svg?style=flat)](http://cocoapods.org/pods/PubNub-Testing)
 [![License](https://img.shields.io/cocoapods/l/PubNub-Testing.svg?style=flat)](http://cocoapods.org/pods/PubNub-Testing)
 [![Platform](https://img.shields.io/cocoapods/p/PubNub-Testing.svg?style=flat)](http://cocoapods.org/pods/PubNub-Testing)
+[![Build Status](https://travis-ci.org/pubnub/objective-c-testing.svg?branch=master)](https://travis-ci.org/pubnub/objective-c-testing)
 
 ## Example
 
