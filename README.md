@@ -1,6 +1,5 @@
 # PubNub-Testing
 
-[![CI Status](http://img.shields.io/travis/Jordan Zucker/PubNub-Testing.svg?style=flat)](https://travis-ci.org/Jordan Zucker/PubNub-Testing)
 [![Version](https://img.shields.io/cocoapods/v/PubNub-Testing.svg?style=flat)](http://cocoapods.org/pods/PubNub-Testing)
 [![License](https://img.shields.io/cocoapods/l/PubNub-Testing.svg?style=flat)](http://cocoapods.org/pods/PubNub-Testing)
 [![Platform](https://img.shields.io/cocoapods/p/PubNub-Testing.svg?style=flat)](http://cocoapods.org/pods/PubNub-Testing)
@@ -19,6 +18,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "PubNub-Testing"
 ```
+
+## Release criteria
+
+* Need to add some simple tests and travis CI (badge)
 
 ## Author
 

@@ -275,7 +275,7 @@
 - (void)client:(PubNub *)client didReceivePresenceEvent:(PNPresenceEventResult *)event {
     NSInteger index = self.expectedPresenceResultIndex;
     if (self.expectedPresenceResults[index]) {
-        PNTTestPresenceResult *expectedPresenceResult = self.expectedPresenceResults[index];
+        PNTTestPresenceEventResult *expectedPresenceResult = self.expectedPresenceResults[index];
         // assert here
         [self PNT_successfulPresenceEventWithExpectedEvent:expectedPresenceResult andActualEvent:event];
         [self incrementExpectedPresenceResultIndex];

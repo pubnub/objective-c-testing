@@ -15,9 +15,17 @@
 // Matchers
 #import "PNTDeviceIndependentMatcher.h"
 
-// Test Case Subclasses
-#import "PNTClientTestCase.h"
-#import "PNTSubscribeLoopTestCase.h"
+// Test Representations
+#import "PNTTestResult.h"
+#import "PNTTestStatus.h"
+#import "PNTTestErrorStatus.h"
+#import "PNTTestAcknowledgmentStatus.h"
+#import "PNTTestHistoryResult.h"
+#import "PNTTestPublishStatus.h"
+#import "PNTTestTimeResult.h"
+#import "PNTTestSubscribeStatus.h"
+#import "PNTTestSubscriberResults.h"
+
 
 // Categories
 #import "XCTestCase+PNTChannelGroup.h"
@@ -26,5 +34,9 @@
 #import "XCTestCase+PNTPublish.h"
 #import "XCTestCase+PNTSizeOfMessage.h"
 #import "XCTestCase+PNTSubscription.h"
+
+// Test Case Subclasses
+#import "PNTClientTestCase.h"
+#import "PNTSubscribeLoopTestCase.h"
 
 #endif /* PubNubTesting_h */
