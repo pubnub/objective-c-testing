@@ -47,9 +47,7 @@
 
 + (NSString *)PubNubClassName {
     NSString *testClassName = NSStringFromClass(self);
-    NSString *pubNubClassName = [testClassName stringByReplacingOccurrencesOfString:@"TTest" withString:@""];
-    NSLog(@"%s: %@", __PRETTY_FUNCTION__, pubNubClassName);
-    return pubNubClassName;
+    return [testClassName stringByReplacingOccurrencesOfString:@"TTest" withString:@""];
 }
 
 + (Class)PubNubClass {

@@ -7,13 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <objc/runtime.h>
 
 #ifndef PNTTestConstants_h
 #define PNTTestConstants_h
-
-#define objc_dynamic_cast(obj, cls) \
-([obj isKindOfClass:(Class)objc_getClass(#cls)] ? (cls *)obj : NULL)
 
 #define PNTWeakify(__var) \
 __weak __typeof__(__var) __var ## _weak_ = (__var)
