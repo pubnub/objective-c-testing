@@ -20,10 +20,6 @@ it, simply add the following line to your Podfile:
 pod "PubNub-Testing"
 ```
 
-## Release criteria
-
-* Travis CI (badge)
-
 ## Author
 
 Jordan Zucker, jordan.zucker@gmail.com
