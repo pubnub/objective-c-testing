@@ -11,7 +11,7 @@
 
 @interface XCTestCase (PNTChannelGroup)
 
-- (PNChannelGroupChangeCompletionBlock)PNT_channelGroupAdd;
+- (PNChannelGroupChangeCompletionBlock)PNT_ccompletionWith;
 - (PNChannelGroupChangeCompletionBlock)PNT_channelGroupRemoveSomeChannels;
 - (PNGroupChannelsAuditCompletionBlock)PNT_channelGroupAudit;
 - (PNChannelGroupChangeCompletionBlock)PNT_channelGroupRemoveAllChannels;

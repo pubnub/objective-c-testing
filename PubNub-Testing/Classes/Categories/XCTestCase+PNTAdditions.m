@@ -23,8 +23,6 @@
         id expectedValue = [expectedResult valueForKey:obj];
         Class PubNubClass = [expectedResult.class PubNubClass];
         XCTAssertTrue([actualResult isKindOfClass:PubNubClass]);
-//        PubNubClassName *castedActualResult = objc_dynamic_cast(actualResult, PubNubClassName);
-//        PubNubClassName castedActualValue = (PubNubClassName )actualResult;
         id actualValue = [idActual valueForKey:obj];
         XCTAssertEqualObjects(expectedValue, actualValue);
     }];
