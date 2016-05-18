@@ -14,7 +14,7 @@ typedef void (^PNTClientDidReceivePresenceEventHandler)(PubNub *client, PNPresen
 
 @class PNTTestSubscribeStatus;
 @class PNTTestMessageResult;
-@class PNTTestPresenceResult;
+@class PNTTestPresenceEventResult;
 
 @interface PNTSubscribeLoopTestCase : PNTClientTestCase <PNObjectEventListener>
 
@@ -24,7 +24,7 @@ typedef void (^PNTClientDidReceivePresenceEventHandler)(PubNub *client, PNPresen
 
 @property (nonatomic, strong) NSArray<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
 @property (nonatomic, strong) NSArray<PNTTestMessageResult *> *expectedMessageResults;
-@property (nonatomic, strong) NSArray<PNTTestPresenceResult *> *expectedPresenceResults;
+@property (nonatomic, strong) NSArray<PNTTestPresenceEventResult *> *expectedPresenceResults;
 
 // these are properties so that they can be easily accessed with dot accessors with compiler autocomplete
 @property (nonatomic, strong, readonly) NSArray<NSString *> *subscribedChannels; // default is empty array
