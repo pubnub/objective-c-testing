@@ -26,8 +26,8 @@
     return [[self alloc] initPublishStatusWithClient:client statusCode:200 isError:NO timeToken:timeToken];
 }
 
-+ (instancetype)failedStatusWithClient:(PubNub *)client timeToken:(NSNumber *)timeToken {
-    return [[self alloc] initPublishStatusWithClient:client statusCode:400 isError:YES timeToken:timeToken];
++ (instancetype)failedStatusWithClient:(PubNub *)client {
+    return [[self alloc] initPublishStatusWithClient:client statusCode:400 isError:YES timeToken:nil];
 }
 
 - (NSArray<NSString *> *)dataKeyPathsToAssert {
