@@ -30,8 +30,8 @@
     return [[self alloc] initPublishStatusWithClient:client statusCode:400 isError:YES timeToken:timeToken];
 }
 
-- (NSArray<NSString *> *)keysToAssert {
-    NSMutableArray *superKeys = [super keysToAssert].mutableCopy;
+- (NSArray<NSString *> *)dataKeyPathsToAssert {
+    NSMutableArray *superKeys = [super dataKeyPathsToAssert].mutableCopy;
     [superKeys addObjectsFromArray:@[
                                      @"data.timetoken",
                                      ]];

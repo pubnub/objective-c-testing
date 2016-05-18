@@ -10,4 +10,8 @@
 
 @implementation PNTTestErrorStatus
 
+- (NSArray<NSString *> *)dataKeyPathsToAssert {
+    return @[];
+}
+
 @end

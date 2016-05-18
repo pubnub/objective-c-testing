@@ -8,6 +8,7 @@
 
 #import <PubNub/PubNub.h>
 #import "XCTestCase+PNTAdditions.h"
+#import "PNTTestConstants.h"
 
 @implementation XCTestCase (PNTAdditions)
 
@@ -19,6 +20,8 @@
         id expectedValue = [expectedResult valueForKey:obj];
         Class PubNubClassName = [expectedResult.class PubNubClassName];
         XCTAssertTrue([actualResult isKindOfClass:PubNubClassName]);
+        id castedResult = (id)actualResult;
+//        PubNubClassName *castedActualResult = objc_dynamic_cast(actualResult, PubNubClassName);
 //        PubNubClassName castedActualValue = (PubNubClassName )actualResult;
         id actualValue = [actualResult valueForKey:obj];
         XCTAssertEqualObjects(expectedValue, actualValue);
