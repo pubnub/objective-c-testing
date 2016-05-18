@@ -1,5 +1,5 @@
 PODS:
-  - BeKindRewind (2.3.0):
+  - BeKindRewind (2.3.2):
     - OHHTTPStubs (~> 5.0.0)
   - CocoaLumberjack (2.3.0):
     - CocoaLumberjack/Default (= 2.3.0)
@@ -25,8 +25,8 @@ PODS:
   - PubNub (4.3.3):
     - CocoaLumberjack (= 2.3.0)
     - PubNub/Core (= 4.3.3)
-  - PubNub-Testing (0.4.0):
-    - BeKindRewind
+  - PubNub-Testing (0.4.1):
+    - BeKindRewind (~> 2.3.2)
     - PubNub
   - PubNub/Core (4.3.3):
     - CocoaLumberjack (= 2.3.0)
@@ -39,11 +39,11 @@ EXTERNAL SOURCES:
     :path: .
 
 SPEC CHECKSUMS:
-  BeKindRewind: cbd74e2ef5d7d64eb8284336a2cdefe9b7f7d540
+  BeKindRewind: bd3713b67a4b269bb3e938abd3306a2ee11107f7
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   OHHTTPStubs: a5d2e9eea07869d42ec03338325f398bc520e159
   PubNub: 51acd937c947d931a75d2caef654fd12f7573e09
-  PubNub-Testing: 381635ee26118d7042799a2e975b670ca82f969c
+  PubNub-Testing: 7005abb57b0c82f470671917fabb50fd566b694c
 
 PODFILE CHECKSUM: e3d9fe7c70736374b355145bee13378ef28fa8d6
 
