@@ -21,7 +21,7 @@ pod "PubNub-Testing"
 
 ## Release criteria
 
-* Need to add some simple tests and travis CI (badge)
+* Travis CI (badge)
 
 ## Author
 
