@@ -11,9 +11,7 @@
 
 @protocol PNTTestRepresentation <NSObject>
 
-//- (BOOL)PNT_assertsTrueWithPubNubObject:(PNResult *)result;
 - (NSArray<NSString *> *)keysToAssert;
-- (id)valueForKey:(NSString *)key;
 
 @end
 
