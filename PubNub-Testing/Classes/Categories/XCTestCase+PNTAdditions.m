@@ -7,7 +7,6 @@
 //
 
 #import <PubNub/PubNub.h>
-#import <BlocksKit/BlocksKit.h>
 #import "XCTestCase+PNTAdditions.h"
 
 @implementation XCTestCase (PNTAdditions)
