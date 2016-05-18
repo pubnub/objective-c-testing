@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong, readonly) PNConfiguration *configuration;
 @property (nonatomic, strong, readonly) PubNub *client;
+@property (nonatomic, copy, readonly) NSString *publishChannel;
+@property (nonatomic, copy, readonly) NSString *historyChannel;
 
 - (PNConfiguration *)clientConfiguration;
 

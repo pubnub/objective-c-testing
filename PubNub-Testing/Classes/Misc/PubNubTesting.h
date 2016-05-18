@@ -39,8 +39,4 @@
 #import "PNTClientTestCase.h"
 #import "PNTSubscribeLoopTestCase.h"
 
-// Service TestCase Subclasses
-#import "PNTHistoryTestCase.h"
-#import "PNTPublishTestCase.h"
-
 #endif /* PubNubTesting_h */

@@ -43,6 +43,14 @@
     return defaultConfiguration;
 }
 
+- (NSString *)publishChannel {
+    return @"a";
+}
+
+- (NSString *)historyChannel {
+    return @"a";
+}
+
 - (PNConfiguration *)clientConfiguration {
     
     PNConfiguration *configuration = [PNConfiguration configurationWithPublishKey:@"demo-36" subscribeKey:@"demo-36"];

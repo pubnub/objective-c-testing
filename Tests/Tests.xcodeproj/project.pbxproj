@@ -20,6 +20,15 @@
 		51EDD31B1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51EDD3171CECDC5500F559F7 /* PublishTestCase.bundle */; };
 		51EDD31C1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51EDD3171CECDC5500F559F7 /* PublishTestCase.bundle */; };
 		51EDD31D1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51EDD3171CECDC5500F559F7 /* PublishTestCase.bundle */; };
+		51EDD31F1CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD31E1CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m */; };
+		51EDD3201CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD31E1CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m */; };
+		51EDD3211CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD31E1CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m */; };
+		51EDD3231CECE0FF00F559F7 /* TimeTokenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD3221CECE0FF00F559F7 /* TimeTokenTestCase.m */; };
+		51EDD3241CECE0FF00F559F7 /* TimeTokenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD3221CECE0FF00F559F7 /* TimeTokenTestCase.m */; };
+		51EDD3251CECE0FF00F559F7 /* TimeTokenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD3221CECE0FF00F559F7 /* TimeTokenTestCase.m */; };
+		51EDD3271CECE11E00F559F7 /* ChannelGroupTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD3261CECE11E00F559F7 /* ChannelGroupTestCase.m */; };
+		51EDD3281CECE11E00F559F7 /* ChannelGroupTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD3261CECE11E00F559F7 /* ChannelGroupTestCase.m */; };
+		51EDD3291CECE11E00F559F7 /* ChannelGroupTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD3261CECE11E00F559F7 /* ChannelGroupTestCase.m */; };
 		FC49CD9680C4CBF43CFDF419 /* Pods_PNT_Tests_OSX_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82D403031D54074EF664776 /* Pods_PNT_Tests_OSX_ObjC.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +47,9 @@
 		51EDD2F11CECD8D300F559F7 /* PublishTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PublishTestCase.m; path = Tests/TestCases/PublishTestCase.m; sourceTree = "<group>"; };
 		51EDD3161CECDC5500F559F7 /* HistoryTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = HistoryTestCase.bundle; path = Tests/Fixtures/HistoryTestCase.bundle; sourceTree = "<group>"; };
 		51EDD3171CECDC5500F559F7 /* PublishTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PublishTestCase.bundle; path = Tests/Fixtures/PublishTestCase.bundle; sourceTree = "<group>"; };
+		51EDD31E1CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PublishSizeOfMessageTestCase.m; path = Tests/TestCases/PublishSizeOfMessageTestCase.m; sourceTree = "<group>"; };
+		51EDD3221CECE0FF00F559F7 /* TimeTokenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTokenTestCase.m; path = Tests/TestCases/TimeTokenTestCase.m; sourceTree = "<group>"; };
+		51EDD3261CECE11E00F559F7 /* ChannelGroupTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelGroupTestCase.m; path = Tests/TestCases/ChannelGroupTestCase.m; sourceTree = "<group>"; };
 		6949EFB16A2A1D902FC87CC8 /* Pods-PNT-Tests-OSX-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-OSX-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-OSX-ObjC/Pods-PNT-Tests-OSX-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		8AA34D05AAD748F5AB91C363 /* Pods-PNT-Tests-iOS-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-iOS-ObjC.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-iOS-ObjC/Pods-PNT-Tests-iOS-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		A82D403031D54074EF664776 /* Pods_PNT_Tests_OSX_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNT_Tests_OSX_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +151,9 @@
 			children = (
 				51EDD2EA1CECD86800F559F7 /* HistoryTestCase.m */,
 				51EDD2F11CECD8D300F559F7 /* PublishTestCase.m */,
+				51EDD31E1CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m */,
+				51EDD3221CECE0FF00F559F7 /* TimeTokenTestCase.m */,
+				51EDD3261CECE11E00F559F7 /* ChannelGroupTestCase.m */,
 			);
 			name = TestCases;
 			sourceTree = "<group>";
@@ -441,6 +456,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				51EDD2F21CECD8D300F559F7 /* PublishTestCase.m in Sources */,
+				51EDD31F1CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m in Sources */,
+				51EDD3231CECE0FF00F559F7 /* TimeTokenTestCase.m in Sources */,
+				51EDD3271CECE11E00F559F7 /* ChannelGroupTestCase.m in Sources */,
 				51EDD2EB1CECD86800F559F7 /* HistoryTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +468,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				51EDD2F31CECD8D300F559F7 /* PublishTestCase.m in Sources */,
+				51EDD3201CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m in Sources */,
+				51EDD3241CECE0FF00F559F7 /* TimeTokenTestCase.m in Sources */,
+				51EDD3281CECE11E00F559F7 /* ChannelGroupTestCase.m in Sources */,
 				51EDD2EC1CECD86800F559F7 /* HistoryTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +480,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				51EDD2F41CECD8D300F559F7 /* PublishTestCase.m in Sources */,
+				51EDD3211CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m in Sources */,
+				51EDD3251CECE0FF00F559F7 /* TimeTokenTestCase.m in Sources */,
+				51EDD3291CECE11E00F559F7 /* ChannelGroupTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
