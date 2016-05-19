@@ -1,5 +1,9 @@
 # PubNub-Testing — CHANGELOG
 
+## [0.5.0](https://github.com/pubnub/PubNub-Testing/releases/tag/0.5.0)
+
+* Deprecating PubNub-Testing
+
 ## [0.4.1](https://github.com/pubnub/PubNub-Testing/releases/tag/0.4.1)
 
 * Lock the version of `BeKindRewind` that is used as a dependency
