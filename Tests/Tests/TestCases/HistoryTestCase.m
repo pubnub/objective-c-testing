@@ -6,7 +6,7 @@
 //  Copyright © 2016 Jordan Zucker. All rights reserved.
 //
 
-#import <PubNub_Testing/PubNubTesting.h>
+#import <PubNubTesting/PubNubTesting.h>
 
 @interface HistoryTestCase : PNTClientTestCase
 
