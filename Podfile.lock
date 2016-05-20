@@ -25,17 +25,17 @@ PODS:
   - PubNub (4.3.3):
     - CocoaLumberjack (= 2.3.0)
     - PubNub/Core (= 4.3.3)
-  - PubNub-Testing (0.5.0):
-    - BeKindRewind (~> 2.3.2)
-    - PubNub
   - PubNub/Core (4.3.3):
     - CocoaLumberjack (= 2.3.0)
+  - PubNubTesting (0.6.0):
+    - BeKindRewind (~> 2.3.2)
+    - PubNub
 
 DEPENDENCIES:
-  - PubNub-Testing (from `.`)
+  - PubNubTesting (from `.`)
 
 EXTERNAL SOURCES:
-  PubNub-Testing:
+  PubNubTesting:
     :path: .
 
 SPEC CHECKSUMS:
@@ -43,8 +43,8 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   OHHTTPStubs: a5d2e9eea07869d42ec03338325f398bc520e159
   PubNub: 51acd937c947d931a75d2caef654fd12f7573e09
-  PubNub-Testing: 63f1ad7b9a3b7a32296ff003d1b060e93c25dfcf
+  PubNubTesting: 0d7f055e5e8ad1b2c5875c335dfde2e19dea3b2a
 
-PODFILE CHECKSUM: e3d9fe7c70736374b355145bee13378ef28fa8d6
+PODFILE CHECKSUM: 3ea0fd87aced5abf0fc136daed7e6a11ef6a27c2
 
 COCOAPODS: 1.0.0
