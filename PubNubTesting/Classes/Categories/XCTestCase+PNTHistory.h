@@ -9,8 +9,12 @@
 #import <XCTest/XCTest.h>
 #import <PubNub/PubNub.h>
 
+@class PNTTestHistoryResult;
+@class PNTTestErrorStatus;
+
 @interface XCTestCase (PNTHistory)
 
 - (PNHistoryCompletionBlock)PNT_historyCompletionBlock;
+- (PNHistoryCompletionBlock)PNT_historyCompletionBlockWithHistoryResult:(PNTTestHistoryResult *)expectedResult andError:(PNTTestErrorStatus *)expectedErrorStatus;
 
 @end

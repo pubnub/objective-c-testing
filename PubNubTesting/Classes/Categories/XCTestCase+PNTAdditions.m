@@ -14,6 +14,13 @@
 @implementation XCTestCase (PNTAdditions)
 
 - (void)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult {
+    if (
+        !expectedResult &&
+        !actualResult
+        ) {
+        // if both are nil then return, nothing to check
+        return;
+    }
     XCTAssertNotNil(expectedResult);
     XCTAssertNotNil(actualResult);
     NSArray<NSString *> *keys = [expectedResult keysToAssert];
@@ -26,9 +33,8 @@
         id actualValue = [idActual valueForKey:obj];
         XCTAssertEqualObjects(expectedValue, actualValue);
     }];
-    if ([expectedResult isKindOfClass:[PNTTestErrorStatus class]]) {
-        PNTTestErrorStatus *castedExpected = (PNTTestErrorStatus *)expectedResult;
-        NSArray<NSString *> *dataKeyPaths = [castedExpected dataKeyPathsToAssert];
+    if ([expectedResult respondsToSelector:@selector(dataKeysToAssert)]) {
+        NSArray<NSString *> *dataKeyPaths = [expectedResult dataKeysToAssert];
         [dataKeyPaths enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSString *expectedKeyPath = [obj stringByReplacingOccurrencesOfString:@"data." withString:@""];
             id expectedKeyPathValue = [idExpected valueForKeyPath:expectedKeyPath];
