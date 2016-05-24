@@ -39,7 +39,18 @@
             NSString *expectedKeyPath = [obj stringByReplacingOccurrencesOfString:@"data." withString:@""];
             id expectedKeyPathValue = [idExpected valueForKeyPath:expectedKeyPath];
             id actualKeyPathValue = [idActual valueForKeyPath:obj];
-            XCTAssertEqualObjects(expectedKeyPathValue, actualKeyPathValue);
+            if ([expectedKeyPathValue isKindOfClass:[NSArray class]]) {
+                NSArray *expectedArray = (NSArray *)expectedKeyPathValue;
+                NSArray *actualArray = (NSArray *)actualKeyPathValue;
+                XCTAssertEqual(expectedArray.count, actualArray.count);
+                for (NSInteger i=0; i<expectedArray.count; i++) {
+                    id expectedArrayValue = expectedArray[i];
+                    id actualArrayValue = actualArray[i];
+                    XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%d) for expected value (%@) and actual value (%@)", i, expectedArrayValue, actualArrayValue);
+                }
+            } else {
+                XCTAssertEqualObjects(expectedKeyPathValue, actualKeyPathValue);
+            }
         }];
     }
 }
