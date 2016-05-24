@@ -44,7 +44,9 @@
                 NSArray *actualArray = (NSArray *)actualKeyPathValue;
                 XCTAssertEqual(expectedArray.count, actualArray.count);
                 for (NSInteger i=0; i<expectedArray.count; i++) {
+                    XCTAssertNotNil(expectedArray[i]);
                     id expectedArrayValue = expectedArray[i];
+                    XCTAssertNotNil(actualArray[i]);
                     id actualArrayValue = actualArray[i];
                     XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%d) for expected value (%@) and actual value (%@)", i, expectedArrayValue, actualArrayValue);
                 }
