@@ -37,6 +37,7 @@
 		4787E6FDADF6AE63FC2C0EEF /* Pods-PNT-Tests-tvOS-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-tvOS-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-tvOS-ObjC/Pods-PNT-Tests-tvOS-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		47A2FD9D0C53DBC00BCE9117 /* Pods-PNT-Tests-iOS-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-iOS-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-iOS-ObjC/Pods-PNT-Tests-iOS-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		4F90F982F3CBF8F44576F314 /* Pods-PNT-Tests-OSX-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-OSX-ObjC.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-OSX-ObjC/Pods-PNT-Tests-OSX-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		51EB83F41CF62BE40013B10C /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		51EDD2C91CECD47D00F559F7 /* PNT-Tests-iOS-ObjC.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNT-Tests-iOS-ObjC.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EDD2CD1CECD47D00F559F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EDD2D51CECD49E00F559F7 /* PNT-Tests-tvOS-ObjC.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNT-Tests-tvOS-ObjC.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +102,7 @@
 		51EDD2A21CECD38900F559F7 = {
 			isa = PBXGroup;
 			children = (
+				51EB83F41CF62BE40013B10C /* Podfile */,
 				51EDD2E91CECD83500F559F7 /* TestCases */,
 				51EDD2F51CECDB5900F559F7 /* Fixtures */,
 				51EDD2CA1CECD47D00F559F7 /* PNT-Tests-iOS-ObjC */,

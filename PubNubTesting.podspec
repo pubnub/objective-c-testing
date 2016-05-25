@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PubNubTesting"
-  s.version          = "0.6.0"
+  s.version          = "0.7.0"
   s.summary          = "A simple testing pod for PubNub"
 
   s.description      = <<-DESC
