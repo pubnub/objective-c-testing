@@ -14,7 +14,6 @@
 
 @interface XCTestCase (PNTHistory)
 
-- (PNHistoryCompletionBlock)PNT_historyCompletionBlock;
 - (PNHistoryCompletionBlock)PNT_historyCompletionBlockWithHistoryResult:(PNTTestHistoryResult *)expectedResult andError:(PNTTestErrorStatus *)expectedErrorStatus;
 
 @end

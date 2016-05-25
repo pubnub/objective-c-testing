@@ -57,4 +57,26 @@
     }
 }
 
+- (void)PNT_printTestingObject:(id)object {
+    NSString *prettyPrintString = @"";
+    if ([object isKindOfClass:[NSArray class]]) {
+        NSArray *arrayObject = (NSArray *)object;
+        prettyPrintString = [prettyPrintString stringByAppendingString:@"@[\n"];
+        for (id item in arrayObject) {
+            NSString *itemString = nil;
+            if ([item isKindOfClass:[NSNumber class]]) {
+                itemString = [NSString stringWithFormat:@"\t\@%@,\n", item];
+            } else if ([item isKindOfClass:[NSString class]]) {
+                itemString = [NSString stringWithFormat:@"\t\@\"%@\",\n", item];
+            }
+            if (itemString) {
+                prettyPrintString = [prettyPrintString stringByAppendingString:itemString];
+            }
+            
+        }
+        prettyPrintString = [prettyPrintString stringByAppendingString:@"];"];
+    }
+    NSLog(@"%@", prettyPrintString);
+}
+
 @end
