@@ -12,6 +12,7 @@
 @interface XCTestCase (PNTAdditions)
 
 - (void)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult;
+- (NSString *)PNT_stringByAppendingPrettyPrintedStringForObject:(id)object toString:(NSString *)existingString;
 - (void)PNT_printTestingObject:(id)object; // can be either an array or a dictionary, this prints it in a way that can easily be inserted into a test
 
 @end
