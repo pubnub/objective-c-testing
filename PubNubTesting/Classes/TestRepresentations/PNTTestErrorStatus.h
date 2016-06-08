@@ -8,8 +8,6 @@
 
 #import "PNTTestStatus.h"
 
-@interface PNTTestErrorStatus : PNTTestStatus
-
-- (NSArray<NSString *> *)dataKeyPathsToAssert;
+@interface PNTTestErrorStatus : PNTTestStatus <PNTTestRepresentation>
 
 @end

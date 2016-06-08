@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PubNubTesting"
-  s.version          = "0.6.0"
+  s.version          = "0.7.0"
   s.summary          = "A simple testing pod for PubNub"
 
   s.description      = <<-DESC
@@ -28,6 +28,7 @@ This contains all helper methods for testing PubNub. It is abstracted into its o
   s.requires_arc = true
 
   s.source_files = 'PubNubTesting/Classes/**/*'
+  s.dependency 'JSONLiteralString'
   s.dependency 'PubNub'
   s.dependency 'BeKindRewind', '~> 2.3.2'
   s.framework = 'XCTest'

@@ -9,6 +9,7 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
+  - JSONLiteralString (0.3.0)
   - OHHTTPStubs (5.0.0):
     - OHHTTPStubs/Default (= 5.0.0)
   - OHHTTPStubs/Core (5.0.0)
@@ -27,8 +28,9 @@ PODS:
     - PubNub/Core (= 4.3.3)
   - PubNub/Core (4.3.3):
     - CocoaLumberjack (= 2.3.0)
-  - PubNubTesting (0.6.0):
+  - PubNubTesting (0.7.0):
     - BeKindRewind (~> 2.3.2)
+    - JSONLiteralString
     - PubNub
 
 DEPENDENCIES:
@@ -41,10 +43,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BeKindRewind: bd3713b67a4b269bb3e938abd3306a2ee11107f7
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  JSONLiteralString: 00002dc3523978adfaa683071aabcf96423ebce0
   OHHTTPStubs: a5d2e9eea07869d42ec03338325f398bc520e159
   PubNub: 51acd937c947d931a75d2caef654fd12f7573e09
-  PubNubTesting: 0d7f055e5e8ad1b2c5875c335dfde2e19dea3b2a
+  PubNubTesting: f563d2d2770dd7d3cddce7c2f338cb159f45b19d
 
 PODFILE CHECKSUM: 3ea0fd87aced5abf0fc136daed7e6a11ef6a27c2
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1

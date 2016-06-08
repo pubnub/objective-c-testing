@@ -13,4 +13,6 @@
 
 - (void)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult;
 
+- (void)PNT_prettyPrint:(id)object;
+
 @end

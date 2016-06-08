@@ -31,11 +31,14 @@
 }
 
 - (NSArray<NSString *> *)dataKeyPathsToAssert {
-    NSMutableArray *superKeys = [super dataKeyPathsToAssert].mutableCopy;
-    [superKeys addObjectsFromArray:@[
-                                     @"data.timetoken",
-                                     ]];
-    return superKeys.copy;
+//    NSMutableArray *superKeys = [super dataKeyPathsToAssert].mutableCopy;
+//    [superKeys addObjectsFromArray:@[
+//                                     @"data.timetoken",
+//                                     ]];
+//    return superKeys.copy;
+    return @[
+             @"data.timetoken"
+             ];
 }
 
 @end
