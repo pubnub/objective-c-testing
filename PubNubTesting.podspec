@@ -28,6 +28,7 @@ This contains all helper methods for testing PubNub. It is abstracted into its o
   s.requires_arc = true
 
   s.source_files = 'PubNubTesting/Classes/**/*'
+  s.dependency 'JSONLiteralString'
   s.dependency 'PubNub'
   s.dependency 'BeKindRewind', '~> 2.3.2'
   s.framework = 'XCTest'
