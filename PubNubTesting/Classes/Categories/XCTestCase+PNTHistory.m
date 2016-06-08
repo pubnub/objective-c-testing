@@ -15,7 +15,7 @@
     __block XCTestExpectation *historyExpectation = [self expectationWithDescription:@"history"];
     return ^void (PNHistoryResult * _Nullable result, PNErrorStatus * _Nullable status) {
 //        NSLog(@"result: %@", result.debugDescription);
-        NSLog(@"messages: %@", result.data.messages);
+//        NSLog(@"messages: %@", result.data.messages);
 //        [self PNT_printTestingObject:result.data.messages];
 //        NSLog(@"result.data.messages: %@", [result.data.messages PNT_literalRepresentation]);
         [self PNT_prettyPrint:result.data.messages];

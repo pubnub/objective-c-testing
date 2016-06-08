@@ -32,7 +32,7 @@
         Class PubNubClass = [expectedResult.class PubNubClass];
         XCTAssertTrue([actualResult isKindOfClass:PubNubClass]);
         id actualValue = [idActual valueForKey:obj];
-        XCTAssertEqualObjects(expectedValue, actualValue);
+        XCTAssertEqualObjects(expectedValue, actualValue, @"For key (%@) expected value (%@) does not match actual value (%@)", obj, expectedValue, actualValue);
     }];
     if ([expectedResult respondsToSelector:@selector(dataKeysToAssert)]) {
         NSArray<NSString *> *dataKeyPaths = [expectedResult dataKeysToAssert];
@@ -50,7 +50,6 @@
                     XCTAssertNotNil(actualArray[i]);
                     id actualArrayValue = actualArray[i];
                     XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%d) for expected value (%@) and actual value (%@)", i, expectedArrayValue, actualArrayValue);
-                    NSLog(@"this");
                 }
             } else {
                 XCTAssertEqualObjects(expectedKeyPathValue, actualKeyPathValue);
