@@ -52,7 +52,7 @@
                     XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%d) for expected value (%@) and actual value (%@)", i, expectedArrayValue, actualArrayValue);
                 }
             } else {
-                XCTAssertEqualObjects(expectedKeyPathValue, actualKeyPathValue);
+                XCTAssertEqualObjects(expectedKeyPathValue, actualKeyPathValue, @"For keyPath (%@) expected value (%@) does not match actual value (%@)", obj, expectedKeyPathValue, actualKeyPathValue);
             }
         }];
     }
