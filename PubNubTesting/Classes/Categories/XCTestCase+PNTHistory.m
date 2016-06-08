@@ -8,7 +8,6 @@
 
 #import "XCTestCase+PNTHistory.h"
 #import "XCTestCase+PNTAdditions.h"
-#import "NSObject+PNTPrettyPrinting.h"
 
 @implementation XCTestCase (PNTHistory)
 
@@ -18,7 +17,8 @@
 //        NSLog(@"result: %@", result.debugDescription);
         NSLog(@"messages: %@", result.data.messages);
 //        [self PNT_printTestingObject:result.data.messages];
-        NSLog(@"result.data.messages: %@", [result.data.messages PNT_literalRepresentation]);
+//        NSLog(@"result.data.messages: %@", [result.data.messages PNT_literalRepresentation]);
+        [self PNT_prettyPrint:result.data.messages];
         XCTAssertNotNil(result);
         XCTAssertNotNil(result.data.messages);
         [self PNT_assertExpected:expectedResult withActual:result];

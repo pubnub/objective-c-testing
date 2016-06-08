@@ -7,6 +7,7 @@
 //
 
 #import <PubNub/PubNub.h>
+#import <JSONLiteralString/JSONLiteralString.h>
 #import "XCTestCase+PNTAdditions.h"
 #import "PNTTestConstants.h"
 #import "PNTTestErrorStatus.h"
@@ -49,6 +50,7 @@
                     XCTAssertNotNil(actualArray[i]);
                     id actualArrayValue = actualArray[i];
                     XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%d) for expected value (%@) and actual value (%@)", i, expectedArrayValue, actualArrayValue);
+                    NSLog(@"this");
                 }
             } else {
                 XCTAssertEqualObjects(expectedKeyPathValue, actualKeyPathValue);
@@ -57,54 +59,8 @@
     }
 }
 
-- (NSString *)PNT_stringByAppendingPrettyPrintedStringForObject:(id)object toString:(NSString *)existingString {
-    if (
-        !object ||
-        !existingString
-        ) {
-        return nil;
-    }
-    if ([object isKindOfClass:[NSArray class]]) {
-        NSArray *arrayObject = (NSArray *)object;
-        existingString = [existingString stringByAppendingString:@"@[\n"];
-        for (id item in arrayObject) {
-            return [self PNT_stringByAppendingPrettyPrintedStringForObject:item toString:existingString];
-        }
-        
-    }
-//    NSString *prettyPrintString = @"";
-//    if ([object isKindOfClass:[NSArray class]]) {
-//        NSArray *arrayObject = (NSArray *)object;
-//        prettyPrintString = [prettyPrintString stringByAppendingString:@"@[\n"];
-//        for (id item in arrayObject) {
-//            NSString *itemString = nil;
-//            if ([item isKindOfClass:[NSNumber class]]) {
-//                itemString = [NSString stringWithFormat:@"\t\@%@,\n", item];
-//            } else if ([item isKindOfClass:[NSString class]]) {
-//                itemString = [NSString stringWithFormat:@"\t\@\"%@\",\n", item];
-//            }
-//            if (itemString) {
-//                prettyPrintString = [prettyPrintString stringByAppendingString:itemString];
-//            }
-//            
-//        }
-//        prettyPrintString = [prettyPrintString stringByAppendingString:@"];"];
-//    }
-//    return prettyPrintString;
-}
-
-- (void)PNT_printTestingObject:(id)object {
-    NSString *prettyPrintString = [self PNT_stringByAppendingPrettyPrintedStringForObject:object toString:@""];
-    if (prettyPrintString) {
-        NSLog(@"%@", prettyPrintString);
-    }
-}
-
-- (NSString *)PNT_prettyPrintedLine:(id)object {
-    if (!object) {
-        return nil;
-    }
-    return [NSString stringWithFormat:@"\t\@%@,\n", object];
+- (void)PNT_prettyPrint:(id)object {
+    NSLog(@"%p\n%@", object, [object JLS_literalString]);
 }
 
 @end

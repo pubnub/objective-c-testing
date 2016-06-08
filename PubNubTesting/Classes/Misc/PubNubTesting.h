@@ -12,8 +12,8 @@
 // Constants
 #import "PNTTestConstants.h"
 
-// Easy fixture comparison
-#import "NSObject+PNTPrettyPrinting.h"
+// Utilities
+#import "XCTestCase+PNTAdditions.h"
 
 // Matchers
 #import "PNTDeviceIndependentMatcher.h"

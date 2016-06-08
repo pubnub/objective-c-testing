@@ -22,7 +22,7 @@
     return @"a";
 }
 
-- (void)DISABLE_testGetHistory {
+- (void)testGetHistory {
     NSArray *messages = @[
                           @"********....... 8695 - 2016-05-17 11:59:32",
                           @123,
@@ -43,26 +43,26 @@
                           @123,
                           @"test",
                           @{
-                              @"test": @"test"
-                          },
+                              @"test": @"test",
+                              },
                           @{
-                              @"test":         @{
-                                  @"test": @"test"
-                              }
-                          },
+                              @"test": @{
+                                      @"test": @"test",
+                                      },
+                              },
                           @"test",
                           @"test",
                           @"test",
                           @"test",
                           @"test",
                           @"*.............. 8703 - 2016-05-17 12:08:12",
-                          @"test",
+                          @123,
                           @"**............. 8704 - 2016-05-17 12:09:17",
-                          @"test",
+                          @123,
                           @"***............ 8705 - 2016-05-17 12:10:22",
-                          @"test",
+                          @123,
                           @"****........... 8706 - 2016-05-17 12:11:26",
-                          @"test",
+                          @123,
                           @"*****.......... 8707 - 2016-05-17 12:12:31",
                           @123,
                           @"******......... 8708 - 2016-05-17 12:13:36",
@@ -115,12 +115,12 @@
                           @"test",
                           @{
                               @"test": @"test",
-                          },
+                              },
                           @{
-                              @"test":         @{
-                                  @"test": @"test",
-                              }
-                          },
+                              @"test": @{
+                                      @"test": @"test",
+                                      },
+                              },
                           @"test",
                           @"test",
                           @"test",
@@ -135,7 +135,7 @@
                           @123,
                           @123,
                           @"**............. 8734 - 2016-05-17 12:41:42",
-                          @123
+                          @123,
                           ];
     PNTTestHistoryResult *expectedResult = [PNTTestHistoryResult successfulResultWithClient:self.client statusCode:200 start:@14635115736913685 end:@14635141632331604 messages:messages];
     [self.client historyForChannel:self.historyChannel withCompletion:[self PNT_historyCompletionBlockWithHistoryResult:expectedResult andError:nil]];
