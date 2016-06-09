@@ -12,6 +12,8 @@
 @protocol PNTTestRepresentation <NSObject>
 
 - (NSArray<NSString *> *)keysToAssert;
+@optional
+- (NSArray<NSString *> *)dataKeysToAssert;
 
 @end
 

@@ -12,6 +12,9 @@
 // Constants
 #import "PNTTestConstants.h"
 
+// Utilities
+#import "XCTestCase+PNTAdditions.h"
+
 // Matchers
 #import "PNTDeviceIndependentMatcher.h"
 

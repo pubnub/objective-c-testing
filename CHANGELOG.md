@@ -1,5 +1,11 @@
 # PubNubTesting — CHANGELOG
 
+## [0.7.0](https://github.com/pubnub/objective-c-testing/releases/tag/0.7.0)
+
+* Updated for better and easier testing with test objects
+* Fixed Travis CI
+* Added JSONLiteralString as dependency for easy literal pretty printing of objects
+
 ## [0.6.0](https://github.com/pubnub/objective-c-testing/releases/tag/0.6.0)
 
 * Renamed Pod to PubNubTesting
