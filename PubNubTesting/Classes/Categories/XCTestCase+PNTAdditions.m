@@ -44,12 +44,21 @@
                 NSArray *expectedArray = (NSArray *)expectedKeyPathValue;
                 NSArray *actualArray = (NSArray *)actualKeyPathValue;
                 XCTAssertEqual(expectedArray.count, actualArray.count);
+                if (expectedArray.count != actualArray.count) {
+                    // Stop execution if the count is different, above check is slightly inefficient but creates better logs
+                    [self PNT_prettyPrint:actualArray];
+                    return;
+                }
                 for (NSInteger i=0; i<expectedArray.count; i++) {
                     XCTAssertNotNil(expectedArray[i]);
                     id expectedArrayValue = expectedArray[i];
                     XCTAssertNotNil(actualArray[i]);
                     id actualArrayValue = actualArray[i];
                     XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%d) for expected value (%@) and actual value (%@)", i, expectedArrayValue, actualArrayValue);
+                    if (![expectedArrayValue isEqual:actualArrayValue]) {
+                        [self PNT_prettyPrint:actualArray];
+                        return;
+                    }
                 }
             } else {
                 XCTAssertEqualObjects(expectedKeyPathValue, actualKeyPathValue, @"For keyPath (%@) expected value (%@) does not match actual value (%@)", obj, expectedKeyPathValue, actualKeyPathValue);
@@ -59,7 +68,7 @@
 }
 
 - (void)PNT_prettyPrint:(id)object {
-    NSLog(@"%p\n%@", object, [object JLS_literalString]);
+    NSLog(@"%p:\n%@", object, [object JLS_literalString]);
 }
 
 @end

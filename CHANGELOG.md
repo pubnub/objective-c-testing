@@ -1,5 +1,9 @@
 # PubNubTesting — CHANGELOG
 
+## [0.7.1](https://github.com/pubnub/objective-c-testing/releases/tag/0.7.1)
+
+* Fixed comparing objects if they are arrays, especially of different lengths
+
 ## [0.7.0](https://github.com/pubnub/objective-c-testing/releases/tag/0.7.0)
 
 * Updated for better and easier testing with test objects
