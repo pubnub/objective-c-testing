@@ -16,8 +16,8 @@
     return ^void (PNHistoryResult * _Nullable result, PNErrorStatus * _Nullable status) {
         XCTAssertNotNil(result);
         XCTAssertNotNil(result.data.messages);
-        [self PNT_assertExpected:expectedResult withActual:result];
-        [self PNT_assertExpected:expectedErrorStatus withActual:status];
+        [self PNT_assertExpected:(PNTTestResult *)expectedResult withActual:result];
+        [self PNT_assertExpected:(PNTTestResult *)expectedErrorStatus withActual:status];
         [historyExpectation fulfill];
     };
 }

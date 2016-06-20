@@ -54,7 +54,7 @@
                     id expectedArrayValue = expectedArray[i];
                     XCTAssertNotNil(actualArray[i]);
                     id actualArrayValue = actualArray[i];
-                    XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%d) for expected value (%@) and actual value (%@)", i, expectedArrayValue, actualArrayValue);
+                    XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%ld) for expected value (%@) and actual value (%@)", (long)i, expectedArrayValue, actualArrayValue);
                     if (![expectedArrayValue isEqual:actualArrayValue]) {
                         [self PNT_prettyPrint:actualArray];
                         return;
