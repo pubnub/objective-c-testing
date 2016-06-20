@@ -14,6 +14,7 @@
 
 // Utilities
 #import "XCTestCase+PNTAdditions.h"
+#import "NSString+PNTAdditions.h"
 
 // Matchers
 #import "PNTDeviceIndependentMatcher.h"
