@@ -27,10 +27,10 @@
 }
 
 + (instancetype)failedStatusWithClient:(PubNub *)client {
-    return [[self alloc] initPublishStatusWithClient:client statusCode:400 isError:YES timeToken:nil];
+    return [PNTTestErrorStatus errorWithClient:client statusCode:400 operation:PNPublishOperation category:PNBadRequestCategory];
 }
 
-- (NSArray<NSString *> *)dataKeyPathsToAssert {
+- (NSArray<NSString *> *)dataKeysToAssert {
 //    NSMutableArray *superKeys = [super dataKeyPathsToAssert].mutableCopy;
 //    [superKeys addObjectsFromArray:@[
 //                                     @"data.timetoken",
