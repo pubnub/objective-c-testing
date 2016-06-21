@@ -9,6 +9,8 @@
 #import <XCTest/XCTest.h>
 #import "PNTTestResult.h"
 
+@class PNResult;
+
 @interface XCTestCase (PNTAdditions)
 
 - (void)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult;
