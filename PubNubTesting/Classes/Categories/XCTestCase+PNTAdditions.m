@@ -34,7 +34,12 @@
         id actualValue = [idActual valueForKey:obj];
         XCTAssertEqualObjects(expectedValue, actualValue, @"For key (%@) expected value (%@) does not match actual value (%@)", obj, expectedValue, actualValue);
     }];
-    if ([expectedResult respondsToSelector:@selector(dataKeysToAssert)]) {
+    if (
+        [expectedResult respondsToSelector:@selector(isError)] &&
+        [expectedResult performSelector:@selector(isError)]
+        ) {
+        // add more checks for error messages later
+    } else if ([expectedResult respondsToSelector:@selector(dataKeysToAssert)]) {
         NSArray<NSString *> *dataKeyPaths = [expectedResult dataKeysToAssert];
         [dataKeyPaths enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSString *expectedKeyPath = [obj stringByReplacingOccurrencesOfString:@"data." withString:@""];
@@ -54,7 +59,7 @@
                     id expectedArrayValue = expectedArray[i];
                     XCTAssertNotNil(actualArray[i]);
                     id actualArrayValue = actualArray[i];
-                    XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%d) for expected value (%@) and actual value (%@)", i, expectedArrayValue, actualArrayValue);
+                    XCTAssertEqualObjects(expectedArrayValue, actualArrayValue, @"Failure to match at index (%ld) for expected value (%@) and actual value (%@)", (long)i, expectedArrayValue, actualArrayValue);
                     if (![expectedArrayValue isEqual:actualArrayValue]) {
                         [self PNT_prettyPrint:actualArray];
                         return;

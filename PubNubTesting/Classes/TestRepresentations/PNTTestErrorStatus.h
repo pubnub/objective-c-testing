@@ -10,4 +10,7 @@
 
 @interface PNTTestErrorStatus : PNTTestStatus <PNTTestRepresentation>
 
+- (instancetype)initErrorWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category;
++ (instancetype)errorWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category;
+
 @end
