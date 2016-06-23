@@ -26,8 +26,8 @@
     return [[self alloc] initPublishStatusWithClient:client statusCode:200 isError:NO timeToken:timeToken];
 }
 
-+ (instancetype)failedStatusWithClient:(PubNub *)client {
-    return [PNTTestErrorStatus errorWithClient:client statusCode:400 operation:PNPublishOperation category:PNBadRequestCategory];
++ (PNTTestPublishStatus *)failedStatusWithClient:(PubNub *)client {
+    return (PNTTestPublishStatus *)[PNTTestErrorStatus errorWithClient:client statusCode:400 operation:PNPublishOperation category:PNBadRequestCategory];
 }
 
 - (NSArray<NSString *> *)dataKeysToAssert {

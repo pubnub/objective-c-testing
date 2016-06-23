@@ -1,5 +1,9 @@
 # PubNubTesting — CHANGELOG
 
+## [0.7.3](https://github.com/pubnub/objective-c-testing/releases/tag/0.7.3)
+
+* Silenced another warning accidentally added for failed publishes
+
 ## [0.7.2](https://github.com/pubnub/objective-c-testing/releases/tag/0.7.2)
 
 * Added method for generating random strings of fixed lengths

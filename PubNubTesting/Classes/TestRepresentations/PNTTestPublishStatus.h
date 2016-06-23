@@ -14,6 +14,6 @@
 
 - (instancetype)initPublishStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError timeToken:(NSNumber *)timeToken;
 + (instancetype)successfulStatusWithClient:(PubNub *)client timeToken:(NSNumber *)timeToken;
-+ (instancetype)failedStatusWithClient:(PubNub *)client;
++ (PNTTestPublishStatus *)failedStatusWithClient:(PubNub *)client;
 
 @end
