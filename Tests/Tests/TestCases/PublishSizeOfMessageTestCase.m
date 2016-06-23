@@ -30,4 +30,9 @@
     [self waitFor:kPNTSizeOfMessageTimeout];
 }
 
+- (void)testSizeOfStringMessageWithNoStoreInHistoryAndNotCompressed {
+    [self.client sizeOfMessage:@"test" toChannel:self.publishChannel compressed:NO storeInHistory:NO withCompletion:[self PNT_messageSizeCompletionWithSize:341]];
+    [self waitFor:kPNTSizeOfMessageTimeout];
+}
+
 @end

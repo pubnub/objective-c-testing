@@ -8,7 +8,7 @@
 
 #import "XCTestCase+PNTSizeOfMessage.h"
 
-static NSInteger const kPNTMessageSizeTolerance = 11;
+static NSInteger const kPNTMessageSizeTolerance = 15;
 
 @implementation XCTestCase (PNTSizeOfMessage)
 
