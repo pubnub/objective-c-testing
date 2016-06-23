@@ -1,5 +1,9 @@
 # PubNubTesting — CHANGELOG
 
+## [0.7.5](https://github.com/pubnub/objective-c-testing/releases/tag/0.7.5)
+
+* More tolerance for publish message size estimation
+
 ## [0.7.4](https://github.com/pubnub/objective-c-testing/releases/tag/0.7.4)
 
 * Added a fix for failing size of estimate test
