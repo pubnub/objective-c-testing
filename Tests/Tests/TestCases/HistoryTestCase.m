@@ -127,7 +127,7 @@
                           ];
     PNTTestHistoryResult *expectedResult = [PNTTestHistoryResult successfulResultWithClient:self.client statusCode:200 start:@14654142431936747 end:@14654173241405040 messages:messages];
     [self.client historyForChannel:self.historyChannel withCompletion:[self PNT_historyCompletionBlockWithHistoryResult:expectedResult andError:nil]];
-    [self waitFor:kPNTHistoryTimeout];
+    [self PNT_waitFor:kPNTHistoryTimeout];
 }
 
 - (void)testGetHistoryForChannelWithNoMessages {
@@ -136,7 +136,7 @@
     NSString *emptyChannel = @"please-dont-use-this-channel";
     PNTTestHistoryResult *expectedResult = [PNTTestHistoryResult successfulResultWithClient:self.client statusCode:200 start:@0 end:@0 messages:messages];
     [self.client historyForChannel:emptyChannel withCompletion:[self PNT_historyCompletionBlockWithHistoryResult:expectedResult andError:nil]];
-    [self waitFor:kPNTHistoryTimeout];
+    [self PNT_waitFor:kPNTHistoryTimeout];
 }
 
 @end

@@ -13,4 +13,8 @@
 - (instancetype)initAcknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError;
 + (instancetype)acknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError;
 
++ (instancetype)channelGroupAddWithClient:(PubNub *)client;
++ (instancetype)channelGroupRemoveWithClient:(PubNub *)client;
++ (instancetype)channelGroupRemoveAllChannelsWithClient:(PubNub *)client;
+
 @end
