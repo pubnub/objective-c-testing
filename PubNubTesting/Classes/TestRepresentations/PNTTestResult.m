@@ -17,19 +17,19 @@
 
 @implementation PNTTestResult
 
-- (instancetype)initWithClient:(PubNub *)client andPubNubResult:(id)pubNubResult {
+@synthesize actualResult = _actualResult;
+
+- (instancetype)initWithClient:(PubNub *)client {
     NSParameterAssert(client);
-    NSParameterAssert(pubNubResult);
     self = [super init];
     if (self) {
         _client = client;
-        _actualPubNubResult = (PNResult *)pubNubResult;
     }
     return self;
 }
 
-- (instancetype)initResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult {
-    self = [self initWithClient:client andPubNubResult:pubNubResult];
+- (instancetype)initResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType {
+    self = [self initWithClient:client];
     if (self) {
         _statusCode = statusCode;
         _operation = operationType;
@@ -37,12 +37,16 @@
     return self;
 }
 
-+ (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult {
-    return [[self alloc] initResultWithClient:client statusCode:statusCode operation:operationType andPubNubResult:pubNubResult];
++ (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType {
+    return [[self alloc] initResultWithClient:client statusCode:statusCode operation:operationType];
 }
 
-- (NSObject *)pubNubResult {
-    return self.actualPubNubResult;
+- (PNResult *)actualResult {
+    return _actualResult;
+}
+
+- (void)setActualResult:(PNResult *)actualResult {
+    _actualResult = actualResult;
 }
 
 - (NSArray<NSString *> *)keysToAssert {

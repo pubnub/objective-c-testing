@@ -9,16 +9,17 @@
 #import <Foundation/Foundation.h>
 
 @class PubNub;
+@class PNResult;
 
 @protocol PNTTestRepresentation <NSObject>
 
 + (Class)PubNubClass;
 + (NSString *)PubNubClassName;
 - (NSArray<NSString *> *)keysToAssert;
-- (instancetype)initWithClient:(PubNub *)client andPubNubResult:(id)actualPubNubResult;
+- (instancetype)initWithClient:(PubNub *)client;
 
 @property (nonatomic, strong, readonly) PubNub *client;
-@property (nonatomic, strong, readonly) NSObject *actualResult;
+@property (nonatomic, strong) PNResult *actualResult;
 
 @optional
 - (NSArray<NSString *> *)dataKeysToAssert;

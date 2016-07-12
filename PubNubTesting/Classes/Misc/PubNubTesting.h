@@ -38,7 +38,7 @@
 //#import "XCTestCase+PNTChannelGroup.h"
 //#import "XCTestCase+PNTClientState.h"
 //#import "XCTestCase+PNTHistory.h"
-//#import "XCTestCase+PNTPublish.h"
+#import "XCTestCase+PNTPublish.h"
 //#import "XCTestCase+PNTSizeOfMessage.h"
 //#import "XCTestCase+PNTSubscription.h"
 

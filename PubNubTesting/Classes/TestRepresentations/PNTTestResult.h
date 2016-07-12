@@ -13,10 +13,9 @@
 
 @property (nonatomic, readonly, assign) NSInteger statusCode;
 @property (nonatomic, readonly, assign) PNOperationType operation;
-@property (nonatomic, strong, readonly) PNResult *actualPubNubResult;
 
-- (instancetype)initResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult;
+- (instancetype)initResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType;
 
-+ (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult;
++ (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType;
 
 @end

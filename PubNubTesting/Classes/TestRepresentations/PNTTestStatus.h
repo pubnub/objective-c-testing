@@ -14,11 +14,11 @@
 
 @property (nonatomic, readonly, assign) PNStatusCategory category;
 @property (nonatomic, readonly, assign, getter = isError) BOOL error;
-@property (nonatomic, strong, readonly) PNStatus *actualPubNubStatus;
+@property (nonatomic, strong) PNStatus *actualStatus;
 
-- (instancetype)initStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError andPubNubStatus:(PNStatus *)pubNubStatus;
+- (instancetype)initStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
 
-+ (instancetype)statusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError andPubNubStatus:(PNStatus *)pubNubStatus;
++ (instancetype)statusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
 
 @end
 
@@ -26,14 +26,31 @@
 
 @interface PNTTestErrorStatus : PNTTestStatus
 
-- (instancetype)initErrorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category andPubNubStatus:(PNErrorStatus *)pubNubErrorStatus;
-+ (instancetype)errorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category andPubNubStatus:(PNErrorStatus *)pubNubErrorStatus;
+@property (nonatomic, strong) PNErrorStatus *actualErrorStatus;
+
+- (instancetype)initErrorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
++ (instancetype)errorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
 
 @end
 
+#pragma mark - Base Acknowledgment Status Class (Abstract)
+
 @interface PNTTestAcknowledgmentStatus : PNTTestErrorStatus
 
-- (instancetype)initAcknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError andPubNubStatus:(PNAcknowledgmentStatus *)pubNubAcknowledgmentStatus;
-+ (instancetype)acknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError andPubNubStatus:(PNAcknowledgmentStatus *)pubNubAcknowledgmentStatus;
+@property (nonatomic, strong) PNAcknowledgmentStatus *actualAcknowledgmentStatus;
+
+- (instancetype)initAcknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError;
++ (instancetype)acknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError;
+
+@end
+
+@interface PNTTestPublishStatus : PNTTestAcknowledgmentStatus
+
+@property (nonatomic, readonly, strong) NSNumber *timetoken;
+@property (nonatomic, strong) PNPublishStatus *actualPublishStatus;
+
+- (instancetype)initPublishStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError timeToken:(NSNumber *)timeToken;
++ (instancetype)successfulStatusWithClient:(PubNub *)client timeToken:(NSNumber *)timeToken;
++ (PNTTestPublishStatus *)failedStatusWithClient:(PubNub *)client;
 
 @end
