@@ -6,6 +6,7 @@
 //
 //
 
+#import "XCTestCase+PNTAdditions.h"
 #import "PNTSubscribeLoopTestCase.h"
 #import "XCTestCase+PNTChannelGroup.h"
 #import "XCTestCase+PNTSubscription.h"
@@ -106,16 +107,15 @@
         // loop through all channel groups
         for (NSString *channelGroup in self.subscribedChannelGroups) {
             // first remove channel group
-            [self.client removeChannelsFromGroup:channelGroup withCompletion:[self PNT_channelGroupRemoveAllChannels]];
-            [self waitFor:kPNTChannelGroupChangeTimeout];
+            [self PNT_removeChannelGroup:channelGroup forClient:self.client];
+            // now add specified channels
             NSArray<NSString *> *channels = [self expectedChannelsForChannelGroup:channelGroup];
-            [self.client addChannels:channels toGroup:channelGroup withCompletion:[self PNT_channelGroupAdd]];
-            [self waitFor:kPNTChannelGroupChangeTimeout];
+            [self PNT_addChannels:channels toGroup:channelGroup forClient:self.client];
         }
         self.channelGroupSubscribeSetUpExpectation = [self expectationWithDescription:@"channel group subscribe setUp"];
         [self.client subscribeToChannelGroups:self.subscribedChannelGroups withPresence:self.shouldSubscribeWithPresence];
     }
-    [self waitFor:kPNTSubscribeTimeout];
+    [self PNT_waitFor:kPNTSubscribeTimeout];
 }
 
 - (void)tearDown {
@@ -123,7 +123,7 @@
         self.isTearingDown = YES;
         self.tearDownExpectation = [self expectationWithDescription:@"tearDown"];
         [self.client unsubscribeFromAll];
-        [self waitFor:kPNTUnsubscribeTimeout];
+        [self PNT_waitFor:kPNTUnsubscribeTimeout];
     }
     [self.client removeListener:self];
     self.isTearingDown = NO;

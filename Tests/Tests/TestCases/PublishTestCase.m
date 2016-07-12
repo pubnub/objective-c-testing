@@ -21,7 +21,7 @@
 - (void)testPublishString {
     PNTTestPublishStatus *expectedStatus = [PNTTestPublishStatus successfulStatusWithClient:self.client timeToken:@14665431616192699];
     [self.client publish:@"test" toChannel:self.publishChannel withCompletion:[self PNT_completionWithExpectedPublishStatus:expectedStatus]];
-    [self waitFor:kPNTPublishTimeout];
+    [self PNT_waitFor:kPNTPublishTimeout];
 }
 
 - (void)testPublishNilMessage {
@@ -30,7 +30,7 @@
 #pragma clang diagnostic ignored "-Wnonnull"
     [self.client publish:nil toChannel:self.publishChannel withCompletion:[self PNT_completionWithExpectedPublishStatus:expectedStatus]];
 #pragma clang diagnostic pop
-    [self waitFor:kPNTPublishTimeout];
+    [self PNT_waitFor:kPNTPublishTimeout];
 }
 
 @end

@@ -19,6 +19,18 @@
     return [[self alloc] initAcknowledgmentStatusWithClient:client statusCode:statusCode operation:operationType isError:isError];
 }
 
++ (instancetype)channelGroupAddWithClient:(PubNub *)client {
+    return [self acknowledgmentStatusWithClient:client statusCode:200 operation:PNAddChannelsToGroupOperation isError:NO];
+}
+
++ (instancetype)channelGroupRemoveWithClient:(PubNub *)client {
+    return [self acknowledgmentStatusWithClient:client statusCode:200 operation:PNRemoveChannelsFromGroupOperation isError:NO];
+}
+
++ (instancetype)channelGroupRemoveAllChannelsWithClient:(PubNub *)client {
+    return [self acknowledgmentStatusWithClient:client statusCode:200 operation:PNRemoveGroupOperation isError:NO];
+}
+
 //- (NSArray<NSString *> *)keysToAssert {
 //    NSMutableArray *superKeys = [super keysToAssert].mutableCopy;
 //    [superKeys addObjectsFromArray:@[

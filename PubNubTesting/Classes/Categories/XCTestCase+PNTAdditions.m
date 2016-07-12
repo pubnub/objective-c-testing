@@ -76,4 +76,22 @@
     NSLog(@"%p:\n%@", object, [object JLS_literalString]);
 }
 
+- (NSString *)PNT_testCaseName {
+    return NSStringFromSelector(self.invocation.selector);
+}
+
+- (void)PNT_waitFor:(NSTimeInterval)timeout {
+    [self PNT_waitFor:timeout withHandler:nil];
+}
+
+- (void)PNT_waitFor:(NSTimeInterval)timeout withHandler:(XCWaitCompletionHandler)handler {
+    NSParameterAssert(timeout);
+    [self waitForExpectationsWithTimeout:timeout handler:^(NSError * _Nullable error) {
+        XCTAssertNil(error);
+        if (handler) {
+            handler(error);
+        }
+    }];
+}
+
 @end
