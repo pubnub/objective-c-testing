@@ -7,13 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "PNTTestResult.h"
+#import "PNTTestRepresentation.h"
 
 @class PNResult;
 
 @interface XCTestCase (PNTAdditions)
 
-- (void)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult;
+- (void)PNT_assertTestRepresentation:(NSObject<PNTTestRepresentation> *)testObject;
 
 - (void)PNT_prettyPrint:(id)object;
 

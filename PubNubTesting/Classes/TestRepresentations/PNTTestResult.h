@@ -6,29 +6,18 @@
 //
 //
 
-#import <XCTest/XCTest.h>
-#import <PubNub/PubNub.h>
+#import "PNTTestRepresentation.h"
 
-@protocol PNTTestRepresentation <NSObject>
-
-- (NSArray<NSString *> *)keysToAssert;
-@optional
-- (NSArray<NSString *> *)dataKeysToAssert;
-
-@end
+@class PNResult;
 
 @interface PNTTestResult : NSObject <PNTTestRepresentation>
 
 @property (nonatomic, readonly, assign) NSInteger statusCode;
 @property (nonatomic, readonly, assign) PNOperationType operation;
-@property (nonatomic, readonly, strong) PubNub *client;
+@property (nonatomic, strong, readonly) PNResult *actualPubNubResult;
 
-- (instancetype)initWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType;
+- (instancetype)initWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult;
 
-+ (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType;
-
-+ (NSString *)PubNubClassName;
-
-+ (Class)PubNubClass;
++ (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult;
 
 @end

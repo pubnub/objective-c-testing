@@ -10,41 +10,37 @@
 #import <JSONLiteralString/JSONLiteralString.h>
 #import "XCTestCase+PNTAdditions.h"
 #import "PNTTestConstants.h"
-#import "PNTTestErrorStatus.h"
 
 @implementation XCTestCase (PNTAdditions)
 
-- (void)PNT_assertExpected:(PNTTestResult *)expectedResult withActual:(PNResult *)actualResult {
+- (void)PNT_assertTestRepresentation:(NSObject<PNTTestRepresentation> *)testObject; {
     if (
-        !expectedResult &&
-        !actualResult
+        !testObject
         ) {
         // if both are nil then return, nothing to check
         return;
     }
-    XCTAssertNotNil(expectedResult);
+    NSObject *actualResult = [testObject actualResult];
     XCTAssertNotNil(actualResult);
-    NSArray<NSString *> *keys = [expectedResult keysToAssert];
-    id idActual = (id)actualResult;
-    id idExpected = (id)expectedResult;
+    NSArray<NSString *> *keys = [testObject keysToAssert];
     [keys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        id expectedValue = [expectedResult valueForKey:obj];
-        Class PubNubClass = [expectedResult.class PubNubClass];
+        id expectedValue = [testObject valueForKey:obj];
+        Class PubNubClass = [testObject.class PubNubClass];
         XCTAssertTrue([actualResult isKindOfClass:PubNubClass]);
-        id actualValue = [idActual valueForKey:obj];
+        id actualValue = [actualResult valueForKey:obj];
         XCTAssertEqualObjects(expectedValue, actualValue, @"For key (%@) expected value (%@) does not match actual value (%@)", obj, expectedValue, actualValue);
     }];
     if (
-        [expectedResult respondsToSelector:@selector(isError)] &&
-        [expectedResult performSelector:@selector(isError)]
+        [testObject respondsToSelector:@selector(isError)] &&
+        [testObject performSelector:@selector(isError)]
         ) {
         // add more checks for error messages later
-    } else if ([expectedResult respondsToSelector:@selector(dataKeysToAssert)]) {
-        NSArray<NSString *> *dataKeyPaths = [expectedResult dataKeysToAssert];
+    } else if ([testObject respondsToSelector:@selector(dataKeysToAssert)]) {
+        NSArray<NSString *> *dataKeyPaths = [testObject dataKeysToAssert];
         [dataKeyPaths enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSString *expectedKeyPath = [obj stringByReplacingOccurrencesOfString:@"data." withString:@""];
-            id expectedKeyPathValue = [idExpected valueForKeyPath:expectedKeyPath];
-            id actualKeyPathValue = [idActual valueForKeyPath:obj];
+            id expectedKeyPathValue = [testObject valueForKeyPath:expectedKeyPath];
+            id actualKeyPathValue = [actualResult valueForKeyPath:obj];
             if ([expectedKeyPathValue isKindOfClass:[NSArray class]]) {
                 NSArray *expectedArray = (NSArray *)expectedKeyPathValue;
                 NSArray *actualArray = (NSArray *)actualKeyPathValue;
