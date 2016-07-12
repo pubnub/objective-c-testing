@@ -1,5 +1,10 @@
 # PubNubTesting — CHANGELOG
 
+## [0.8.0](https://github.com/pubnub/objective-c-testing/releases/tag/0.8.0)
+
+* Added better support for channel group changes.
+* Moved wait for asynchronous execution helper method from subclass into a category.
+
 ## [0.7.5](https://github.com/pubnub/objective-c-testing/releases/tag/0.7.5)
 
 * More tolerance for publish message size estimation

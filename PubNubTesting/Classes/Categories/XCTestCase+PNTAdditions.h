@@ -17,4 +17,9 @@
 
 - (void)PNT_prettyPrint:(id)object;
 
+- (NSString *)PNT_testCaseName;
+
+- (void)PNT_waitFor:(NSTimeInterval)timeout;
+- (void)PNT_waitFor:(NSTimeInterval)timeout withHandler:(XCWaitCompletionHandler)handler;
+
 @end

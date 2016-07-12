@@ -24,6 +24,8 @@
 #import "PNTTestStatus.h"
 #import "PNTTestErrorStatus.h"
 #import "PNTTestAcknowledgmentStatus.h"
+#import "PNTTestChannelGroupChannelsResult.h"
+#import "PNTTestChannelGroupsResult.h"
 #import "PNTTestHistoryResult.h"
 #import "PNTTestPublishStatus.h"
 #import "PNTTestTimeResult.h"
