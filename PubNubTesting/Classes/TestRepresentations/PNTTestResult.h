@@ -19,3 +19,16 @@
 + (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType;
 
 @end
+
+@interface PNTTestHistoryResult : PNTTestResult
+
+@property (nonatomic, strong, readonly) NSNumber *start;
+@property (nonatomic, strong, readonly) NSNumber *end;
+@property (nonatomic, strong, readonly) NSArray *messages;
+@property (nonatomic, strong) PNHistoryResult *actualHistoryResult;
+
+- (instancetype)initHistoryResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages;
+
++ (instancetype)successfulResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages;
+
+@end

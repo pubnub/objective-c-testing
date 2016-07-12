@@ -65,6 +65,38 @@
     return NSClassFromString([self PubNubClassName]);
 }
 
+@end
 
+@implementation PNTTestHistoryResult
+
+- (instancetype)initHistoryResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages {
+    self = [super initResultWithClient:client statusCode:statusCode operation:PNHistoryOperation];
+    if (self) {
+        _start = start;
+        _end = end;
+        _messages = messages;
+    }
+    return self;
+}
+
++ (instancetype)successfulResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages {
+    return [[self alloc] initHistoryResultWithClient:client statusCode:statusCode isError:NO start:start end:end messages:messages];
+}
+
+- (PNHistoryResult *)actualHistoryResult {
+    return (PNHistoryResult *)self.actualResult;
+}
+
+- (void)setActualHistoryResult:(PNHistoryResult *)actualHistoryResult {
+    self.actualResult = (PNResult *)actualHistoryResult;
+}
+
+- (NSArray<NSString *> *)dataKeysToAssert {
+    return @[
+             @"data.start",
+             @"data.end",
+             @"data.messages",
+             ];
+}
 
 @end
