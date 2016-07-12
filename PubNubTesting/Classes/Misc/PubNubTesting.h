@@ -12,16 +12,17 @@
 // Constants
 #import "PNTTestConstants.h"
 
-// Utilities
-#import "XCTestCase+PNTAdditions.h"
-#import "NSString+PNTAdditions.h"
-
 // Matchers
 #import "PNTDeviceIndependentMatcher.h"
 
 // Test Representations
 #import "PNTTestResult.h"
-//#import "PNTTestStatus.h"
+#import "PNTTestStatus.h"
+
+// Utilities
+#import "XCTestCase+PNTAdditions.h"
+#import "NSString+PNTAdditions.h"
+
 //#import "PNTTestErrorStatus.h"
 //#import "PNTTestAcknowledgmentStatus.h"
 //#import "PNTTestChannelGroupChannelsResult.h"

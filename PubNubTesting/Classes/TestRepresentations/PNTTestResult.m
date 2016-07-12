@@ -6,7 +6,6 @@
 //
 //
 
-#import <PubNub/PubNub.h>
 #import "PNTTestResult.h"
 
 @interface PNTTestResult ()
@@ -29,7 +28,7 @@
     return self;
 }
 
-- (instancetype)initWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult {
+- (instancetype)initResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult {
     self = [self initWithClient:client andPubNubResult:pubNubResult];
     if (self) {
         _statusCode = statusCode;
@@ -39,7 +38,7 @@
 }
 
 + (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult {
-    return [[self alloc] initWithClient:client statusCode:statusCode operation:operationType andPubNubResult:pubNubResult];
+    return [[self alloc] initResultWithClient:client statusCode:statusCode operation:operationType andPubNubResult:pubNubResult];
 }
 
 - (NSObject *)pubNubResult {

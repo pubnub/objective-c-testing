@@ -6,9 +6,8 @@
 //
 //
 
+#import <PubNub/PubNub.h>
 #import "PNTTestRepresentation.h"
-
-@class PNResult;
 
 @interface PNTTestResult : NSObject <PNTTestRepresentation>
 
@@ -16,7 +15,7 @@
 @property (nonatomic, readonly, assign) PNOperationType operation;
 @property (nonatomic, strong, readonly) PNResult *actualPubNubResult;
 
-- (instancetype)initWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult;
+- (instancetype)initResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult;
 
 + (instancetype)resultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType andPubNubResult:(PNResult *)pubNubResult;
 
