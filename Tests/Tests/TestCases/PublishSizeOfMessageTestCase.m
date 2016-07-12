@@ -18,21 +18,21 @@
     return NO;
 }
 
-//- (void)testSize10kCharacterStringMessageWithStoreInHistoryAndCompressed {
-//    NSString *message = [NSString PNT_randomAlphanumericStringWithLength:10000];
-//    [self.client sizeOfMessage:message toChannel:self.publishChannel compressed:YES storeInHistory:YES withCompletion:[self PNT_messageSizeCompletionWithSize:7971]];
-//    [self PNT_waitFor:kPNTSizeOfMessageTimeout];
-//}
-//
-//- (void)testSize10kCharacterStringMessageWithNoStoreInHistoryAndNotCompressed {
-//    NSString *message = [NSString PNT_randomAlphanumericStringWithLength:10000];
-//    [self.client sizeOfMessage:message toChannel:self.publishChannel compressed:NO storeInHistory:NO withCompletion:[self PNT_messageSizeCompletionWithSize:10345]];
-//    [self PNT_waitFor:kPNTSizeOfMessageTimeout];
-//}
-//
-//- (void)testSizeOfStringMessageWithNoStoreInHistoryAndNotCompressed {
-//    [self.client sizeOfMessage:@"test" toChannel:self.publishChannel compressed:NO storeInHistory:NO withCompletion:[self PNT_messageSizeCompletionWithSize:341]];
-//    [self PNT_waitFor:kPNTSizeOfMessageTimeout];
-//}
+- (void)testSize10kCharacterStringMessageWithStoreInHistoryAndCompressed {
+    NSString *message = [NSString PNT_randomAlphanumericStringWithLength:10000];
+    [self.client sizeOfMessage:message toChannel:self.publishChannel compressed:YES storeInHistory:YES withCompletion:[self PNT_messageSizeCompletionWithSize:7971]];
+    [self PNT_waitFor:kPNTSizeOfMessageTimeout];
+}
+
+- (void)testSize10kCharacterStringMessageWithNoStoreInHistoryAndNotCompressed {
+    NSString *message = [NSString PNT_randomAlphanumericStringWithLength:10000];
+    [self.client sizeOfMessage:message toChannel:self.publishChannel compressed:NO storeInHistory:NO withCompletion:[self PNT_messageSizeCompletionWithSize:10345]];
+    [self PNT_waitFor:kPNTSizeOfMessageTimeout];
+}
+
+- (void)testSizeOfStringMessageWithNoStoreInHistoryAndNotCompressed {
+    [self.client sizeOfMessage:@"test" toChannel:self.publishChannel compressed:NO storeInHistory:NO withCompletion:[self PNT_messageSizeCompletionWithSize:341]];
+    [self PNT_waitFor:kPNTSizeOfMessageTimeout];
+}
 
 @end

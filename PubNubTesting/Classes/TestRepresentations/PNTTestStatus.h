@@ -42,6 +42,11 @@
 - (instancetype)initAcknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError;
 + (instancetype)acknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError;
 
+#pragma mark - Channel Groups
++ (instancetype)successfulChannelGroupAddWithClient:(PubNub *)client;
++ (instancetype)successfulChannelGroupRemoveWithClient:(PubNub *)client;
++ (instancetype)successfulChannelGroupRemoveAllChannelsWithClient:(PubNub *)client;
+
 @end
 
 @interface PNTTestPublishStatus : PNTTestAcknowledgmentStatus

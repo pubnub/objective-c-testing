@@ -88,6 +88,20 @@
     self.actualErrorStatus = (PNErrorStatus *)actualAcknowledgmentStatus;
 }
 
+#pragma mark - Channel Groups
+
++ (instancetype)successfulChannelGroupAddWithClient:(PubNub *)client {
+    return [self acknowledgmentStatusWithClient:client statusCode:200 operation:PNAddChannelsToGroupOperation isError:NO];
+}
+
++ (instancetype)successfulChannelGroupRemoveWithClient:(PubNub *)client {
+    return [self acknowledgmentStatusWithClient:client statusCode:200 operation:PNRemoveChannelsFromGroupOperation isError:NO];
+}
+
++ (instancetype)successfulChannelGroupRemoveAllChannelsWithClient:(PubNub *)client {
+    return [self acknowledgmentStatusWithClient:client statusCode:200 operation:PNRemoveGroupOperation isError:NO];
+}
+
 @end
 
 @interface PNTTestPublishStatus ()
