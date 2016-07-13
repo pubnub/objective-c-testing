@@ -32,3 +32,13 @@
 + (instancetype)successfulResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages;
 
 @end
+
+@interface PNTTestPresenceChannelHereNowResult : PNTTestResult
+@property (nonatomic, strong, readonly) id uuids;
+@property (nonatomic, strong, readonly) NSNumber *occupancy;
+@property (nonatomic, strong) PNPresenceChannelHereNowResult *actualHereNowResult;
+
+- (instancetype)initHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError uuids:(id)uuids occupancy:(NSNumber *)occupancy;
++ (instancetype)successfulHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode uuids:(id)uuids occupancy:(NSNumber *)occupancy;
+
+@end

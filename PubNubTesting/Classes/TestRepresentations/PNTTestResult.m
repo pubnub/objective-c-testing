@@ -67,6 +67,12 @@
 
 @end
 
+@interface PNTTestHistoryResult ()
+@property (nonatomic, strong, readwrite) NSNumber *start;
+@property (nonatomic, strong, readwrite) NSNumber *end;
+@property (nonatomic, strong, readwrite) NSArray *messages;
+@end
+
 @implementation PNTTestHistoryResult
 
 - (instancetype)initHistoryResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages {
@@ -96,6 +102,36 @@
              @"data.start",
              @"data.end",
              @"data.messages",
+             ];
+}
+
+@end
+
+@interface PNTTestPresenceChannelHereNowResult ()
+@property (nonatomic, strong, readwrite) id uuids;
+@property (nonatomic, strong, readwrite) NSNumber *occupancy;
+
+@end
+
+@implementation PNTTestPresenceChannelHereNowResult
+
+- (instancetype)initHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError uuids:(id)uuids occupancy:(NSNumber *)occupancy {
+    self = [super initResultWithClient:client statusCode:statusCode operation:PNHereNowGlobalOperation];
+    if (self) {
+        _uuids = uuids;
+        _occupancy = occupancy;
+    }
+    return self;
+}
+
++ (instancetype)successfulHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode uuids:(id)uuids occupancy:(NSNumber *)occupancy {
+    return [[self alloc] initHereNowResultWithClient:client statusCode:statusCode isError:NO uuids:uuids occupancy:occupancy];
+}
+
+- (NSArray<NSString *> *)dataKeysToAssert {
+    return @[
+             @"data.occupancy",
+             @"data.uuids",
              ];
 }
 
