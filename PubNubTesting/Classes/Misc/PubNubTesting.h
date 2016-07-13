@@ -41,6 +41,7 @@
 #import "XCTestCase+PNTHistory.h"
 #import "XCTestCase+PNTPublish.h"
 #import "XCTestCase+PNTSizeOfMessage.h"
+#import "XCTestCase+PNTPresence.h"
 //#import "XCTestCase+PNTSubscription.h"
 
 // TestCase Subclasses

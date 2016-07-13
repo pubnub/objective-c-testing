@@ -85,8 +85,8 @@
     return self;
 }
 
-+ (instancetype)successfulResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages {
-    return [[self alloc] initHistoryResultWithClient:client statusCode:statusCode isError:NO start:start end:end messages:messages];
++ (instancetype)successfulResultWithClient:(PubNub *)client start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages {
+    return [[self alloc] initHistoryResultWithClient:client statusCode:200 isError:NO start:start end:end messages:messages];
 }
 
 - (PNHistoryResult *)actualHistoryResult {
@@ -124,8 +124,8 @@
     return self;
 }
 
-+ (instancetype)successfulHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode uuids:(id)uuids occupancy:(NSNumber *)occupancy {
-    return [[self alloc] initHereNowResultWithClient:client statusCode:statusCode isError:NO uuids:uuids occupancy:occupancy];
++ (instancetype)successfulHereNowResultWithClient:(PubNub *)client uuids:(id)uuids occupancy:(NSNumber *)occupancy {
+    return [[self alloc] initHereNowResultWithClient:client statusCode:200 isError:NO uuids:uuids occupancy:occupancy];
 }
 
 - (NSArray<NSString *> *)dataKeysToAssert {
@@ -133,6 +133,14 @@
              @"data.occupancy",
              @"data.uuids",
              ];
+}
+
+- (void)setActualHereNowResult:(PNPresenceChannelHereNowResult *)actualHereNowResult {
+    self.actualResult = (PNResult *)actualHereNowResult;
+}
+
+- (PNPresenceChannelHereNowResult *)actualHereNowResult {
+    return (PNPresenceChannelHereNowResult *)self.actualResult;
 }
 
 @end

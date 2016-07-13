@@ -29,7 +29,7 @@
 
 - (instancetype)initHistoryResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages;
 
-+ (instancetype)successfulResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages;
++ (instancetype)successfulResultWithClient:(PubNub *)client start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages;
 
 @end
 
@@ -39,6 +39,6 @@
 @property (nonatomic, strong) PNPresenceChannelHereNowResult *actualHereNowResult;
 
 - (instancetype)initHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError uuids:(id)uuids occupancy:(NSNumber *)occupancy;
-+ (instancetype)successfulHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode uuids:(id)uuids occupancy:(NSNumber *)occupancy;
++ (instancetype)successfulHereNowResultWithClient:(PubNub *)client uuids:(id)uuids occupancy:(NSNumber *)occupancy;
 
 @end

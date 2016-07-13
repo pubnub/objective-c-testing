@@ -9,10 +9,11 @@
 #import <XCTest/XCTest.h>
 #import <PubNub/PubNub.h>
 
+@class PNTTestPresenceChannelHereNowResult;
+@class PNTTestErrorStatus;
+
 @interface XCTestCase (PNTPresence)
 
-- (PNHereNowCompletionBlock)PNT_hereNowCompletionBlockWithExpectedHereNowResult:(PNT)
-
-- (PNHistoryCompletionBlock)PNT_historyCompletionBlockWithExpectedHistoryResult:(PNTTestHistoryResult *)expectedResult andExpectedError:(PNTTestErrorStatus *)expectedErrorStatus;
+- (PNHereNowCompletionBlock)PNT_hereNowCompletionBlockWithExpectedHereNowResult:(PNTTestPresenceChannelHereNowResult *)expectedResult andExpectedError:(PNTTestErrorStatus *)expectedErrorStatus;
 
 @end
