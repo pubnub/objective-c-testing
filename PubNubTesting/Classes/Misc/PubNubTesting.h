@@ -46,6 +46,7 @@
 
 // TestCase Subclasses
 #import "PNTClientTestCase.h"
+#import "PNTClientChannelGroupTestCase.h"
 //#import "PNTSubscribeLoopTestCase.h"
 
 #endif /* PubNubTesting_h */

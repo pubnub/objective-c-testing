@@ -115,7 +115,7 @@
 
 @implementation PNTTestPresenceChannelHereNowResult
 
-- (instancetype)initHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode uuids:(id)uuids occupancy:(NSNumber *)occupancy {
+- (instancetype)initChannelHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode uuids:(id)uuids occupancy:(NSNumber *)occupancy {
     self = [super initResultWithClient:client statusCode:statusCode operation:PNHereNowForChannelOperation];
     if (self) {
         _uuids = uuids;
@@ -124,8 +124,8 @@
     return self;
 }
 
-+ (instancetype)successfulHereNowResultWithClient:(PubNub *)client uuids:(id)uuids occupancy:(NSNumber *)occupancy {
-    return [[self alloc] initHereNowResultWithClient:client statusCode:200 uuids:uuids occupancy:occupancy];
++ (instancetype)successfulChannelHereNowResultWithClient:(PubNub *)client uuids:(id)uuids occupancy:(NSNumber *)occupancy {
+    return [[self alloc] initChannelHereNowResultWithClient:client statusCode:200 uuids:uuids occupancy:occupancy];
 }
 
 - (NSArray<NSString *> *)dataKeysToAssert {

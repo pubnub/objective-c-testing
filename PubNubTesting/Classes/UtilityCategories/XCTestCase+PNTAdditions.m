@@ -63,6 +63,10 @@
                 }
             } else {
                 XCTAssertEqualObjects(expectedKeyPathValue, actualKeyPathValue, @"For keyPath (%@) expected value (%@) does not match actual value (%@)", obj, expectedKeyPathValue, actualKeyPathValue);
+                if (![expectedKeyPathValue isEqual:actualKeyPathValue]) {
+                    [self PNT_prettyPrint:actualKeyPathValue];
+                    return;
+                }
             }
         }];
     }
