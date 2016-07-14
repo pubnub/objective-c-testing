@@ -49,7 +49,7 @@
     _actualResult = actualResult;
 }
 
-- (NSArray<NSString *> *)keysToAssert {
++ (NSArray<NSString *> *)keysToAssert {
     return @[
              @"statusCode",
              @"operation",
@@ -97,7 +97,7 @@
     self.actualResult = (PNResult *)actualHistoryResult;
 }
 
-- (NSArray<NSString *> *)dataKeysToAssert {
++ (NSArray<NSString *> *)dataKeysToAssert {
     return @[
              @"data.start",
              @"data.end",
@@ -128,7 +128,7 @@
     return [[self alloc] initChannelHereNowResultWithClient:client statusCode:200 uuids:uuids occupancy:occupancy];
 }
 
-- (NSArray<NSString *> *)dataKeysToAssert {
++ (NSArray<NSString *> *)dataKeysToAssert {
     return @[
              @"data.occupancy",
              @"data.uuids",
@@ -168,7 +168,7 @@
     return [[self alloc] initGlobalHereNowResultWithClient:client statusCode:200 channels:channels totalOccupancy:totalOccupancy totalChannels:totalChannels];
 }
 
-- (NSArray<NSString *> *)dataKeysToAssert {
++ (NSArray<NSString *> *)dataKeysToAssert {
     return @[
              @"data.channels",
              @"data.totalChannels",

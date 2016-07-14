@@ -29,7 +29,7 @@
     return [[self alloc] initStatusWithClient:client statusCode:statusCode operation:operationType category:category isError:isError];
 }
 
-- (NSArray<NSString *> *)keysToAssert {
++ (NSArray<NSString *> *)keysToAssert {
     NSMutableArray *superKeys = [super keysToAssert].mutableCopy;
     [superKeys addObjectsFromArray:@[
                                      @"category",
@@ -136,7 +136,7 @@
     return (PNTTestPublishStatus *)[PNTTestErrorStatus failedBadRequestStatusWithClient:client operation:PNPublishOperation];
 }
 
-- (NSArray<NSString *> *)dataKeysToAssert {
++ (NSArray<NSString *> *)dataKeysToAssert {
     //    NSMutableArray *superKeys = [super dataKeyPathsToAssert].mutableCopy;
     //    [superKeys addObjectsFromArray:@[
     //                                     @"data.timetoken",
