@@ -27,7 +27,7 @@
 @property (nonatomic, strong, readonly) NSArray *messages;
 @property (nonatomic, strong) PNHistoryResult *actualHistoryResult;
 
-- (instancetype)initHistoryResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages;
+- (instancetype)initHistoryResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages;
 
 + (instancetype)successfulResultWithClient:(PubNub *)client start:(NSNumber *)start end:(NSNumber *)end messages:(NSArray *)messages;
 
@@ -36,9 +36,39 @@
 @interface PNTTestPresenceChannelHereNowResult : PNTTestResult
 @property (nonatomic, strong, readonly) id uuids;
 @property (nonatomic, strong, readonly) NSNumber *occupancy;
-@property (nonatomic, strong) PNPresenceChannelHereNowResult *actualHereNowResult;
+@property (nonatomic, strong) PNPresenceChannelHereNowResult *actualChannelHereNowResult;
 
-- (instancetype)initHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError uuids:(id)uuids occupancy:(NSNumber *)occupancy;
-+ (instancetype)successfulHereNowResultWithClient:(PubNub *)client uuids:(id)uuids occupancy:(NSNumber *)occupancy;
+- (instancetype)initChannelHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode uuids:(id)uuids occupancy:(NSNumber *)occupancy;
++ (instancetype)successfulChannelHereNowResultWithClient:(PubNub *)client uuids:(id)uuids occupancy:(NSNumber *)occupancy;
+
+@end
+
+@interface PNTTestPresenceGlobalHereNowResult : PNTTestResult
+@property (nonatomic, strong, readonly) NSDictionary<NSString *, NSDictionary *> *channels;
+@property (nonatomic, strong, readonly) NSNumber *totalChannels;
+@property (nonatomic, strong, readonly) NSNumber *totalOccupancy;
+@property (nonatomic, strong) PNPresenceGlobalHereNowResult *actualGlobalHereNowResult;
+
+- (instancetype)initGlobalHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode channels:(NSDictionary<NSString *, NSDictionary *> *)channels totalOccupancy:(NSNumber *)totalOccupancy totalChannels:(NSNumber *)totalChannels;
++ (instancetype)successfulGlobalHereNowResultWithClient:(PubNub *)client channels:(NSDictionary<NSString *, NSDictionary *> *)channels totalOccupancy:(NSNumber *)totalOccupancy totalChannels:(NSNumber *)totalChannels;
+
+@end
+
+@interface PNTTestPresenceChannelGroupHereNowResult : PNTTestResult
+@property (nonatomic, strong, readonly) NSDictionary<NSString *, NSDictionary *> *channels;
+@property (nonatomic, strong, readonly) NSNumber *totalChannels;
+@property (nonatomic, strong, readonly) NSNumber *totalOccupancy;
+@property (nonatomic, strong) PNPresenceChannelGroupHereNowResult *actualChannelGroupHereNowResult;
+
+- (instancetype)initChannelGroupHereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode channels:(NSDictionary<NSString *, NSDictionary *> *)channels totalOccupancy:(NSNumber *)totalOccupancy totalChannels:(NSNumber *)totalChannels;
++ (instancetype)successfulChannelGroupHereNowResultWithClient:(PubNub *)client channels:(NSDictionary<NSString *, NSDictionary *> *)channels totalOccupancy:(NSNumber *)totalOccupancy totalChannels:(NSNumber *)totalChannels;
+@end
+
+@interface PNTTestPresenceWhereNowResult : PNTTestResult
+@property (nonatomic, readonly, strong) NSArray<NSString *> *channels;
+@property (nonatomic, strong) PNPresenceWhereNowResult *actualWhereNowResult;
+
+- (instancetype)initWhereNowResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode channels:(NSArray<NSString *> *)channels;
++ (instancetype)successfulWhereNowResultWithClient:(PubNub *)client channels:(NSArray<NSString *> *)channels;
 
 @end

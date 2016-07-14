@@ -34,5 +34,6 @@ static NSTimeInterval const kPNTSubscribeTimeout = kPNTDefaultTimeout;
 static NSTimeInterval const kPNTUnsubscribeTimeout = kPNTDefaultTimeout;
 static NSTimeInterval const kPNTSetClientStateTimeout = kPNTDefaultTimeout;
 static NSTimeInterval const kPNTHistoryTimeout = kPNTDefaultTimeout;
+static NSTimeInterval const kPNTPresenceTimeout = kPNTDefaultTimeout;
 
 #endif /* PNTTestConstants_h */
