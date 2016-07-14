@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>creationDate</key>
-	<date>2016-07-14T18:46:18Z</date>
+	<date>2016-07-14T20:43:27Z</date>
 	<key>scenes</key>
 	<array>
 		<dict>
@@ -34,11 +34,11 @@
 					<key>class</key>
 					<string>BKROriginalRequestFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.1863689</real>
+					<real>1468529007.115226</real>
 					<key>timeoutInterval</key>
 					<real>60</real>
 					<key>uniqueIdentifier</key>
-					<string>8EDEC37B-6999-430C-A717-73C608D8339E</string>
+					<string>B8FC36D2-F83E-4BEB-AEE4-51186611F984</string>
 				</dict>
 				<dict>
 					<key>HTTPMethod</key>
@@ -67,11 +67,11 @@
 					<key>class</key>
 					<string>BKRCurrentRequestFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.1865849</real>
+					<real>1468529007.1154311</real>
 					<key>timeoutInterval</key>
 					<real>60</real>
 					<key>uniqueIdentifier</key>
-					<string>8EDEC37B-6999-430C-A717-73C608D8339E</string>
+					<string>B8FC36D2-F83E-4BEB-AEE4-51186611F984</string>
 				</dict>
 				<dict>
 					<key>MIMEType</key>
@@ -80,6 +80,8 @@
 					<string>https://pubsub.pubnub.com/v2/presence/sub-key/demo-36?pnsdk=PubNub-ObjC-iOS%2F4.4.1&amp;state=0&amp;deviceid=3650F534-FC54-4EE8-884C-EF1B83188BB7&amp;disable_uuids=0&amp;uuid=322A70B3-F0EA-48CD-9BB0-D3F0F5DE996C</string>
 					<key>allHeaderFields</key>
 					<dict>
+						<key>Accept-Ranges</key>
+						<string>bytes</string>
 						<key>Access-Control-Allow-Methods</key>
 						<string>OPTIONS, GET, POST</string>
 						<key>Access-Control-Allow-Origin</key>
@@ -90,31 +92,29 @@
 						<string>no-cache</string>
 						<key>Connection</key>
 						<string>keep-alive</string>
-						<key>Content-Encoding</key>
-						<string>gzip</string>
+						<key>Content-Length</key>
+						<string>986</string>
 						<key>Content-Type</key>
 						<string>text/javascript; charset="UTF-8"</string>
 						<key>Date</key>
-						<string>Thu, 14 Jul 2016 18:46:18 GMT</string>
+						<string>Thu, 14 Jul 2016 20:43:29 GMT</string>
 						<key>Server</key>
 						<string>Pubnub Presence</string>
-						<key>Transfer-Encoding</key>
-						<string>Identity</string>
 					</dict>
 					<key>class</key>
 					<string>BKRResponseFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.279933</real>
+					<real>1468529009.0951571</real>
 					<key>statusCode</key>
 					<integer>200</integer>
 					<key>uniqueIdentifier</key>
-					<string>8EDEC37B-6999-430C-A717-73C608D8339E</string>
+					<string>B8FC36D2-F83E-4BEB-AEE4-51186611F984</string>
 				</dict>
 				<dict>
 					<key>class</key>
 					<string>BKRDataFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.279959</real>
+					<real>1468529009.0952311</real>
 					<key>data</key>
 					<data>
 					eyJzdGF0dXMiOiAyMDAsICJtZXNzYWdlIjog
@@ -123,54 +123,44 @@
 					bG9ja3MiOiB7InV1aWRzIjogWyJiMDU4ZDk3
 					MC04OTY5LTRjYzQtYTNhYy0zNjgwYWI2M2Fj
 					YWEiXSwgIm9jY3VwYW5jeSI6IDF9LCAid2Vi
-					aW5hci1jaGF0IjogeyJ1dWlkcyI6IFsiM2M5
-					Nzc5YzQtYTA0MS00ZGEzLWI2YzctY2VmYzcx
-					YjI1YTYxIiwgIjhiY2Y3OGZiLTEyMGQtNGQ4
-					Zi05OGMyLWUzYTljYzZjNjBiOSJdLCAib2Nj
-					dXBhbmN5IjogMn0sICJwdWJudWItcG9ydGFs
-					LWdvbGQtYmxvY2tzIjogeyJ1dWlkcyI6IFsi
-					YjA1OGQ5NzAtODk2OS00Y2M0LWEzYWMtMzY4
-					MGFiNjNhY2FhIl0sICJvY2N1cGFuY3kiOiAx
-					fSwgInB1Ym51Yi1wb3J0YWwtY2xpZW50LXNp
-					bHZlci1ibG9ja3MiOiB7InV1aWRzIjogWyJi
-					MDU4ZDk3MC04OTY5LTRjYzQtYTNhYy0zNjgw
-					YWI2M2FjYWEiXSwgIm9jY3VwYW5jeSI6IDF9
-					LCAicHVibnViLXBvcnRhbC1zaWx2ZXItYmxv
-					Y2tzIjogeyJ1dWlkcyI6IFsiYjA1OGQ5NzAt
-					ODk2OS00Y2M0LWEzYWMtMzY4MGFiNjNhY2Fh
-					Il0sICJvY2N1cGFuY3kiOiAxfSwgImNoLXR1
-					a3VuYXJlIjogeyJ1dWlkcyI6IFsiZDMwMmNm
-					ZGItMjE3NC00ODRmLWE4ODQtNjc2NTQ5YTFj
-					YWNiIl0sICJvY2N1cGFuY3kiOiAxfSwgImRl
-					bW8iOiB7InV1aWRzIjogWyIyMjA5NGI5NC0z
-					NGIyLTRiYTctYTI5NC02YTE2OTlkMzk5YzQi
-					XSwgIm9jY3VwYW5jeSI6IDF9LCAicHVibnVi
-					LXBvcnRhbC1jbGllbnQtZ29sZC1ibG9ja3Mi
+					aW5hci1jaGF0IjogeyJ1dWlkcyI6IFsiOGJj
+					Zjc4ZmItMTIwZC00ZDhmLTk4YzItZTNhOWNj
+					NmM2MGI5Il0sICJvY2N1cGFuY3kiOiAxfSwg
+					InB1Ym51Yi1wb3J0YWwtZ29sZC1ibG9ja3Mi
 					OiB7InV1aWRzIjogWyJiMDU4ZDk3MC04OTY5
 					LTRjYzQtYTNhYy0zNjgwYWI2M2FjYWEiXSwg
-					Im9jY3VwYW5jeSI6IDF9LCAibW9vbmxpZ2h0
-					LWZpbHRlci1jaGVjayI6IHsidXVpZHMiOiBb
-					IjY4Il0sICJvY2N1cGFuY3kiOiAxfSwgInB1
-					Ym51Yi1wb3J0YWwtY2xpZW50LWJyb256ZS1i
-					bG9ja3MiOiB7InV1aWRzIjogWyJiMDU4ZDk3
-					MC04OTY5LTRjYzQtYTNhYy0zNjgwYWI2M2Fj
-					YWEiXSwgIm9jY3VwYW5jeSI6IDF9LCAiZm9v
-					LioiOiB7InV1aWRzIjogWyJCQzg0QjY5MC1G
-					QjlBLTQ3OTctQkJDRC1ENkE1Q0VGMUM3NTki
-					LCAiNjE2NjZENEItN0M3Ri00MjBDLUE5QTIt
-					Q0Q0M0Y4RjQ0NUREIiwgIkE2N0MyMDZBLTVC
-					OTgtNEExMC04QzQ2LUU0QTA3NzY5MTMyRiJd
-					LCAib2NjdXBhbmN5IjogM319LCAidG90YWxf
-					Y2hhbm5lbHMiOiAxMSwgInRvdGFsX29jY3Vw
-					YW5jeSI6IDE0fSwgInNlcnZpY2UiOiAiUHJl
-					c2VuY2UifQ==
+					Im9jY3VwYW5jeSI6IDF9LCAicHVibnViLXBv
+					cnRhbC1jbGllbnQtc2lsdmVyLWJsb2NrcyI6
+					IHsidXVpZHMiOiBbImIwNThkOTcwLTg5Njkt
+					NGNjNC1hM2FjLTM2ODBhYjYzYWNhYSJdLCAi
+					b2NjdXBhbmN5IjogMX0sICJwdWJudWItcG9y
+					dGFsLXNpbHZlci1ibG9ja3MiOiB7InV1aWRz
+					IjogWyJiMDU4ZDk3MC04OTY5LTRjYzQtYTNh
+					Yy0zNjgwYWI2M2FjYWEiXSwgIm9jY3VwYW5j
+					eSI6IDF9LCAicHVibnViLXBvcnRhbC1jbGll
+					bnQtZ29sZC1ibG9ja3MiOiB7InV1aWRzIjog
+					WyJiMDU4ZDk3MC04OTY5LTRjYzQtYTNhYy0z
+					NjgwYWI2M2FjYWEiXSwgIm9jY3VwYW5jeSI6
+					IDF9LCAicHVibnViLXBvcnRhbC1jbGllbnQt
+					YnJvbnplLWJsb2NrcyI6IHsidXVpZHMiOiBb
+					ImIwNThkOTcwLTg5NjktNGNjNC1hM2FjLTM2
+					ODBhYjYzYWNhYSJdLCAib2NjdXBhbmN5Ijog
+					MX0sICJmb28uKiI6IHsidXVpZHMiOiBbIkJD
+					ODRCNjkwLUZCOUEtNDc5Ny1CQkNELUQ2QTVD
+					RUYxQzc1OSIsICI2MTY2NkQ0Qi03QzdGLTQy
+					MEMtQTlBMi1DRDQzRjhGNDQ1REQiLCAiQTY3
+					QzIwNkEtNUI5OC00QTEwLThDNDYtRTRBMDc3
+					NjkxMzJGIl0sICJvY2N1cGFuY3kiOiAzfX0s
+					ICJ0b3RhbF9jaGFubmVscyI6IDgsICJ0b3Rh
+					bF9vY2N1cGFuY3kiOiAxMH0sICJzZXJ2aWNl
+					IjogIlByZXNlbmNlIn0=
 					</data>
 					<key>uniqueIdentifier</key>
-					<string>8EDEC37B-6999-430C-A717-73C608D8339E</string>
+					<string>B8FC36D2-F83E-4BEB-AEE4-51186611F984</string>
 				</dict>
 			</array>
 			<key>uniqueIdentifier</key>
-			<string>8EDEC37B-6999-430C-A717-73C608D8339E</string>
+			<string>B8FC36D2-F83E-4BEB-AEE4-51186611F984</string>
 		</dict>
 	</array>
 	<key>version</key>

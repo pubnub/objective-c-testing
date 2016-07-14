@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>creationDate</key>
-	<date>2016-07-14T18:46:18Z</date>
+	<date>2016-07-14T20:43:29Z</date>
 	<key>scenes</key>
 	<array>
 		<dict>
@@ -34,11 +34,11 @@
 					<key>class</key>
 					<string>BKROriginalRequestFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.307658</real>
+					<real>1468529009.105747</real>
 					<key>timeoutInterval</key>
 					<real>60</real>
 					<key>uniqueIdentifier</key>
-					<string>3267FEC0-3FAB-413B-9057-3D61BA4EB01F</string>
+					<string>04226AB7-9C00-44E1-A08E-1AB15C054E16</string>
 				</dict>
 				<dict>
 					<key>HTTPMethod</key>
@@ -65,11 +65,11 @@
 					<key>class</key>
 					<string>BKRCurrentRequestFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.3076971</real>
+					<real>1468529009.1058259</real>
 					<key>timeoutInterval</key>
 					<real>60</real>
 					<key>uniqueIdentifier</key>
-					<string>3267FEC0-3FAB-413B-9057-3D61BA4EB01F</string>
+					<string>04226AB7-9C00-44E1-A08E-1AB15C054E16</string>
 				</dict>
 				<dict>
 					<key>HTTPMethod</key>
@@ -98,11 +98,11 @@
 					<key>class</key>
 					<string>BKRCurrentRequestFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.308295</real>
+					<real>1468529009.105901</real>
 					<key>timeoutInterval</key>
 					<real>60</real>
 					<key>uniqueIdentifier</key>
-					<string>3267FEC0-3FAB-413B-9057-3D61BA4EB01F</string>
+					<string>04226AB7-9C00-44E1-A08E-1AB15C054E16</string>
 				</dict>
 				<dict>
 					<key>MIMEType</key>
@@ -128,24 +128,24 @@
 						<key>Content-Type</key>
 						<string>text/javascript; charset="UTF-8"</string>
 						<key>Date</key>
-						<string>Thu, 14 Jul 2016 18:46:19 GMT</string>
+						<string>Thu, 14 Jul 2016 20:43:29 GMT</string>
 						<key>Server</key>
 						<string>Pubnub Presence</string>
 					</dict>
 					<key>class</key>
 					<string>BKRResponseFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.5386219</real>
+					<real>1468529009.468508</real>
 					<key>statusCode</key>
 					<integer>200</integer>
 					<key>uniqueIdentifier</key>
-					<string>3267FEC0-3FAB-413B-9057-3D61BA4EB01F</string>
+					<string>04226AB7-9C00-44E1-A08E-1AB15C054E16</string>
 				</dict>
 				<dict>
 					<key>class</key>
 					<string>BKRDataFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.538682</real>
+					<real>1468529009.46854</real>
 					<key>data</key>
 					<data>
 					eyJzdGF0dXMiOiAyMDAsICJtZXNzYWdlIjog
@@ -154,11 +154,11 @@
 					IDB9
 					</data>
 					<key>uniqueIdentifier</key>
-					<string>3267FEC0-3FAB-413B-9057-3D61BA4EB01F</string>
+					<string>04226AB7-9C00-44E1-A08E-1AB15C054E16</string>
 				</dict>
 			</array>
 			<key>uniqueIdentifier</key>
-			<string>3267FEC0-3FAB-413B-9057-3D61BA4EB01F</string>
+			<string>04226AB7-9C00-44E1-A08E-1AB15C054E16</string>
 		</dict>
 	</array>
 	<key>version</key>

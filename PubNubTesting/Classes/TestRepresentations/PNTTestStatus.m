@@ -67,6 +67,16 @@
     self.actualStatus = (PNStatus *)actualErrorStatus;
 }
 
+#pragma mark - Failed
+
++ (instancetype)failedErrorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category {
+    return [self errorStatusWithClient:client statusCode:statusCode operation:operationType category:category isError:YES];
+}
+
++ (instancetype)failedBadRequestStatusWithClient:(PubNub *)client operation:(PNOperationType)operationType {
+    return [self failedErrorStatusWithClient:client statusCode:400 operation:operationType category:PNBadRequestCategory];
+}
+
 @end
 
 @implementation PNTTestAcknowledgmentStatus
@@ -123,7 +133,7 @@
 }
 
 + (PNTTestPublishStatus *)failedStatusWithClient:(PubNub *)client {
-    return (PNTTestPublishStatus *)[PNTTestErrorStatus errorStatusWithClient:client statusCode:400 operation:PNPublishOperation category:PNBadRequestCategory isError:YES];
+    return (PNTTestPublishStatus *)[PNTTestErrorStatus failedBadRequestStatusWithClient:client operation:PNPublishOperation];
 }
 
 - (NSArray<NSString *> *)dataKeysToAssert {

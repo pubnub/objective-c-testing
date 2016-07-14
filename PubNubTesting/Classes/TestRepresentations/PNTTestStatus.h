@@ -31,6 +31,11 @@
 - (instancetype)initErrorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
 + (instancetype)errorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
 
+#pragma mark - Failed
++ (instancetype)failedErrorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category;
++ (instancetype)failedBadRequestStatusWithClient:(PubNub *)client operation:(PNOperationType)operationType;
+
+
 @end
 
 #pragma mark - Base Acknowledgment Status Class (Abstract)

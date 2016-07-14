@@ -140,11 +140,14 @@
     [self PNT_waitFor:kPNTPresenceTimeout];
 }
 
-//- (void)testHereNowForNilChannel {
-//    PNTTestErrorStatus *
-//    [self.client hereNowForChannel:@"a" withVerbosity:PNHereNowUUID completion:[self PNT_channelHereNowCompletionBlockWithExpectedHereNowResult:expectedResult andExpectedError:nil]];
-//    [self PNT_waitFor:kPNTPresenceTimeout];
-//}
+- (void)testHereNowForNilChannel {
+    PNTTestErrorStatus *errorStatus = [PNTTestErrorStatus failedBadRequestStatusWithClient:self.client operation:PNHereNowForChannelOperation];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+    [self.client hereNowForChannel:nil withVerbosity:PNHereNowUUID completion:[self PNT_channelHereNowCompletionBlockWithExpectedHereNowResult:nil andExpectedError:errorStatus]];
+#pragma clang diagnostic pop
+    [self PNT_waitFor:kPNTPresenceTimeout];
+}
 
 - (void)testWhereNowUUID {
     NSArray<NSString *> *channels = @[
@@ -155,8 +158,13 @@
     [self PNT_waitFor:kPNTPresenceTimeout];
 }
 
-//- (void)testWhereNowNilUUID {
-//    
-//}
+- (void)testWhereNowNilUUID {
+    PNTTestErrorStatus *errorStatus = [PNTTestErrorStatus failedBadRequestStatusWithClient:self.client operation:PNWhereNowOperation];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+    [self.client whereNowUUID:nil withCompletion:[self PNT_whereNowCompletionBlockWithExpectedHereNowResult:nil andExpectedError:errorStatus]];
+#pragma clang diagnostic pop
+    [self PNT_waitFor:kPNTPresenceTimeout];
+}
 
 @end

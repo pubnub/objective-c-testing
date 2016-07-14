@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>creationDate</key>
-	<date>2016-07-14T18:46:18Z</date>
+	<date>2016-07-14T20:43:25Z</date>
 	<key>scenes</key>
 	<array>
 		<dict>
@@ -34,11 +34,42 @@
 					<key>class</key>
 					<string>BKROriginalRequestFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.0412951</real>
+					<real>1468529005.9438651</real>
 					<key>timeoutInterval</key>
 					<real>60</real>
 					<key>uniqueIdentifier</key>
-					<string>88C83C43-4D7E-456D-9F3F-3ABA705C39EE</string>
+					<string>B0BDB5E7-7BF2-48B3-8C65-9EF6A11E57BB</string>
+				</dict>
+				<dict>
+					<key>HTTPMethod</key>
+					<string>GET</string>
+					<key>HTTPShouldHandleCookies</key>
+					<true/>
+					<key>HTTPShouldUsePipelining</key>
+					<false/>
+					<key>URL</key>
+					<string>https://pubsub.pubnub.com/v2/presence/sub-key/demo-36?pnsdk=PubNub-ObjC-iOS%2F4.4.1&amp;state=1&amp;deviceid=3650F534-FC54-4EE8-884C-EF1B83188BB7&amp;disable_uuids=0&amp;uuid=322A70B3-F0EA-48CD-9BB0-D3F0F5DE996C</string>
+					<key>allHTTPHeaderFields</key>
+					<dict>
+						<key>Accept</key>
+						<string>*/*</string>
+						<key>Accept-Encoding</key>
+						<string>gzip,deflate</string>
+						<key>Connection</key>
+						<string>keep-alive</string>
+						<key>User-Agent</key>
+						<string>iPhone; CPU iPhone OS 9.2 Version</string>
+					</dict>
+					<key>allowsCellularAccess</key>
+					<true/>
+					<key>class</key>
+					<string>BKRCurrentRequestFrame</string>
+					<key>creationDate</key>
+					<real>1468529005.9439259</real>
+					<key>timeoutInterval</key>
+					<real>60</real>
+					<key>uniqueIdentifier</key>
+					<string>B0BDB5E7-7BF2-48B3-8C65-9EF6A11E57BB</string>
 				</dict>
 				<dict>
 					<key>HTTPMethod</key>
@@ -67,11 +98,11 @@
 					<key>class</key>
 					<string>BKRCurrentRequestFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.0496669</real>
+					<real>1468529005.952615</real>
 					<key>timeoutInterval</key>
 					<real>60</real>
 					<key>uniqueIdentifier</key>
-					<string>88C83C43-4D7E-456D-9F3F-3ABA705C39EE</string>
+					<string>B0BDB5E7-7BF2-48B3-8C65-9EF6A11E57BB</string>
 				</dict>
 				<dict>
 					<key>MIMEType</key>
@@ -95,7 +126,7 @@
 						<key>Content-Type</key>
 						<string>text/javascript; charset="UTF-8"</string>
 						<key>Date</key>
-						<string>Thu, 14 Jul 2016 18:46:18 GMT</string>
+						<string>Thu, 14 Jul 2016 20:43:26 GMT</string>
 						<key>Server</key>
 						<string>Pubnub Presence</string>
 						<key>Transfer-Encoding</key>
@@ -104,17 +135,17 @@
 					<key>class</key>
 					<string>BKRResponseFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.1658471</real>
+					<real>1468529007.1041911</real>
 					<key>statusCode</key>
 					<integer>200</integer>
 					<key>uniqueIdentifier</key>
-					<string>88C83C43-4D7E-456D-9F3F-3ABA705C39EE</string>
+					<string>B0BDB5E7-7BF2-48B3-8C65-9EF6A11E57BB</string>
 				</dict>
 				<dict>
 					<key>class</key>
 					<string>BKRDataFrame</string>
 					<key>creationDate</key>
-					<real>1468521978.165894</real>
+					<real>1468529007.1042981</real>
 					<key>data</key>
 					<data>
 					eyJzdGF0dXMiOiAyMDAsICJtZXNzYWdlIjog
@@ -125,64 +156,49 @@
 					NjgwYWI2M2FjYWEifV0sICJvY2N1cGFuY3ki
 					OiAxfSwgIndlYmluYXItY2hhdCI6IHsidXVp
 					ZHMiOiBbeyJzdGF0ZSI6IHsidXNlcm5hbWUi
-					OiAic2Vjb25ka2ltIiwgImF2YXRhciI6ICJm
-					YWNlLTEyIGNvbG9yLTYiLCAibG9jYXRpb24i
-					OiAiZW5nbGFuZCJ9LCAidXVpZCI6ICIzYzk3
-					NzljNC1hMDQxLTRkYTMtYjZjNy1jZWZjNzFi
-					MjVhNjEifSwgeyJzdGF0ZSI6IHsidXNlcm5h
-					bWUiOiAiaWFta2ltIiwgImF2YXRhciI6ICJm
-					YWNlLTMgY29sb3ItOCIsICJsb2NhdGlvbiI6
-					ICJ1bml0ZWQga2luZ2RvbSJ9LCAidXVpZCI6
-					ICI4YmNmNzhmYi0xMjBkLTRkOGYtOThjMi1l
-					M2E5Y2M2YzYwYjkifV0sICJvY2N1cGFuY3ki
-					OiAyfSwgInB1Ym51Yi1wb3J0YWwtZ29sZC1i
-					bG9ja3MiOiB7InV1aWRzIjogW3sidXVpZCI6
-					ICJiMDU4ZDk3MC04OTY5LTRjYzQtYTNhYy0z
-					NjgwYWI2M2FjYWEifV0sICJvY2N1cGFuY3ki
-					OiAxfSwgInB1Ym51Yi1wb3J0YWwtY2xpZW50
-					LXNpbHZlci1ibG9ja3MiOiB7InV1aWRzIjog
-					W3sidXVpZCI6ICJiMDU4ZDk3MC04OTY5LTRj
-					YzQtYTNhYy0zNjgwYWI2M2FjYWEifV0sICJv
-					Y2N1cGFuY3kiOiAxfSwgInB1Ym51Yi1wb3J0
-					YWwtc2lsdmVyLWJsb2NrcyI6IHsidXVpZHMi
-					OiBbeyJ1dWlkIjogImIwNThkOTcwLTg5Njkt
-					NGNjNC1hM2FjLTM2ODBhYjYzYWNhYSJ9XSwg
-					Im9jY3VwYW5jeSI6IDF9LCAiY2gtdHVrdW5h
-					cmUiOiB7InV1aWRzIjogW3sidXVpZCI6ICJk
-					MzAyY2ZkYi0yMTc0LTQ4NGYtYTg4NC02NzY1
-					NDlhMWNhY2IifV0sICJvY2N1cGFuY3kiOiAx
-					fSwgImRlbW8iOiB7InV1aWRzIjogW3sidXVp
-					ZCI6ICIyMjA5NGI5NC0zNGIyLTRiYTctYTI5
-					NC02YTE2OTlkMzk5YzQifV0sICJvY2N1cGFu
-					Y3kiOiAxfSwgInB1Ym51Yi1wb3J0YWwtY2xp
-					ZW50LWdvbGQtYmxvY2tzIjogeyJ1dWlkcyI6
-					IFt7InV1aWQiOiAiYjA1OGQ5NzAtODk2OS00
-					Y2M0LWEzYWMtMzY4MGFiNjNhY2FhIn1dLCAi
-					b2NjdXBhbmN5IjogMX0sICJtb29ubGlnaHQt
-					ZmlsdGVyLWNoZWNrIjogeyJ1dWlkcyI6IFt7
-					InV1aWQiOiAiNjgifV0sICJvY2N1cGFuY3ki
-					OiAxfSwgInB1Ym51Yi1wb3J0YWwtY2xpZW50
-					LWJyb256ZS1ibG9ja3MiOiB7InV1aWRzIjog
-					W3sidXVpZCI6ICJiMDU4ZDk3MC04OTY5LTRj
-					YzQtYTNhYy0zNjgwYWI2M2FjYWEifV0sICJv
-					Y2N1cGFuY3kiOiAxfSwgImZvby4qIjogeyJ1
-					dWlkcyI6IFt7InV1aWQiOiAiQkM4NEI2OTAt
-					RkI5QS00Nzk3LUJCQ0QtRDZBNUNFRjFDNzU5
-					In0sIHsidXVpZCI6ICI2MTY2NkQ0Qi03QzdG
-					LTQyMEMtQTlBMi1DRDQzRjhGNDQ1REQifSwg
-					eyJ1dWlkIjogIkE2N0MyMDZBLTVCOTgtNEEx
-					MC04QzQ2LUU0QTA3NzY5MTMyRiJ9XSwgIm9j
-					Y3VwYW5jeSI6IDN9fSwgInRvdGFsX2NoYW5u
-					ZWxzIjogMTEsICJ0b3RhbF9vY2N1cGFuY3ki
-					OiAxNH0sICJzZXJ2aWNlIjogIlByZXNlbmNl
-					In0=
+					OiAiaWFta2ltIiwgImF2YXRhciI6ICJmYWNl
+					LTMgY29sb3ItOCIsICJsb2NhdGlvbiI6ICJ1
+					bml0ZWQga2luZ2RvbSJ9LCAidXVpZCI6ICI4
+					YmNmNzhmYi0xMjBkLTRkOGYtOThjMi1lM2E5
+					Y2M2YzYwYjkifV0sICJvY2N1cGFuY3kiOiAx
+					fSwgInB1Ym51Yi1wb3J0YWwtZ29sZC1ibG9j
+					a3MiOiB7InV1aWRzIjogW3sidXVpZCI6ICJi
+					MDU4ZDk3MC04OTY5LTRjYzQtYTNhYy0zNjgw
+					YWI2M2FjYWEifV0sICJvY2N1cGFuY3kiOiAx
+					fSwgInB1Ym51Yi1wb3J0YWwtY2xpZW50LXNp
+					bHZlci1ibG9ja3MiOiB7InV1aWRzIjogW3si
+					dXVpZCI6ICJiMDU4ZDk3MC04OTY5LTRjYzQt
+					YTNhYy0zNjgwYWI2M2FjYWEifV0sICJvY2N1
+					cGFuY3kiOiAxfSwgInB1Ym51Yi1wb3J0YWwt
+					c2lsdmVyLWJsb2NrcyI6IHsidXVpZHMiOiBb
+					eyJ1dWlkIjogImIwNThkOTcwLTg5NjktNGNj
+					NC1hM2FjLTM2ODBhYjYzYWNhYSJ9XSwgIm9j
+					Y3VwYW5jeSI6IDF9LCAicHVibnViLXBvcnRh
+					bC1jbGllbnQtZ29sZC1ibG9ja3MiOiB7InV1
+					aWRzIjogW3sidXVpZCI6ICJiMDU4ZDk3MC04
+					OTY5LTRjYzQtYTNhYy0zNjgwYWI2M2FjYWEi
+					fV0sICJvY2N1cGFuY3kiOiAxfSwgInB1Ym51
+					Yi1wb3J0YWwtY2xpZW50LWJyb256ZS1ibG9j
+					a3MiOiB7InV1aWRzIjogW3sidXVpZCI6ICJi
+					MDU4ZDk3MC04OTY5LTRjYzQtYTNhYy0zNjgw
+					YWI2M2FjYWEifV0sICJvY2N1cGFuY3kiOiAx
+					fSwgImZvby4qIjogeyJ1dWlkcyI6IFt7InV1
+					aWQiOiAiQkM4NEI2OTAtRkI5QS00Nzk3LUJC
+					Q0QtRDZBNUNFRjFDNzU5In0sIHsidXVpZCI6
+					ICI2MTY2NkQ0Qi03QzdGLTQyMEMtQTlBMi1D
+					RDQzRjhGNDQ1REQifSwgeyJ1dWlkIjogIkE2
+					N0MyMDZBLTVCOTgtNEExMC04QzQ2LUU0QTA3
+					NzY5MTMyRiJ9XSwgIm9jY3VwYW5jeSI6IDN9
+					fSwgInRvdGFsX2NoYW5uZWxzIjogOCwgInRv
+					dGFsX29jY3VwYW5jeSI6IDEwfSwgInNlcnZp
+					Y2UiOiAiUHJlc2VuY2UifQ==
 					</data>
 					<key>uniqueIdentifier</key>
-					<string>88C83C43-4D7E-456D-9F3F-3ABA705C39EE</string>
+					<string>B0BDB5E7-7BF2-48B3-8C65-9EF6A11E57BB</string>
 				</dict>
 			</array>
 			<key>uniqueIdentifier</key>
-			<string>88C83C43-4D7E-456D-9F3F-3ABA705C39EE</string>
+			<string>B0BDB5E7-7BF2-48B3-8C65-9EF6A11E57BB</string>
 		</dict>
 	</array>
 	<key>version</key>
