@@ -159,7 +159,7 @@
     if (self) {
         _totalChannels = totalChannels;
         _channels = channels;
-        _totalOccupancy = _totalOccupancy;
+        _totalOccupancy = totalOccupancy;
     }
     return self;
 }
