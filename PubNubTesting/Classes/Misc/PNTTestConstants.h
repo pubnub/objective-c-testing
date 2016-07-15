@@ -27,8 +27,8 @@ typedef NS_ENUM(NSUInteger, PNTTestSubscribeComparisonType) {
 
 static NSTimeInterval const kPNTDebugTimeout = 120.0;
 
-//static NSTimeInterval const kPNTDefaultTimeout = 5.0;
-static NSTimeInterval const kPNTDefaultTimeout = kPNTDebugTimeout;
+static NSTimeInterval const kPNTDefaultTimeout = 5.0;
+//static NSTimeInterval const kPNTDefaultTimeout = kPNTDebugTimeout;
 static NSTimeInterval const kPNTPublishTimeout = kPNTDefaultTimeout;
 static NSTimeInterval const kPNTSizeOfMessageTimeout = kPNTDefaultTimeout;
 static NSTimeInterval const kPNTTimeTokenTimeout = kPNTDefaultTimeout;
