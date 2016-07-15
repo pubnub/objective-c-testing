@@ -137,11 +137,6 @@
 }
 
 + (NSArray<NSString *> *)dataKeysToAssert {
-    //    NSMutableArray *superKeys = [super dataKeyPathsToAssert].mutableCopy;
-    //    [superKeys addObjectsFromArray:@[
-    //                                     @"data.timetoken",
-    //                                     ]];
-    //    return superKeys.copy;
     return @[
              @"data.timetoken"
              ];
@@ -153,6 +148,40 @@
 
 - (void)setActualPublishStatus:(PNPublishStatus *)actualPublishStatus {
     self.actualAcknowledgmentStatus = (PNAcknowledgmentStatus *)actualPublishStatus;
+}
+
+@end
+
+@interface PNTTestClientStateUpdateStatus ()
+@property (nonatomic, readwrite, strong) NSDictionary<NSString *, id> *state;
+@end
+
+@implementation PNTTestClientStateUpdateStatus
+
+- (instancetype)initClientStateUpdateStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError state:(NSDictionary<NSString *, id> *)state {
+    self = [super initErrorStatusWithClient:client statusCode:statusCode operation:PNSetStateOperation category:PNAcknowledgmentCategory isError:isError];
+    if (self) {
+        _state = state;
+    }
+    return self;
+}
+
++ (instancetype)successfulClientStateUpdateStatusWithClient:(PubNub *)client state:(NSDictionary<NSString *, id> *)state {
+    return [[self alloc] initClientStateUpdateStatusWithClient:client statusCode:200 isError:NO state:state];
+}
+
++ (NSArray<NSString *> *)dataKeysToAssert {
+    return @[
+             @"data.state"
+             ];
+}
+
+- (PNClientStateUpdateStatus *)actualClientStateUpdateStatus {
+    return (PNClientStateUpdateStatus *)self.actualErrorStatus;
+}
+
+- (void)setActualClientStateUpdateStatus:(PNClientStateUpdateStatus *)actualClientStateUpdateStatus {
+    self.actualErrorStatus = (PNErrorStatus *)actualClientStateUpdateStatus;
 }
 
 @end

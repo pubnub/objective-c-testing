@@ -72,14 +72,20 @@ typedef NSArray<NSURLQueryItem *> PNTQueryItemArray;
         PNTQueryItemArray *otherRequestQueryItems = (PNTQueryItemArray *)possibleMatchComponentValue;
         // need to separate into two arrays, one with query items that need to be turned into objects and one for everything else
 #warning should only do this if state is being set, not if state is 1 or 0 (like in presence where now)
-        NSArray<NSString *> *specialQueryItemsNames = @[
-                                                        @"state",
-                                                        ];
+        NSString *stateQueryItemName = @"state";
+        NSMutableArray<NSString *> *specialQueryItemsNames = [@[
+                                                                stateQueryItemName,
+                                                                ] mutableCopy];
         
         // pull out all simple matching query items
         NSPredicate *removeSpecialQueryItemNamesPredicate = [NSPredicate predicateWithFormat:@"NOT (name IN %@)", specialQueryItemsNames];
         PNTQueryItemArray *simpleRequestQueryItems = [requestQueryItems filteredArrayUsingPredicate:removeSpecialQueryItemNamesPredicate];
         PNTQueryItemArray *simpleOtherRequestQueryItems = [otherRequestQueryItems filteredArrayUsingPredicate:removeSpecialQueryItemNamesPredicate];
+        
+        // brittle solution, but remove state as a special matching item if it is length 1 (that means
+        // it is most likely a boolean value of 0 or 1 for whether to include state in other calls)
+        // better long term solution would be only do special matching for state for paths that require it
+        // because we are not doing it correctly, the special value is pulled out then put back in
         
         BOOL simpleMatch = [NSURLComponents BKR_componentQueryItems:simpleRequestQueryItems matchesOtherComponentQueryItems:simpleOtherRequestQueryItems withOptions:[self requestComparisonOptions]];
         
@@ -92,6 +98,16 @@ typedef NSArray<NSURLQueryItem *> PNTQueryItemArray;
         for (NSInteger i=0; i<objectRequestQueryItems.count; i++) {
             NSURLQueryItem *queryItem = objectRequestQueryItems[i];
             NSURLQueryItem *otherQueryItem = objectOtherRequestQueryItems[i];
+            // here we will do simple compares if the value is length 1
+            if (
+                (queryItem.value.length ==1) &&
+                (otherQueryItem.value.length == 1) &&
+                ([queryItem.name isEqualToString:stateQueryItemName]) &&
+                ([otherQueryItem.name isEqualToString:stateQueryItemName])
+                ) {
+                objectMatch = [NSURLComponents BKR_componentQueryItems:@[queryItem] matchesOtherComponentQueryItems:@[otherQueryItem] withOptions:[self requestComparisonOptions]];
+                continue;
+            }
             // Now convert publish to JSON and compare objects
             NSData *data = [queryItem.value dataUsingEncoding:NSUTF8StringEncoding];
             NSData *possibleMatchData = [otherQueryItem.value dataUsingEncoding:NSUTF8StringEncoding];

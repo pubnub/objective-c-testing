@@ -64,3 +64,12 @@
 + (PNTTestPublishStatus *)failedStatusWithClient:(PubNub *)client;
 
 @end
+
+@interface PNTTestClientStateUpdateStatus : PNTTestErrorStatus
+@property (nonatomic, readonly, strong) NSDictionary<NSString *, id> *state;
+@property (nonatomic, strong) PNClientStateUpdateStatus *actualClientStateUpdateStatus;
+
+- (instancetype)initClientStateUpdateStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError state:(NSDictionary<NSString *, id> *)state;
++ (instancetype)successfulClientStateUpdateStatusWithClient:(PubNub *)client state:(NSDictionary<NSString *, id> *)state;
+
+@end
