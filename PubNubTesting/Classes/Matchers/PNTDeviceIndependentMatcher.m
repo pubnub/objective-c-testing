@@ -22,7 +22,7 @@ typedef NSArray<NSURLQueryItem *> PNTQueryItemArray;
     return superComparisonOptions.copy;
 }
 
-- (BOOL)hasMatchForURLComponent:(NSString *)URLComponent withRequestComponentValue:(id)requestComponentValue possibleMatchComponentValue:(id)possibleMatchComponentValue {
+- (BOOL)hasOverrideMatchForURLComponent:(NSString *)URLComponent withRequestComponentValue:(id)requestComponentValue possibleMatchComponentValue:(id)possibleMatchComponentValue {
     if ([URLComponent isEqualToString:@"path"]) {
         if (!requestComponentValue && !possibleMatchComponentValue) {
             return YES;
@@ -105,7 +105,10 @@ typedef NSArray<NSURLQueryItem *> PNTQueryItemArray;
                 ([queryItem.name isEqualToString:stateQueryItemName]) &&
                 ([otherQueryItem.name isEqualToString:stateQueryItemName])
                 ) {
-                objectMatch = [NSURLComponents BKR_componentQueryItems:@[queryItem] matchesOtherComponentQueryItems:@[otherQueryItem] withOptions:[self requestComparisonOptions]];
+                if (![NSURLComponents BKR_componentQueryItems:@[queryItem] matchesOtherComponentQueryItems:@[otherQueryItem] withOptions:[self requestComparisonOptions]]) {
+                    objectMatch = NO;
+                    break;
+                }
                 continue;
             }
             // Now convert publish to JSON and compare objects

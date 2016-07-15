@@ -37,7 +37,7 @@
         [testObject performSelector:@selector(isError)]
         ) {
         // add more checks for error messages later
-    } else if ([testObject respondsToSelector:@selector(dataKeysToAssert)]) {
+    } else if ([testObject.class respondsToSelector:@selector(dataKeysToAssert)]) {
         NSArray<NSString *> *dataKeyPaths = [testObject.class dataKeysToAssert];
         [dataKeyPaths enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSString *expectedKeyPath = [obj stringByReplacingOccurrencesOfString:@"data." withString:@""];

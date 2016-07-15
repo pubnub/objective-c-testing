@@ -135,6 +135,12 @@
              ];
 }
 
++ (NSArray<NSString *> *)assertionsWithoutOrdering {
+    return @[
+             @"data.uuids",
+             ];
+}
+
 - (void)setActualChannelHereNowResult:(PNPresenceChannelHereNowResult *)actualChannelHereNowResult {
     self.actualResult = (PNResult *)actualChannelHereNowResult;
 }
