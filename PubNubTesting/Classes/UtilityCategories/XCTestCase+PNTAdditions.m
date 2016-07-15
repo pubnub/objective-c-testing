@@ -25,11 +25,9 @@
     NSArray<NSString *> *keys = [testObject.class keysToAssert];
     [keys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         id expectedValue = [testObject valueForKey:obj];
-//        id expectedValue = [testObject valueForKeyPath:obj];
         Class PubNubClass = [testObject.class PubNubClass];
         XCTAssertTrue([actualResult isKindOfClass:PubNubClass]);
         id actualValue = [actualResult valueForKey:obj];
-//        id actualValue = [actualResult valueForKeyPath:obj];
         XCTAssertEqualObjects(expectedValue, actualValue, @"For key (%@) expected value (%@) does not match actual value (%@)", obj, expectedValue, actualValue);
     }];
     if (

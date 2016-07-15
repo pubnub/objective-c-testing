@@ -182,6 +182,12 @@
              ];
 }
 
++ (NSArray<NSString *> *)assertionsWithoutOrdering {
+    return @[
+             @"data.channels",
+             ];
+}
+
 - (void)setActualGlobalHereNowResult:(PNPresenceGlobalHereNowResult *)actualGlobalHereNowResult {
     self.actualResult = (PNResult *)actualGlobalHereNowResult;
 }
