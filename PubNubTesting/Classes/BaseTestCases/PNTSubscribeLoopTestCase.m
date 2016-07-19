@@ -13,8 +13,8 @@
 
 @interface PNTSubscribeLoopTestCase ()
 @property (nonatomic, strong) dispatch_queue_t accessQueue;
-@property (nonatomic, strong, readwrite) PNTStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
-@property (nonatomic, strong, readwrite) PNTStack<PNTTestMessageResult *> *expectedMessages;
+//@property (nonatomic, strong, readwrite) PNTStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
+//@property (nonatomic, strong, readwrite) PNTStack<PNTTestMessageResult *> *expectedMessages;
 @end
 
 @implementation PNTSubscribeLoopTestCase
@@ -22,8 +22,8 @@
 - (void)setUp {
     [super setUp];
     self.accessQueue = dispatch_queue_create("com.PubNubTesting.subscribeLoopTestCaseAccessQueue", DISPATCH_QUEUE_CONCURRENT);
-    self.expectedSubscribeStatuses = [PNTStack stack];
-    self.expectedMessages = [PNTStack stack];
+//    self.expectedSubscribeStatuses = [PNTStack stack];
+//    self.expectedMessages = [PNTStack stack];
     if (self.shouldRunSubscribeSetUp) {
         [self.client addListener:self];
     }
@@ -33,8 +33,8 @@
     if (self.shouldRunSubscribeTearDown) {
         [self.client unsubscribeFromAll];
     }
-    self.expectedSubscribeStatuses = nil;
-    self.expectedMessages = nil;
+//    self.expectedSubscribeStatuses = nil;
+//    self.expectedMessages = nil;
     [super tearDown];
 }
 
