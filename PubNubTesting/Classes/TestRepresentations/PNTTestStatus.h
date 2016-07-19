@@ -73,3 +73,17 @@
 + (instancetype)successfulClientStateUpdateStatusWithClient:(PubNub *)client state:(NSDictionary<NSString *, id> *)state;
 
 @end
+
+@interface PNTTestSubscribeStatus : PNTTestErrorStatus
+
+@property (nonatomic, nullable, readonly, strong) NSString *subscribedChannel;
+
+@property (nonatomic, nullable, readonly, strong) NSString *actualChannel;
+@property (nonatomic, readonly, strong) NSNumber *timetoken;
+@property (nonatomic, strong) PNSubscribeStatus *actualSubscribeStatus;
+
+- (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
++ (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
++ (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
+
+@end

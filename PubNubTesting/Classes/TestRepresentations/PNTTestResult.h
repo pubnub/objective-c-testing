@@ -72,3 +72,12 @@
 + (instancetype)successfulWhereNowResultWithClient:(PubNub *)client channels:(NSArray<NSString *> *)channels;
 
 @end
+
+@interface PNTTestMessageResult : PNTTestResult
+@property (nonatomic, strong, readonly) id message;
+@property (nonatomic, strong) PNMessageResult *actualMessageResult;
+
+- (instancetype)initMessageResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode message:(id)message;
++ (instancetype)successfulMessageResultWithClient:(PubNub *)client message:(id)message;
+
+@end

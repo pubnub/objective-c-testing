@@ -220,7 +220,7 @@
     return [[self alloc] initChannelGroupHereNowResultWithClient:client statusCode:200 channels:channels totalOccupancy:totalOccupancy totalChannels:totalChannels];
 }
 
-- (NSArray<NSString *> *)dataKeysToAssert {
++ (NSArray<NSString *> *)dataKeysToAssert {
     return @[
              @"data.channels",
              @"data.totalChannels",
@@ -254,7 +254,7 @@
     return [[self alloc] initWhereNowResultWithClient:client statusCode:200 channels:channels];
 }
 
-- (NSArray<NSString *> *)dataKeysToAssert {
++ (NSArray<NSString *> *)dataKeysToAssert {
     return @[
              @"data.channels",
              ];
@@ -266,6 +266,40 @@
 
 - (PNPresenceWhereNowResult *)actualWhereNowResult {
     return (PNPresenceWhereNowResult *)self.actualResult;
+}
+
+@end
+
+@interface PNTTestMessageResult ()
+@property (nonatomic, strong, readwrite) id message;
+@end
+
+@implementation PNTTestMessageResult
+
+- (instancetype)initMessageResultWithClient:(PubNub *)client statusCode:(NSInteger)statusCode message:(id)message {
+    self = [super initResultWithClient:client statusCode:statusCode operation:PNSubscribeOperation];
+    if (self) {
+        _message = message;
+    }
+    return self;
+}
+
++ (instancetype)successfulMessageResultWithClient:(PubNub *)client message:(id)message {
+    return [[self alloc] initMessageResultWithClient:client statusCode:200 message:message];
+}
+
+- (PNMessageResult *)actualMessageResult {
+    return (PNMessageResult *)self.actualResult;
+}
+
+- (void)setActualMessageResult:(PNMessageResult *)actualMessageResult {
+    self.actualResult = (PNResult *)actualMessageResult;
+}
+
++ (NSArray<NSString *> *)dataKeysToAssert {
+    return @[
+             @"data.message",
+             ];
 }
 
 @end

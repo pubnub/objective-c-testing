@@ -185,3 +185,48 @@
 }
 
 @end
+
+@interface PNTTestSubscribeStatus ()
+@property (nonatomic, nullable, readwrite, strong) NSString *subscribedChannel;
+
+@property (nonatomic, nullable, readwrite, strong) NSString *actualChannel;
+@property (nonatomic, readwrite, strong) NSNumber *timetoken;
+@end
+
+@implementation PNTTestSubscribeStatus
+
+- (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+    self = [super initErrorStatusWithClient:client statusCode:statusCode operation:PNSubscribeOperation category:category isError:isError];
+    if (self) {
+        _subscribedChannel = subscribedChannel;
+        _actualChannel = actualChannel;
+        _timetoken = timeToken;
+    }
+    return self;
+}
+
++ (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+    return [[self alloc] initSubscribeStatusWithClient:client statusCode:statusCode category:category isError:isError subscribedChannel:subscribedChannel actualChannel:actualChannel timeToken:timeToken];
+}
+
++ (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+    return [self subscribeStatusWithClient:client statusCode:200 category:PNConnectedCategory isError:NO subscribedChannel:subscribedChannel actualChannel:actualChannel timeToken:timeToken];
+}
+
+- (void)setActualSubscribeStatus:(PNSubscribeStatus *)actualSubscribeStatus {
+    self.actualStatus = (PNStatus *)actualSubscribeStatus;
+}
+
+- (PNSubscribeStatus *)actualSubscribeStatus {
+    return (PNSubscribeStatus *)self.actualStatus;
+}
+
++ (NSArray<NSString *> *)dataKeysToAssert {
+    return @[
+             @"data.subscribedChannel",
+             @"data.actualChannel",
+             @"data.timetoken",
+             ];
+}
+
+@end

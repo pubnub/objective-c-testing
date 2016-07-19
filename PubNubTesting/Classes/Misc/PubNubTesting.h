@@ -23,6 +23,8 @@
 #import "XCTestCase+PNTAdditions.h"
 #import "NSString+PNTAdditions.h"
 
+#import "PNTStack.h"
+
 //#import "PNTTestErrorStatus.h"
 //#import "PNTTestAcknowledgmentStatus.h"
 //#import "PNTTestChannelGroupChannelsResult.h"

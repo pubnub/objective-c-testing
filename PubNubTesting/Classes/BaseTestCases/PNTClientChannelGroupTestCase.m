@@ -49,10 +49,6 @@
              };
 }
 
-- (NSString *)presenceChannelGroup {
-    return nil;
-}
-
 - (BOOL)shouldRunChannelGroupSetUp {
     return YES;
 }
