@@ -196,7 +196,6 @@
 
 - (void)testWhereNowUUID {
     NSArray<NSString *> *channels = @[
-                                      @"a",
                                       ];
     PNTTestPresenceWhereNowResult *expectedResult = [PNTTestPresenceWhereNowResult successfulWhereNowResultWithClient:self.client channels:channels];
     [self.client whereNowUUID:self.client.uuid withCompletion:[self PNT_whereNowCompletionBlockWithExpectedHereNowResult:expectedResult andExpectedError:nil]];

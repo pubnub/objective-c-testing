@@ -249,6 +249,7 @@
     if (self) {
         _channels = channels;
     }
+    return self;
 }
 + (instancetype)successfulWhereNowResultWithClient:(PubNub *)client channels:(NSArray<NSString *> *)channels {
     return [[self alloc] initWhereNowResultWithClient:client statusCode:200 channels:channels];

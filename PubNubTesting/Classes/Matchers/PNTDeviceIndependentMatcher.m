@@ -71,7 +71,9 @@ typedef NSArray<NSURLQueryItem *> PNTQueryItemArray;
         PNTQueryItemArray *requestQueryItems = (PNTQueryItemArray *)requestComponentValue;
         PNTQueryItemArray *otherRequestQueryItems = (PNTQueryItemArray *)possibleMatchComponentValue;
         // need to separate into two arrays, one with query items that need to be turned into objects and one for everything else
-#warning should only do this if state is being set, not if state is 1 or 0 (like in presence where now)
+//TODO: Fix this!
+        // should only do this if state is being set, not if state is 1 or 0 (like in presence where now)
+        // this is very inefficient
         NSString *stateQueryItemName = @"state";
         NSMutableArray<NSString *> *specialQueryItemsNames = [@[
                                                                 stateQueryItemName,
