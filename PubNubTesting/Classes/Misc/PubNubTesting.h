@@ -23,6 +23,8 @@
 #import "XCTestCase+PNTAdditions.h"
 #import "NSString+PNTAdditions.h"
 
+#import "PNTStack.h"
+
 //#import "PNTTestErrorStatus.h"
 //#import "PNTTestAcknowledgmentStatus.h"
 //#import "PNTTestChannelGroupChannelsResult.h"
@@ -37,14 +39,16 @@
 // Categories
 #import "XCTestCase+PNTChannelGroup.h"
 #import "XCTestCase+PNTTimeToken.h"
-//#import "XCTestCase+PNTClientState.h"
+#import "XCTestCase+PNTClientState.h"
 #import "XCTestCase+PNTHistory.h"
 #import "XCTestCase+PNTPublish.h"
 #import "XCTestCase+PNTSizeOfMessage.h"
+#import "XCTestCase+PNTPresence.h"
 //#import "XCTestCase+PNTSubscription.h"
 
 // TestCase Subclasses
 #import "PNTClientTestCase.h"
-//#import "PNTSubscribeLoopTestCase.h"
+#import "PNTClientChannelGroupTestCase.h"
+#import "PNTSubscribeLoopTestCase.h"
 
 #endif /* PubNubTesting_h */

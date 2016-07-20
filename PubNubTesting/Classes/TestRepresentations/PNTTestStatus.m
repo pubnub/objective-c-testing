@@ -29,7 +29,7 @@
     return [[self alloc] initStatusWithClient:client statusCode:statusCode operation:operationType category:category isError:isError];
 }
 
-- (NSArray<NSString *> *)keysToAssert {
++ (NSArray<NSString *> *)keysToAssert {
     NSMutableArray *superKeys = [super keysToAssert].mutableCopy;
     [superKeys addObjectsFromArray:@[
                                      @"category",
@@ -65,6 +65,16 @@
 
 - (void)setActualErrorStatus:(PNErrorStatus *)actualErrorStatus {
     self.actualStatus = (PNStatus *)actualErrorStatus;
+}
+
+#pragma mark - Failed
+
++ (instancetype)failedErrorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category {
+    return [self errorStatusWithClient:client statusCode:statusCode operation:operationType category:category isError:YES];
+}
+
++ (instancetype)failedBadRequestStatusWithClient:(PubNub *)client operation:(PNOperationType)operationType {
+    return [self failedErrorStatusWithClient:client statusCode:400 operation:operationType category:PNBadRequestCategory];
 }
 
 @end
@@ -123,15 +133,10 @@
 }
 
 + (PNTTestPublishStatus *)failedStatusWithClient:(PubNub *)client {
-    return (PNTTestPublishStatus *)[PNTTestErrorStatus errorStatusWithClient:client statusCode:400 operation:PNPublishOperation category:PNBadRequestCategory isError:YES];
+    return (PNTTestPublishStatus *)[PNTTestErrorStatus failedBadRequestStatusWithClient:client operation:PNPublishOperation];
 }
 
-- (NSArray<NSString *> *)dataKeysToAssert {
-    //    NSMutableArray *superKeys = [super dataKeyPathsToAssert].mutableCopy;
-    //    [superKeys addObjectsFromArray:@[
-    //                                     @"data.timetoken",
-    //                                     ]];
-    //    return superKeys.copy;
++ (NSArray<NSString *> *)dataKeysToAssert {
     return @[
              @"data.timetoken"
              ];
@@ -143,6 +148,85 @@
 
 - (void)setActualPublishStatus:(PNPublishStatus *)actualPublishStatus {
     self.actualAcknowledgmentStatus = (PNAcknowledgmentStatus *)actualPublishStatus;
+}
+
+@end
+
+@interface PNTTestClientStateUpdateStatus ()
+@property (nonatomic, readwrite, strong) NSDictionary<NSString *, id> *state;
+@end
+
+@implementation PNTTestClientStateUpdateStatus
+
+- (instancetype)initClientStateUpdateStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError state:(NSDictionary<NSString *, id> *)state {
+    self = [super initErrorStatusWithClient:client statusCode:statusCode operation:PNSetStateOperation category:PNAcknowledgmentCategory isError:isError];
+    if (self) {
+        _state = state;
+    }
+    return self;
+}
+
++ (instancetype)successfulClientStateUpdateStatusWithClient:(PubNub *)client state:(NSDictionary<NSString *, id> *)state {
+    return [[self alloc] initClientStateUpdateStatusWithClient:client statusCode:200 isError:NO state:state];
+}
+
++ (NSArray<NSString *> *)dataKeysToAssert {
+    return @[
+             @"data.state"
+             ];
+}
+
+- (PNClientStateUpdateStatus *)actualClientStateUpdateStatus {
+    return (PNClientStateUpdateStatus *)self.actualErrorStatus;
+}
+
+- (void)setActualClientStateUpdateStatus:(PNClientStateUpdateStatus *)actualClientStateUpdateStatus {
+    self.actualErrorStatus = (PNErrorStatus *)actualClientStateUpdateStatus;
+}
+
+@end
+
+@interface PNTTestSubscribeStatus ()
+@property (nonatomic, nullable, readwrite, strong) NSString *subscribedChannel;
+
+@property (nonatomic, nullable, readwrite, strong) NSString *actualChannel;
+@property (nonatomic, readwrite, strong) NSNumber *timetoken;
+@end
+
+@implementation PNTTestSubscribeStatus
+
+- (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+    self = [super initErrorStatusWithClient:client statusCode:statusCode operation:PNSubscribeOperation category:category isError:isError];
+    if (self) {
+        _subscribedChannel = subscribedChannel;
+        _actualChannel = actualChannel;
+        _timetoken = timeToken;
+    }
+    return self;
+}
+
++ (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+    return [[self alloc] initSubscribeStatusWithClient:client statusCode:statusCode category:category isError:isError subscribedChannel:subscribedChannel actualChannel:actualChannel timeToken:timeToken];
+}
+
++ (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+    return [self subscribeStatusWithClient:client statusCode:200 category:PNConnectedCategory isError:NO subscribedChannel:subscribedChannel actualChannel:actualChannel timeToken:timeToken];
+}
+
+- (void)setActualSubscribeStatus:(PNSubscribeStatus *)actualSubscribeStatus {
+    self.actualStatus = (PNStatus *)actualSubscribeStatus;
+}
+
+- (PNSubscribeStatus *)actualSubscribeStatus {
+    return (PNSubscribeStatus *)self.actualStatus;
+}
+
++ (NSArray<NSString *> *)dataKeysToAssert {
+    return @[
+             @"data.subscribedChannel",
+             @"data.actualChannel",
+             @"data.timetoken",
+             ];
 }
 
 @end

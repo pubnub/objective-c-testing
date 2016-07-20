@@ -22,7 +22,7 @@
     }
     NSObject *actualResult = [testObject actualResult];
     XCTAssertNotNil(actualResult);
-    NSArray<NSString *> *keys = [testObject keysToAssert];
+    NSArray<NSString *> *keys = [testObject.class keysToAssert];
     [keys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         id expectedValue = [testObject valueForKey:obj];
         Class PubNubClass = [testObject.class PubNubClass];
@@ -35,8 +35,8 @@
         [testObject performSelector:@selector(isError)]
         ) {
         // add more checks for error messages later
-    } else if ([testObject respondsToSelector:@selector(dataKeysToAssert)]) {
-        NSArray<NSString *> *dataKeyPaths = [testObject dataKeysToAssert];
+    } else if ([testObject.class respondsToSelector:@selector(dataKeysToAssert)]) {
+        NSArray<NSString *> *dataKeyPaths = [testObject.class dataKeysToAssert];
         [dataKeyPaths enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSString *expectedKeyPath = [obj stringByReplacingOccurrencesOfString:@"data." withString:@""];
             id expectedKeyPathValue = [testObject valueForKeyPath:expectedKeyPath];
@@ -63,6 +63,10 @@
                 }
             } else {
                 XCTAssertEqualObjects(expectedKeyPathValue, actualKeyPathValue, @"For keyPath (%@) expected value (%@) does not match actual value (%@)", obj, expectedKeyPathValue, actualKeyPathValue);
+                if (![expectedKeyPathValue isEqual:actualKeyPathValue]) {
+                    [self PNT_prettyPrint:actualKeyPathValue];
+                    return;
+                }
             }
         }];
     }
