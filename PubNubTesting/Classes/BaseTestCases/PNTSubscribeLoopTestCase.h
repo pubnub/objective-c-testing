@@ -7,8 +7,8 @@
 //
 
 #import "PNTClientChannelGroupTestCase.h"
+#import "PNTStack.h"
 
-@class PNTStack;
 @class PNTTestSubscribeStatus;
 @class PNTTestMessageResult;
 
@@ -20,7 +20,7 @@
 @property (nonatomic, assign, readonly) BOOL shouldRunSubscribeSetUp; // default is `YES`
 @property (nonatomic, assign, readonly) BOOL shouldRunSubscribeTearDown; // default is `YES`
 
-//@property (nonatomic, strong, readonly) PNTStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
-//@property (nonatomic, strong, readonly) PNTStack<PNTTestMessageResult *> *expectedMessages;
+@property (nonatomic, strong, readonly) PNTStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
+@property (nonatomic, strong, readonly) PNTStack<PNTTestMessageResult *> *expectedMessages;
 
 @end
