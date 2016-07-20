@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PNTStack<__covariant ObjectType> : NSObject
+// TODO: check into the annotation http://drekka.ghost.io/objective-c-generics/
+@interface PNTStack<ObjectType> : NSObject
 
 + (instancetype)stack;
 
