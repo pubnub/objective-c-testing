@@ -8,7 +8,7 @@
 
 #import <PubNubTesting/PubNubTesting.h>
 
-@interface ChannelGroupTestCase : PNTClientTestCase
+@interface ChannelGroupTestCase : PNTClientChannelGroupTestCase
 @property (nonatomic, copy, readonly) NSString *channelGroup;
 @end
 
@@ -22,18 +22,27 @@
     return NO;
 }
 
-- (void)setUp {
-    [super setUp];
-    [self PNT_removeChannelGroup:self.channelGroup forClient:self.client];
+- (BOOL)shouldRunChannelGroupSetUp {
     NSString *testCaseName = [self PNT_testCaseName];
     if ([testCaseName containsString:@"Existing"]) {
-        [self PNT_addChannels:@[@"a", @"b", @"e"] toGroup:self.channelGroup forClient:self.client];
+        return YES;
     }
+    return NO;
 }
 
-- (void)tearDown {
-    [self PNT_removeChannelGroup:self.channelGroup forClient:self.client];
-    [super tearDown];
+- (NSDictionary<NSString *, NSArray<NSString *> *> *)channelGroups {
+    NSMutableDictionary<NSString *, NSArray<NSString *> *> *groups = [@{
+                                                                        self.channelGroup: @[]
+                                                                        } mutableCopy];
+    NSString *testCaseName = [self PNT_testCaseName];
+    if ([testCaseName containsString:@"Existing"]) {
+        groups[self.channelGroup] = @[
+                                      @"a",
+                                      @"b",
+                                      @"e",
+                                      ];
+    }
+    return groups.copy;
 }
 
 - (void)testAddChannelToNewChannelGroup {
@@ -53,13 +62,13 @@
 }
 
 - (void)testRemoveChannelFromExistingGroup {
-    PNTTestAcknowledgmentStatus *removeChannelStatus = [PNTTestAcknowledgmentStatus channelGroupRemoveWithClient:self.client];
+    PNTTestAcknowledgmentStatus *removeChannelStatus = [PNTTestAcknowledgmentStatus successfulChannelGroupRemoveWithClient:self.client];
     [self.client removeChannels:@[@"a"] fromGroup:self.channelGroup withCompletion:[self PNT_channelGroupChangeCompletionBlockWithResult:removeChannelStatus]];
     [self PNT_waitFor:kPNTChannelGroupChangeTimeout];
 }
 
 - (void)testRemoveMultipleChannelsFromExistingGroup {
-    PNTTestAcknowledgmentStatus *removeChannelStatus = [PNTTestAcknowledgmentStatus channelGroupRemoveWithClient:self.client];
+    PNTTestAcknowledgmentStatus *removeChannelStatus = [PNTTestAcknowledgmentStatus successfulChannelGroupRemoveWithClient:self.client];
     [self.client removeChannels:@[@"a", @"b"] fromGroup:self.channelGroup withCompletion:[self PNT_channelGroupChangeCompletionBlockWithResult:removeChannelStatus]];
     [self PNT_waitFor:kPNTChannelGroupChangeTimeout];
 }

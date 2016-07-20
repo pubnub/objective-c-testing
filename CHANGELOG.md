@@ -1,5 +1,9 @@
 # PubNubTesting — CHANGELOG
 
+## [0.9.0](https://github.com/pubnub/objective-c-testing/releases/tag/0.9.0)
+
+* Refactor and reorganize testing for better extensibility.
+
 ## [0.8.0](https://github.com/pubnub/objective-c-testing/releases/tag/0.8.0)
 
 * Added better support for channel group changes.

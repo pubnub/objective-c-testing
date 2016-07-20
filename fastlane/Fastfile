@@ -16,12 +16,12 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.50.0"
+fastlane_version "1.97.2"
 
 # default_platform :ios
 
 before_all do
-  # "This block is executed before every action of all platforms"
+  # "This block is executed before every action of dall platforms"
 end
 
 #Test Lanes
@@ -56,6 +56,7 @@ desc "####Options"
 desc " * **`configuration`**: The build configuration to use."
 desc ""
 lane :test_framework do |options|
+  print options[:configuration]
   scan(
     configuration: options[:configuration]
   )

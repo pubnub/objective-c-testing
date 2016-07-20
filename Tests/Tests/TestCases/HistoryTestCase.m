@@ -125,8 +125,8 @@
                           @123,
                           @"**********..... 8310 - 2016-06-08 13:22:03",
                           ];
-    PNTTestHistoryResult *expectedResult = [PNTTestHistoryResult successfulResultWithClient:self.client statusCode:200 start:@14654142431936747 end:@14654173241405040 messages:messages];
-    [self.client historyForChannel:self.historyChannel withCompletion:[self PNT_historyCompletionBlockWithHistoryResult:expectedResult andError:nil]];
+    PNTTestHistoryResult *expectedResult = [PNTTestHistoryResult successfulResultWithClient:self.client start:@14654142431936747 end:@14654173241405040 messages:messages];
+    [self.client historyForChannel:self.historyChannel withCompletion:[self PNT_historyCompletionBlockWithExpectedHistoryResult:expectedResult andExpectedError:nil]];
     [self PNT_waitFor:kPNTHistoryTimeout];
 }
 
@@ -134,8 +134,8 @@
     NSArray *messages = @[
                           ];
     NSString *emptyChannel = @"please-dont-use-this-channel";
-    PNTTestHistoryResult *expectedResult = [PNTTestHistoryResult successfulResultWithClient:self.client statusCode:200 start:@0 end:@0 messages:messages];
-    [self.client historyForChannel:emptyChannel withCompletion:[self PNT_historyCompletionBlockWithHistoryResult:expectedResult andError:nil]];
+    PNTTestHistoryResult *expectedResult = [PNTTestHistoryResult successfulResultWithClient:self.client start:@0 end:@0 messages:messages];
+    [self.client historyForChannel:emptyChannel withCompletion:[self PNT_historyCompletionBlockWithExpectedHistoryResult:expectedResult andExpectedError:nil]];
     [self PNT_waitFor:kPNTHistoryTimeout];
 }
 
