@@ -8,13 +8,15 @@
 
 #import "PNTTestResult.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #pragma mark - Base Status Class (Abstract)
 
 @interface PNTTestStatus : PNTTestResult
 
 @property (nonatomic, readonly, assign) PNStatusCategory category;
 @property (nonatomic, readonly, assign, getter = isError) BOOL error;
-@property (nonatomic, strong) PNStatus *actualStatus;
+@property (nonatomic, strong, nullable) PNStatus *actualStatus;
 
 - (instancetype)initStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
 
@@ -26,7 +28,7 @@
 
 @interface PNTTestErrorStatus : PNTTestStatus
 
-@property (nonatomic, strong) PNErrorStatus *actualErrorStatus;
+@property (nonatomic, strong, nullable) PNErrorStatus *actualErrorStatus;
 
 - (instancetype)initErrorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
 + (instancetype)errorStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
@@ -42,7 +44,7 @@
 
 @interface PNTTestAcknowledgmentStatus : PNTTestErrorStatus
 
-@property (nonatomic, strong) PNAcknowledgmentStatus *actualAcknowledgmentStatus;
+@property (nonatomic, strong, nullable) PNAcknowledgmentStatus *actualAcknowledgmentStatus;
 
 - (instancetype)initAcknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError;
 + (instancetype)acknowledgmentStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType isError:(BOOL)isError;
@@ -57,7 +59,7 @@
 @interface PNTTestPublishStatus : PNTTestAcknowledgmentStatus
 
 @property (nonatomic, readonly, strong) NSNumber *timetoken;
-@property (nonatomic, strong) PNPublishStatus *actualPublishStatus;
+@property (nonatomic, strong, nullable) PNPublishStatus *actualPublishStatus;
 
 - (instancetype)initPublishStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError timeToken:(NSNumber *)timeToken;
 + (instancetype)successfulStatusWithClient:(PubNub *)client timeToken:(NSNumber *)timeToken;
@@ -67,7 +69,7 @@
 
 @interface PNTTestClientStateUpdateStatus : PNTTestErrorStatus
 @property (nonatomic, readonly, strong) NSDictionary<NSString *, id> *state;
-@property (nonatomic, strong) PNClientStateUpdateStatus *actualClientStateUpdateStatus;
+@property (nonatomic, strong, nullable) PNClientStateUpdateStatus *actualClientStateUpdateStatus;
 
 - (instancetype)initClientStateUpdateStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode isError:(BOOL)isError state:(NSDictionary<NSString *, id> *)state;
 + (instancetype)successfulClientStateUpdateStatusWithClient:(PubNub *)client state:(NSDictionary<NSString *, id> *)state;
@@ -80,10 +82,12 @@
 
 @property (nonatomic, nullable, readonly, strong) NSString *actualChannel;
 @property (nonatomic, readonly, strong) NSNumber *timetoken;
-@property (nonatomic, strong) PNSubscribeStatus *actualSubscribeStatus;
+@property (nonatomic, strong, nullable) PNSubscribeStatus *actualSubscribeStatus;
 
 - (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
 + (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
 + (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
 
 @end
+
+NS_ASSUME_NONNULL_END

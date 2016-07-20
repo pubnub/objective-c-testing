@@ -9,6 +9,8 @@
 #import <PubNub/PubNub.h>
 #import "PNTTestRepresentation.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface PNTTestResult : NSObject <PNTTestRepresentation>
 
 @property (nonatomic, readonly, assign) NSInteger statusCode;
@@ -81,3 +83,5 @@
 + (instancetype)successfulMessageResultWithClient:(PubNub *)client message:(id)message;
 
 @end
+
+NS_ASSUME_NONNULL_END

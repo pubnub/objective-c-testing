@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PNTStack<ObjectType> : NSObject
+@interface PNTStack<__covariant ObjectType> : NSObject
 
 + (instancetype)stack;
 

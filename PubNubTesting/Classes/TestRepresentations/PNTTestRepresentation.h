@@ -11,6 +11,8 @@
 @class PubNub;
 @class PNResult;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol PNTTestRepresentation <NSObject>
 
 + (Class)PubNubClass;
@@ -19,7 +21,7 @@
 - (instancetype)initWithClient:(PubNub *)client;
 
 @property (nonatomic, strong, readonly) PubNub *client;
-@property (nonatomic, strong) PNResult *actualResult;
+@property (nonatomic, strong, nullable) PNResult *actualResult;
 
 @optional
 + (NSArray<NSString *> *)dataKeysToAssert;
@@ -27,3 +29,5 @@
 - (BOOL)isError;
 
 @end
+
+NS_ASSUME_NONNULL_END
