@@ -22,5 +22,7 @@
 
 @property (nonatomic, strong, readonly) PNTThreadSafeStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
 @property (nonatomic, strong, readonly) PNTThreadSafeStack<PNTTestMessageResult *> *expectedMessages;
+@property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *setUpSubscribeStatuses;
+@property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *tearDownSubscribeStatuses;
 
 @end

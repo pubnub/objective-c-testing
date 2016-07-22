@@ -24,6 +24,10 @@
     self.expectedSubscribeStatuses = [PNTThreadSafeStack stackWithAccessQueue:self.accessQueue];
     self.expectedMessages = [PNTThreadSafeStack stackWithAccessQueue:self.accessQueue];
     if (self.shouldRunSubscribeSetUp) {
+        NSArray<PNTTestSubscribeStatus *> *setUpStatuses = [self setUpSubscribeStatuses];
+        for (PNTTestSubscribeStatus *status in setUpStatuses) {
+            [self.expectedSubscribeStatuses push:status];
+        }
         [self.client addListener:self];
     }
 }
