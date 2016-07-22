@@ -53,7 +53,7 @@
     return (self.itemsArray.count ? YES : NO);
 }
 
-- (NSUInteger)size {
+- (NSUInteger)count {
     return self.itemsArray.count;
 }
 
@@ -106,14 +106,14 @@
     return empty;
 }
 
-- (NSUInteger)size {
-    __block NSUInteger count = YES;
+- (NSUInteger)count {
+    __block NSUInteger size = YES;
     PNTWeakify(self);
     dispatch_sync(self.accessQueue, ^{
         PNTStrongify(self);
-        count = [super size];
+        size = [super count];
     });
-    return count;
+    return size;
 }
 
 @end

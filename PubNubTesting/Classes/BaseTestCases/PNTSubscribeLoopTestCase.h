@@ -25,4 +25,6 @@
 @property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *setUpSubscribeStatuses;
 @property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *tearDownSubscribeStatuses;
 
+- (BOOL)shouldFailIfExtraExpectedSubscribeStatusesBeforeTearDown; // default is YES
+
 @end

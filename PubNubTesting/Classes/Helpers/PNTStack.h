@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable ObjectType)pop;
 
 @property (nonatomic, assign, readonly) BOOL isEmpty;
-@property (nonatomic, assign, readonly) NSUInteger size;
+@property (nonatomic, assign, readonly) NSUInteger count;
 
 @end
 

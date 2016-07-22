@@ -33,7 +33,15 @@
 }
 
 - (void)tearDown {
+    if (self.shouldFailIfExtraExpectedSubscribeStatusesBeforeTearDown) {
+        XCTAssertEqual(self.expectedSubscribeStatuses.count, 0, @"There should be no leftover subscribe statuses before tearDown commences");
+    }
     if (self.shouldRunSubscribeTearDown) {
+        // TODO: check if there are statuses left before tear down
+        NSArray<PNTTestSubscribeStatus *> *tearDownStatuses = [self tearDownSubscribeStatuses];
+        for (PNTTestSubscribeStatus *status in tearDownStatuses) {
+            [self.expectedSubscribeStatuses push:status];
+        }
         [self.client unsubscribeFromAll];
     }
     self.expectedSubscribeStatuses = nil;
@@ -43,12 +51,24 @@
 
 #pragma mark - Customization
 
+- (BOOL)shouldFailIfExtraExpectedSubscribeStatusesBeforeTearDown {
+    return YES;
+}
+
 - (BOOL)shouldRunSubscribeSetUp {
     return YES;
 }
 
 - (BOOL)shouldRunSubscribeTearDown {
     return YES;
+}
+
+- (NSArray<PNTTestSubscribeStatus *> *)setUpSubscribeStatuses {
+    return [NSArray array];
+}
+
+- (NSArray<PNTTestSubscribeStatus *> *)tearDownSubscribeStatuses {
+    return [NSArray array];
 }
 
 - (NSDictionary<NSString *, NSNumber *> *)subscribedChannels {
