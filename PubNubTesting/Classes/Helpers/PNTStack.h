@@ -22,4 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface PNTThreadSafeStack<ObjectType> : PNTStack<ObjectType>
+
+@property (nonatomic, strong, readonly) dispatch_queue_t accessQueue;
+
+- (instancetype)initStackWithAccessQueue:(dispatch_queue_t)dispatchQueue;
++ (instancetype)stackWithAccessQueue:(dispatch_queue_t)dispatchQueue;
+
+@end
+
 NS_ASSUME_NONNULL_END
