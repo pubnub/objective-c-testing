@@ -34,6 +34,12 @@
              };
 }
 
+- (NSArray<PNTTestSubscribeStatus *> *)setUpSubscribeStatuses {
+    return @[
+             [PNTTestSubscribeStatus successfulSubscribeStatusWithClient:self.client subscribedChannel:@"a" actualChannel:@"a" timeToken:@1],
+             ];
+}
+
 - (void)testSetUp {
     XCTAssertTrue([self.client.channels containsObject:@"a"]);
 }

@@ -15,6 +15,7 @@
 @property (nonatomic, strong) dispatch_queue_t accessQueue;
 @property (nonatomic, strong, readwrite) PNTTestStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
 @property (nonatomic, strong, readwrite) PNTTestStack<PNTTestMessageResult *> *expectedMessages;
+@property (nonatomic, strong) XCTestExpectation *setUpExpectation;
 @end
 
 @implementation PNTSubscribeLoopTestCase
@@ -29,6 +30,11 @@
         [self.expectedSubscribeStatuses pushFromArray:[self setUpSubscribeStatuses] withExpectation:setUpSubscribeStatusesExpectation];
         [self PNT_waitFor:kPNTDefaultTimeout];
         [self.client addListener:self];
+        NSDictionary<NSString *, NSNumber *> *subscribedChannels = [self subscribedChannels];
+        NSLog(@"subscribedChannels: %@", subscribedChannels);
+        self.setUpExpectation = [self expectationWithDescription:@"setUp expectation"];
+        [self.client subscribeToChannels:subscribedChannels.allKeys withPresence:YES];
+        [self PNT_waitFor:kPNTSubscribeTimeout];
     }
 }
 
@@ -86,10 +92,21 @@
 #pragma mark - PNObjectEventListener
 
 - (void)client:(PubNub *)client didReceiveStatus:(PNStatus *)status {
-    
+    NSLog(@"%s: %@", __PRETTY_FUNCTION__, status);
+    if (self.expectedSubscribeStatuses.isEmpty) {
+        [self.setUpExpectation fulfill];
+        self.setUpExpectation = nil;
+    }
+    if (self.setUpExpectation) {
+        PNTTestSubscribeStatus *expectedSubscribeStatus = [self.expectedSubscribeStatuses pop];
+        if (expectedSubscribeStatus) {
+            expectedSubscribeStatus.actualSubscribeStatus = status;
+            [self PNT_assertTestRepresentation:expectedSubscribeStatus];
+        }
+    }
 }
 
-- (void)client:(PubNub *)client didReceiveMessage:(nonnull PNMessageResult *)message {
+- (void)client:(PubNub *)client didReceiveMessage:(PNMessageResult *)message {
     
 }
 
