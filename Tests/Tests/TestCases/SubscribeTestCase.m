@@ -34,7 +34,7 @@
              };
 }
 
-- (void)DISABLE_testSetUp {
+- (void)testSetUp {
     XCTAssertTrue([self.client.channels containsObject:@"a"]);
 }
 

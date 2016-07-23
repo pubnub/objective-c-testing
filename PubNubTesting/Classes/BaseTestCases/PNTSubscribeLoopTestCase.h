@@ -7,7 +7,7 @@
 //
 
 #import "PNTClientChannelGroupTestCase.h"
-#import "PNTStack.h"
+#import "PNTTestStack.h"
 
 @class PNTTestSubscribeStatus;
 @class PNTTestMessageResult;
@@ -20,8 +20,8 @@
 @property (nonatomic, assign, readonly) BOOL shouldRunSubscribeSetUp; // default is `YES`
 @property (nonatomic, assign, readonly) BOOL shouldRunSubscribeTearDown; // default is `YES`
 
-@property (nonatomic, strong, readonly) PNTThreadSafeStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
-@property (nonatomic, strong, readonly) PNTThreadSafeStack<PNTTestMessageResult *> *expectedMessages;
+@property (nonatomic, strong, readonly) PNTTestStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
+@property (nonatomic, strong, readonly) PNTTestStack<PNTTestMessageResult *> *expectedMessages;
 @property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *setUpSubscribeStatuses;
 @property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *tearDownSubscribeStatuses;
 

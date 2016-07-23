@@ -23,7 +23,7 @@
 #import "XCTestCase+PNTAdditions.h"
 #import "NSString+PNTAdditions.h"
 
-#import "PNTStack.h"
+#import "PNTTestStack.h"
 
 //#import "PNTTestErrorStatus.h"
 //#import "PNTTestAcknowledgmentStatus.h"
