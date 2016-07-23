@@ -12,6 +12,10 @@
 @class PNTTestSubscribeStatus;
 @class PNTTestMessageResult;
 
+typedef void (^PNTClientDidReceiveStatusHandler)(PubNub *client, PNStatus *status);
+typedef void (^PNTClientDidReceiveMessageHandler)(PubNub *client, PNMessageResult *message);
+typedef void (^PNTClientDidReceivePresenceEventHandler)(PubNub *client, PNPresenceEventResult *event);
+
 @interface PNTSubscribeLoopTestCase : PNTClientChannelGroupTestCase <PNObjectEventListener>
 
 // these are properties so that they can be easily accessed with dot accessors with compiler autocomplete
@@ -24,6 +28,10 @@
 @property (nonatomic, strong, readonly) PNTTestStack<PNTTestMessageResult *> *expectedMessages;
 @property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *setUpSubscribeStatuses;
 @property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *tearDownSubscribeStatuses;
+
+@property (nonatomic, copy) PNTClientDidReceiveStatusHandler didReceiveStatusHandler;
+@property (nonatomic, copy) PNTClientDidReceiveMessageHandler didReceiveMessageHandler;
+@property (nonatomic, copy) PNTClientDidReceivePresenceEventHandler didReceivePresenceEventHandler;
 
 - (BOOL)shouldFailIfExtraExpectedSubscribeStatusesBeforeTearDown; // default is YES
 

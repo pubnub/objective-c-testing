@@ -30,18 +30,18 @@
 }
 
 - (void)push:(id)expectedResult withExpectation:(XCTestExpectation *)expectation {
-    NSParameterAssert(expectation);
     __block XCTestExpectation *originalExpectation = expectation;
     PNTWeakify(self);
     dispatch_barrier_async(self.accessQueue, ^{
         PNTStrongify(self);
         [self push:expectedResult];
-        [originalExpectation fulfill];
+        if (originalExpectation) {
+            [originalExpectation fulfill];
+        }
     });
 }
 
 - (void)pushFromArray:(NSArray *)array withExpectation:(XCTestExpectation *)expectation {
-    NSParameterAssert(expectation);
     if (!array.count) {
         [expectation fulfill];
         return;
@@ -54,32 +54,27 @@
         id expectedResult = array[iteration];
         [self push:expectedResult];
     });
-    [expectation fulfill];
+    if (expectation) {
+        [expectation fulfill];
+    }
 }
 
 - (nullable id)popWithExpectation:(XCTestExpectation *)expectation {
-    NSParameterAssert(expectation);
     __block id result = nil;
     __block XCTestExpectation *originalExpectation = expectation;
     PNTWeakify(self);
     dispatch_sync(self.accessQueue, ^{
         PNTStrongify(self);
         result = [self pop];
-        [originalExpectation fulfill];
+        if (originalExpectation) {
+            [originalExpectation fulfill];
+        }
     });
     return result;
 }
 
 - (BOOL)isEmptyWithExpectation:(XCTestExpectation *)expectation {
-    __block BOOL empty = YES;
-    __block XCTestExpectation *originalExpectation = expectation;
-    PNTWeakify(self);
-    dispatch_sync(self.accessQueue, ^{
-        PNTStrongify(self);
-        empty = [self isEmpty];
-        [originalExpectation fulfill];
-    });
-    return empty;
+    return ([self countWithExpectation:expectation] ? NO : YES);
 }
 
 - (NSUInteger)countWithExpectation:(XCTestExpectation *)expectation {
@@ -89,7 +84,9 @@
     dispatch_sync(self.accessQueue, ^{
         PNTStrongify(self);
         size = [super count];
-        [originalExpectation fulfill];
+        if (originalExpectation) {
+            [originalExpectation fulfill];
+        }
     });
     return size;
 }

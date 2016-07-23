@@ -36,7 +36,13 @@
 
 - (NSArray<PNTTestSubscribeStatus *> *)setUpSubscribeStatuses {
     return @[
-             [PNTTestSubscribeStatus successfulSubscribeStatusWithClient:self.client subscribedChannel:@"a" actualChannel:@"a" timeToken:@1],
+             [PNTTestSubscribeStatus successfulSubscribeStatusWithClient:self.client subscribedChannel:@"a" actualChannel:nil timeToken:@1],
+             ];
+}
+
+- (NSArray<PNTTestSubscribeStatus *> *)tearDownSubscribeStatuses {
+    return @[
+             [PNTTestSubscribeStatus subscribeStatusWithClient:self.client statusCode:200 category:PNDisconnectedCategory isError:NO subscribedChannel:@"a" actualChannel:nil timeToken:@1],
              ];
 }
 

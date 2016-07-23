@@ -19,12 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initStackWithAccessQueue:(dispatch_queue_t)dispatchQueue;
 + (instancetype)stackWithAccessQueue:(dispatch_queue_t)dispatchQueue;
 
-- (void)pushFromArray:(NSArray<ObjectType> *)array withExpectation:(XCTestExpectation *)expectation;
-- (void)push:(ObjectType)expectedResult withExpectation:(XCTestExpectation *)expectation;
-- (nullable ObjectType)popWithExpectation:(XCTestExpectation *)expectation;
+- (void)pushFromArray:(NSArray<ObjectType> *)array withExpectation:(nullable XCTestExpectation *)expectation;
+- (void)push:(ObjectType)expectedResult withExpectation:(nullable XCTestExpectation *)expectation;
+- (nullable ObjectType)popWithExpectation:(nullable XCTestExpectation *)expectation;
 
-- (BOOL)isEmptyWithExpectation:(XCTestExpectation *)expectation;
-- (NSUInteger)countWithExpectation:(XCTestExpectation *)expectation;
+- (BOOL)isEmptyWithExpectation:(nullable XCTestExpectation *)expectation;
+- (NSUInteger)countWithExpectation:(nullable XCTestExpectation *)expectation;
 
 @end
 

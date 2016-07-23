@@ -49,7 +49,7 @@
 }
 
 - (BOOL)isEmpty {
-    return (self.itemsArray.count ? YES : NO);
+    return (self.itemsArray.count ? NO : YES);
 }
 
 - (NSUInteger)count {
