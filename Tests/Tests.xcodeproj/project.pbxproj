@@ -21,6 +21,9 @@
 		5161A24F1D39635400EB67DA /* ClientStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161A24E1D39635400EB67DA /* ClientStateTestCase.m */; };
 		5161A2501D39635400EB67DA /* ClientStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161A24E1D39635400EB67DA /* ClientStateTestCase.m */; };
 		5161A2511D39635400EB67DA /* ClientStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161A24E1D39635400EB67DA /* ClientStateTestCase.m */; };
+		5166C2521D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */; };
+		5166C2531D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */; };
+		5166C2541D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */; };
 		51B1EA8A1D18990E00669390 /* PublishSizeOfMessageTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */; };
 		51B1EA8B1D18990E00669390 /* PublishSizeOfMessageTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */; };
 		51B1EA8C1D18990E00669390 /* PublishSizeOfMessageTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */; };
@@ -59,6 +62,7 @@
 		512A6D0C1D380679001EC93C /* PresenceTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresenceTestCase.m; path = Tests/TestCases/PresenceTestCase.m; sourceTree = "<group>"; };
 		5161A2481D38196A00EB67DA /* PresenceTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PresenceTestCase.bundle; path = Tests/Fixtures/PresenceTestCase.bundle; sourceTree = "<group>"; };
 		5161A24E1D39635400EB67DA /* ClientStateTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClientStateTestCase.m; path = Tests/TestCases/ClientStateTestCase.m; sourceTree = "<group>"; };
+		5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SubscribeTestCase.bundle; path = Tests/Fixtures/SubscribeTestCase.bundle; sourceTree = "<group>"; };
 		51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PublishSizeOfMessageTestCase.bundle; path = Tests/Fixtures/PublishSizeOfMessageTestCase.bundle; sourceTree = "<group>"; };
 		51CA91751D21C72C004BABFF /* ChannelGroupTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ChannelGroupTestCase.bundle; path = Tests/Fixtures/ChannelGroupTestCase.bundle; sourceTree = "<group>"; };
 		51EB83F41CF62BE40013B10C /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -190,6 +194,7 @@
 		51EDD2F51CECDB5900F559F7 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */,
 				5161A2481D38196A00EB67DA /* PresenceTestCase.bundle */,
 				51CA91751D21C72C004BABFF /* ChannelGroupTestCase.bundle */,
 				51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */,
@@ -323,6 +328,7 @@
 				5161A2491D38196A00EB67DA /* PresenceTestCase.bundle in Resources */,
 				51CA91761D21C72C004BABFF /* ChannelGroupTestCase.bundle in Resources */,
 				51EDD3181CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */,
+				5166C2521D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */,
 				51EDD31B1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +341,7 @@
 				5161A24A1D38196A00EB67DA /* PresenceTestCase.bundle in Resources */,
 				51CA91771D21C72C004BABFF /* ChannelGroupTestCase.bundle in Resources */,
 				51EDD3191CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */,
+				5166C2531D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */,
 				51EDD31C1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +354,7 @@
 				5161A24B1D38196A00EB67DA /* PresenceTestCase.bundle in Resources */,
 				51CA91781D21C72C004BABFF /* ChannelGroupTestCase.bundle in Resources */,
 				51EDD31A1CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */,
+				5166C2541D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */,
 				51EDD31D1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

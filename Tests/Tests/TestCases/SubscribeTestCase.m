@@ -15,7 +15,7 @@
 @implementation SubscribeTestCase
 
 - (BOOL)isRecording {
-    return YES;
+    return NO;
 }
 
 - (void)setUp {
@@ -36,17 +36,17 @@
 
 - (NSArray<PNTTestSubscribeStatus *> *)setUpSubscribeStatuses {
     return @[
-             [PNTTestSubscribeStatus successfulSubscribeStatusWithClient:self.client subscribedChannel:@"a" actualChannel:nil timeToken:@1],
+             [PNTTestSubscribeStatus successfulSubscribeStatusWithClient:self.client subscribedChannels:@[@"a", @"a-pnpres"] subscribedChannelGroups:nil timeToken:@14694818239631984],
              ];
 }
 
-- (NSArray<PNTTestSubscribeStatus *> *)tearDownSubscribeStatuses {
+- (NSArray<PNTTestStatus *> *)tearDownSubscribeStatuses {
     return @[
-             [PNTTestSubscribeStatus subscribeStatusWithClient:self.client statusCode:200 category:PNDisconnectedCategory isError:NO subscribedChannel:@"a" actualChannel:nil timeToken:@1],
+             [PNTTestStatus successfulUnsubscribeStatusWithClient:self.client],
              ];
 }
 
-- (void)testSetUp {
+- (void)testSimpleSetUpAndTearDownWithPresence {
     XCTAssertTrue([self.client.channels containsObject:@"a"]);
 }
 

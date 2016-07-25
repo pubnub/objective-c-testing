@@ -9,6 +9,7 @@
 #import "PNTClientChannelGroupTestCase.h"
 #import "PNTTestStack.h"
 
+@class PNTTestStatus;
 @class PNTTestSubscribeStatus;
 @class PNTTestMessageResult;
 
@@ -24,10 +25,10 @@ typedef void (^PNTClientDidReceivePresenceEventHandler)(PubNub *client, PNPresen
 @property (nonatomic, assign, readonly) BOOL shouldRunSubscribeSetUp; // default is `YES`
 @property (nonatomic, assign, readonly) BOOL shouldRunSubscribeTearDown; // default is `YES`
 
-@property (nonatomic, strong, readonly) PNTTestStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
+@property (nonatomic, strong, readonly) PNTTestStack<PNTTestStatus *> *expectedSubscribeStatuses;
 @property (nonatomic, strong, readonly) PNTTestStack<PNTTestMessageResult *> *expectedMessages;
 @property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *setUpSubscribeStatuses;
-@property (nonatomic, strong, readonly) NSArray<PNTTestSubscribeStatus *> *tearDownSubscribeStatuses;
+@property (nonatomic, strong, readonly) NSArray<PNTTestStatus *> *tearDownSubscribeStatuses;
 
 @property (nonatomic, copy) PNTClientDidReceiveStatusHandler didReceiveStatusHandler;
 @property (nonatomic, copy) PNTClientDidReceiveMessageHandler didReceiveMessageHandler;

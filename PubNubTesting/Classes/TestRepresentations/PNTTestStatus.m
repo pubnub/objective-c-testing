@@ -29,7 +29,7 @@
     return [[self alloc] initStatusWithClient:client statusCode:statusCode operation:operationType category:category isError:isError];
 }
 
-+ (NSArray<NSString *> *)keysToAssert {
+- (NSArray<NSString *> *)keysToAssert {
     NSMutableArray *superKeys = [super keysToAssert].mutableCopy;
     [superKeys addObjectsFromArray:@[
                                      @"category",
@@ -44,6 +44,12 @@
 
 - (void)setActualStatus:(PNStatus *)actualStatus {
     self.actualResult = (PNResult *)actualStatus;
+}
+
+#pragma mark - Unsubscribe
+
++ (instancetype)successfulUnsubscribeStatusWithClient:(PubNub *)client {
+    return [[self alloc] initStatusWithClient:client statusCode:200 operation:PNUnsubscribeOperation category:PNDisconnectedCategory isError:NO];
 }
 
 @end
@@ -136,7 +142,7 @@
     return (PNTTestPublishStatus *)[PNTTestErrorStatus failedBadRequestStatusWithClient:client operation:PNPublishOperation];
 }
 
-+ (NSArray<NSString *> *)dataKeysToAssert {
+- (NSArray<NSString *> *)dataKeysToAssert {
     return @[
              @"data.timetoken"
              ];
@@ -170,7 +176,7 @@
     return [[self alloc] initClientStateUpdateStatusWithClient:client statusCode:200 isError:NO state:state];
 }
 
-+ (NSArray<NSString *> *)dataKeysToAssert {
+- (NSArray<NSString *> *)dataKeysToAssert {
     return @[
              @"data.state"
              ];
@@ -187,30 +193,50 @@
 @end
 
 @interface PNTTestSubscribeStatus ()
-@property (nonatomic, nullable, readwrite, strong) NSString *subscribedChannel;
-
-@property (nonatomic, nullable, readwrite, strong) NSString *actualChannel;
+@property (nonatomic, nullable, readwrite, strong) NSString *subscribedChannels;
+@property (nonatomic, nullable, readwrite, strong) NSString *subscribedChannelGroups;
+//@property (nonatomic, nullable, readwrite, strong) NSString *subscribedChannel;
+//
+//@property (nonatomic, nullable, readwrite, strong) NSString *actualChannel;
 @property (nonatomic, readwrite, strong) NSNumber *timetoken;
 @end
 
 @implementation PNTTestSubscribeStatus
 
-- (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+//- (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+//    self = [super initErrorStatusWithClient:client statusCode:statusCode operation:PNSubscribeOperation category:category isError:isError];
+//    if (self) {
+//        _subscribedChannel = subscribedChannel;
+//        _actualChannel = actualChannel;
+//        _timetoken = timeToken;
+//    }
+//    return self;
+//}
+//
+//+ (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+//    return [[self alloc] initSubscribeStatusWithClient:client statusCode:statusCode category:category isError:isError subscribedChannel:subscribedChannel actualChannel:actualChannel timeToken:timeToken];
+//}
+//
+//+ (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
+//    return [self subscribeStatusWithClient:client statusCode:200 category:PNConnectedCategory isError:NO subscribedChannel:subscribedChannel actualChannel:actualChannel timeToken:timeToken];
+//}
+
+- (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannels:(NSArray<NSString *> *)subscribedChannels subscribedChannelGroups:(NSArray<NSString *> *)subscribedChannelGroups timeToken:(NSNumber *)timeToken {
     self = [super initErrorStatusWithClient:client statusCode:statusCode operation:PNSubscribeOperation category:category isError:isError];
     if (self) {
-        _subscribedChannel = subscribedChannel;
-        _actualChannel = actualChannel;
+        _subscribedChannels = subscribedChannels;
+        _subscribedChannelGroups = subscribedChannelGroups;
         _timetoken = timeToken;
     }
     return self;
 }
 
-+ (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
-    return [[self alloc] initSubscribeStatusWithClient:client statusCode:statusCode category:category isError:isError subscribedChannel:subscribedChannel actualChannel:actualChannel timeToken:timeToken];
++ (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannels:(NSArray<NSString *> *)subscribedChannels subscribedChannelGroups:(NSArray<NSString *> *)subscribedChannelGroups timeToken:(NSNumber *)timeToken {
+    return [[self alloc] initSubscribeStatusWithClient:client statusCode:statusCode category:category isError:isError subscribedChannels:subscribedChannels subscribedChannelGroups:subscribedChannelGroups timeToken:timeToken];
 }
 
-+ (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken {
-    return [self subscribeStatusWithClient:client statusCode:200 category:PNConnectedCategory isError:NO subscribedChannel:subscribedChannel actualChannel:actualChannel timeToken:timeToken];
++ (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannels:(NSArray<NSString *> *)subscribedChannels subscribedChannelGroups:(NSArray<NSString *> *)subscribedChannelGroups timeToken:(NSNumber *)timeToken {
+    return [self subscribeStatusWithClient:client statusCode:200 category:PNConnectedCategory isError:NO subscribedChannels:subscribedChannels subscribedChannelGroups:subscribedChannelGroups timeToken:timeToken];
 }
 
 - (void)setActualSubscribeStatus:(PNSubscribeStatus *)actualSubscribeStatus {
@@ -221,10 +247,21 @@
     return (PNSubscribeStatus *)self.actualStatus;
 }
 
-+ (NSArray<NSString *> *)dataKeysToAssert {
+- (NSArray< NSString *> *)keysToAssert {
+    NSMutableArray<NSString *> *superKeys = [[super keysToAssert] mutableCopy];
+    if (self.subscribedChannels) {
+        [superKeys addObject:@"subscribedChannels"];
+    }
+    if (self.subscribedChannelGroups) {
+        [superKeys addObject:@"subscribedChannelGroups"];
+    }
+    return superKeys.copy;
+}
+
+- (NSArray<NSString *> *)dataKeysToAssert {
     return @[
-             @"data.subscribedChannel",
-             @"data.actualChannel",
+//             @"data.subscribedChannel",
+//             @"data.actualChannel",
              @"data.timetoken",
              ];
 }

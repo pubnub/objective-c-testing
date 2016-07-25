@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)statusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode operation:(PNOperationType)operationType category:(PNStatusCategory)category isError:(BOOL)isError;
 
+#pragma mark - Unsubscribe
+
++ (instancetype)successfulUnsubscribeStatusWithClient:(PubNub *)client;
+
 @end
 
 #pragma mark - Base Error Status Class (Abstract)
@@ -78,15 +82,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PNTTestSubscribeStatus : PNTTestErrorStatus
 
-@property (nonatomic, nullable, readonly, strong) NSString *subscribedChannel;
-
-@property (nonatomic, nullable, readonly, strong) NSString *actualChannel;
+@property (nonatomic, nullable, readonly, strong) NSString *subscribedChannels;
+@property (nonatomic, nullable, readonly, strong) NSString *subscribedChannelGroups;
 @property (nonatomic, readonly, strong) NSNumber *timetoken;
 @property (nonatomic, strong, nullable) PNSubscribeStatus *actualSubscribeStatus;
 
-- (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
-+ (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
-+ (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
+//- (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
+//+ (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
+//+ (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannel:(NSString *)subscribedChannel actualChannel:(NSString *)actualChannel timeToken:(NSNumber *)timeToken;
+
+- (instancetype)initSubscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannels:(nullable NSArray<NSString *> *)subscribedChannels subscribedChannelGroups:(nullable NSArray<NSString *> *)subscribedChannelGroups timeToken:(NSNumber *)timeToken;
++ (instancetype)subscribeStatusWithClient:(PubNub *)client statusCode:(NSInteger)statusCode category:(PNStatusCategory)category isError:(BOOL)isError subscribedChannels:(nullable NSArray<NSString *> *)subscribedChannels subscribedChannelGroups:(nullable NSArray<NSString *> *)subscribedChannelGroups timeToken:(NSNumber *)timeToken;
++ (instancetype)successfulSubscribeStatusWithClient:(PubNub *)client subscribedChannels:(nullable NSArray<NSString *> *)subscribedChannels subscribedChannelGroups:(nullable NSArray<NSString *> *)subscribedChannelGroups timeToken:(NSNumber *)timeToken;
 
 @end
 

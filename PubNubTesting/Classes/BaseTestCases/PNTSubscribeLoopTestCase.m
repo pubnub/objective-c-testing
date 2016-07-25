@@ -13,7 +13,7 @@
 
 @interface PNTSubscribeLoopTestCase ()
 @property (nonatomic, strong) dispatch_queue_t accessQueue;
-@property (nonatomic, strong, readwrite) PNTTestStack<PNTTestSubscribeStatus *> *expectedSubscribeStatuses;
+@property (nonatomic, strong, readwrite) PNTTestStack<PNTTestStatus *> *expectedSubscribeStatuses;
 @property (nonatomic, strong, readwrite) PNTTestStack<PNTTestMessageResult *> *expectedMessages;
 @property (nonatomic, strong) XCTestExpectation *setUpExpectation;
 @property (nonatomic, strong) XCTestExpectation *tearDownExpectation;
@@ -74,10 +74,10 @@
         self.didReceiveStatusHandler = ^void(PubNub *client, PNStatus *status) {
             PNTStrongify(self);
             if (self.tearDownExpectation) {
-                PNTTestSubscribeStatus *expectedSubscribeStatus = [self.expectedSubscribeStatuses popWithExpectation:nil];
-                if (expectedSubscribeStatus) {
-                    expectedSubscribeStatus.actualSubscribeStatus = status;
-                    [self PNT_assertTestRepresentation:expectedSubscribeStatus];
+                PNTTestStatus *expectedUnsubscribeStatus = [self.expectedSubscribeStatuses popWithExpectation:nil];
+                if (expectedUnsubscribeStatus) {
+                    expectedUnsubscribeStatus.actualStatus = status;
+                    [self PNT_assertTestRepresentation:expectedUnsubscribeStatus];
                 }
             }
             if ([self.expectedSubscribeStatuses isEmptyWithExpectation:nil]) {
@@ -112,7 +112,7 @@
     return [NSArray array];
 }
 
-- (NSArray<PNTTestSubscribeStatus *> *)tearDownSubscribeStatuses {
+- (NSArray<PNTTestStatus *> *)tearDownSubscribeStatuses {
     return [NSArray array];
 }
 
