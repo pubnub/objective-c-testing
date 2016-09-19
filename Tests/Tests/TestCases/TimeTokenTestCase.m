@@ -14,6 +14,4 @@
 
 @implementation TimeTokenTestCase
 
-
-
 @end

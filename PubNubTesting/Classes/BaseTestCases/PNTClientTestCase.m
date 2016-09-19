@@ -19,9 +19,9 @@
 
 - (void)setUp {
     [super setUp];
-    [PNLog enabled:NO];
     self.configuration = [self clientConfiguration];
     self.client = [PubNub clientWithConfiguration:self.configuration];
+    self.client.logger.enabled = false;
 }
 
 - (void)tearDown {

@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		012A0B4260DFB231D03D4CC5 /* Pods_PNT_Tests_tvOS_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD03AB7CB61B534271E5334F /* Pods_PNT_Tests_tvOS_ObjC.framework */; };
 		34B6F73FDD423FE3DC710101 /* Pods_PNT_Tests_iOS_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F540D5040B3CCA311AA7F995 /* Pods_PNT_Tests_iOS_ObjC.framework */; };
+		5120BC4A1D39A11D00CE60B7 /* SubscribeTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120BC491D39A11D00CE60B7 /* SubscribeTestCase.m */; };
+		5120BC4B1D39A11D00CE60B7 /* SubscribeTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120BC491D39A11D00CE60B7 /* SubscribeTestCase.m */; };
+		5120BC4C1D39A11D00CE60B7 /* SubscribeTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120BC491D39A11D00CE60B7 /* SubscribeTestCase.m */; };
+		512A6D0D1D380679001EC93C /* PresenceTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 512A6D0C1D380679001EC93C /* PresenceTestCase.m */; };
+		512A6D0E1D380679001EC93C /* PresenceTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 512A6D0C1D380679001EC93C /* PresenceTestCase.m */; };
+		512A6D0F1D380679001EC93C /* PresenceTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 512A6D0C1D380679001EC93C /* PresenceTestCase.m */; };
+		5161A2491D38196A00EB67DA /* PresenceTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5161A2481D38196A00EB67DA /* PresenceTestCase.bundle */; };
+		5161A24A1D38196A00EB67DA /* PresenceTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5161A2481D38196A00EB67DA /* PresenceTestCase.bundle */; };
+		5161A24B1D38196A00EB67DA /* PresenceTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5161A2481D38196A00EB67DA /* PresenceTestCase.bundle */; };
+		5161A24F1D39635400EB67DA /* ClientStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161A24E1D39635400EB67DA /* ClientStateTestCase.m */; };
+		5161A2501D39635400EB67DA /* ClientStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161A24E1D39635400EB67DA /* ClientStateTestCase.m */; };
+		5161A2511D39635400EB67DA /* ClientStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161A24E1D39635400EB67DA /* ClientStateTestCase.m */; };
+		5166C2521D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */; };
+		5166C2531D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */; };
+		5166C2541D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */; };
 		51B1EA8A1D18990E00669390 /* PublishSizeOfMessageTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */; };
 		51B1EA8B1D18990E00669390 /* PublishSizeOfMessageTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */; };
 		51B1EA8C1D18990E00669390 /* PublishSizeOfMessageTestCase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */; };
@@ -43,6 +58,11 @@
 		4787E6FDADF6AE63FC2C0EEF /* Pods-PNT-Tests-tvOS-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-tvOS-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-tvOS-ObjC/Pods-PNT-Tests-tvOS-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		47A2FD9D0C53DBC00BCE9117 /* Pods-PNT-Tests-iOS-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-iOS-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-iOS-ObjC/Pods-PNT-Tests-iOS-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		4F90F982F3CBF8F44576F314 /* Pods-PNT-Tests-OSX-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNT-Tests-OSX-ObjC.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PNT-Tests-OSX-ObjC/Pods-PNT-Tests-OSX-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		5120BC491D39A11D00CE60B7 /* SubscribeTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubscribeTestCase.m; path = Tests/TestCases/SubscribeTestCase.m; sourceTree = "<group>"; };
+		512A6D0C1D380679001EC93C /* PresenceTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresenceTestCase.m; path = Tests/TestCases/PresenceTestCase.m; sourceTree = "<group>"; };
+		5161A2481D38196A00EB67DA /* PresenceTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PresenceTestCase.bundle; path = Tests/Fixtures/PresenceTestCase.bundle; sourceTree = "<group>"; };
+		5161A24E1D39635400EB67DA /* ClientStateTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClientStateTestCase.m; path = Tests/TestCases/ClientStateTestCase.m; sourceTree = "<group>"; };
+		5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SubscribeTestCase.bundle; path = Tests/Fixtures/SubscribeTestCase.bundle; sourceTree = "<group>"; };
 		51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PublishSizeOfMessageTestCase.bundle; path = Tests/Fixtures/PublishSizeOfMessageTestCase.bundle; sourceTree = "<group>"; };
 		51CA91751D21C72C004BABFF /* ChannelGroupTestCase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ChannelGroupTestCase.bundle; path = Tests/Fixtures/ChannelGroupTestCase.bundle; sourceTree = "<group>"; };
 		51EB83F41CF62BE40013B10C /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -164,6 +184,9 @@
 				51EDD31E1CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m */,
 				51EDD3221CECE0FF00F559F7 /* TimeTokenTestCase.m */,
 				51EDD3261CECE11E00F559F7 /* ChannelGroupTestCase.m */,
+				512A6D0C1D380679001EC93C /* PresenceTestCase.m */,
+				5161A24E1D39635400EB67DA /* ClientStateTestCase.m */,
+				5120BC491D39A11D00CE60B7 /* SubscribeTestCase.m */,
 			);
 			name = TestCases;
 			sourceTree = "<group>";
@@ -171,6 +194,8 @@
 		51EDD2F51CECDB5900F559F7 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				5166C2511D46BB34009694B6 /* SubscribeTestCase.bundle */,
+				5161A2481D38196A00EB67DA /* PresenceTestCase.bundle */,
 				51CA91751D21C72C004BABFF /* ChannelGroupTestCase.bundle */,
 				51B1EA891D18990E00669390 /* PublishSizeOfMessageTestCase.bundle */,
 				51EDD3161CECDC5500F559F7 /* HistoryTestCase.bundle */,
@@ -300,8 +325,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B1EA8A1D18990E00669390 /* PublishSizeOfMessageTestCase.bundle in Resources */,
+				5161A2491D38196A00EB67DA /* PresenceTestCase.bundle in Resources */,
 				51CA91761D21C72C004BABFF /* ChannelGroupTestCase.bundle in Resources */,
 				51EDD3181CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */,
+				5166C2521D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */,
 				51EDD31B1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,8 +338,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B1EA8B1D18990E00669390 /* PublishSizeOfMessageTestCase.bundle in Resources */,
+				5161A24A1D38196A00EB67DA /* PresenceTestCase.bundle in Resources */,
 				51CA91771D21C72C004BABFF /* ChannelGroupTestCase.bundle in Resources */,
 				51EDD3191CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */,
+				5166C2531D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */,
 				51EDD31C1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,8 +351,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B1EA8C1D18990E00669390 /* PublishSizeOfMessageTestCase.bundle in Resources */,
+				5161A24B1D38196A00EB67DA /* PresenceTestCase.bundle in Resources */,
 				51CA91781D21C72C004BABFF /* ChannelGroupTestCase.bundle in Resources */,
 				51EDD31A1CECDC5500F559F7 /* HistoryTestCase.bundle in Resources */,
+				5166C2541D46BB34009694B6 /* SubscribeTestCase.bundle in Resources */,
 				51EDD31D1CECDC5500F559F7 /* PublishTestCase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,8 +506,11 @@
 			files = (
 				51EDD2F21CECD8D300F559F7 /* PublishTestCase.m in Sources */,
 				51EDD31F1CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m in Sources */,
+				5161A24F1D39635400EB67DA /* ClientStateTestCase.m in Sources */,
 				51EDD3231CECE0FF00F559F7 /* TimeTokenTestCase.m in Sources */,
+				5120BC4A1D39A11D00CE60B7 /* SubscribeTestCase.m in Sources */,
 				51EDD3271CECE11E00F559F7 /* ChannelGroupTestCase.m in Sources */,
+				512A6D0D1D380679001EC93C /* PresenceTestCase.m in Sources */,
 				51EDD2EB1CECD86800F559F7 /* HistoryTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,8 +521,11 @@
 			files = (
 				51EDD2F31CECD8D300F559F7 /* PublishTestCase.m in Sources */,
 				51EDD3201CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m in Sources */,
+				5161A2501D39635400EB67DA /* ClientStateTestCase.m in Sources */,
 				51EDD3241CECE0FF00F559F7 /* TimeTokenTestCase.m in Sources */,
+				5120BC4B1D39A11D00CE60B7 /* SubscribeTestCase.m in Sources */,
 				51EDD3281CECE11E00F559F7 /* ChannelGroupTestCase.m in Sources */,
+				512A6D0E1D380679001EC93C /* PresenceTestCase.m in Sources */,
 				51EDD2EC1CECD86800F559F7 /* HistoryTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,9 +534,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512A6D0F1D380679001EC93C /* PresenceTestCase.m in Sources */,
+				5120BC4C1D39A11D00CE60B7 /* SubscribeTestCase.m in Sources */,
 				51EDD2F41CECD8D300F559F7 /* PublishTestCase.m in Sources */,
 				51EDD3211CECE0D100F559F7 /* PublishSizeOfMessageTestCase.m in Sources */,
 				51EDD3251CECE0FF00F559F7 /* TimeTokenTestCase.m in Sources */,
+				5161A2511D39635400EB67DA /* ClientStateTestCase.m in Sources */,
 				51EDD3291CECE11E00F559F7 /* ChannelGroupTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

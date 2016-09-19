@@ -34,10 +34,11 @@ matrix:
     # tvOS 9.2
     - env: FASTLANE_ENV=tvos92_AppleTV1080p
 before_install:
-  - gem install fastlane -v 1.50.0 --no-rdoc --no-ri --no-document --quiet
-  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+  - gem uninstall json --version 2.0.1 --quiet # this is to fix a fastlane bug: https://github.com/travis-ci/travis-ci/issues/6325
+  - gem install fastlane --no-rdoc --no-ri --no-document --quiet
+  # - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-  - pod repo update --silent # fixes bug in travis repo when checking out
+  # - pod repo update --silent # fixes bug in travis repo when checking out
 script:
   - set -o pipefail
   - fastlane $FASTLANE_LANE configuration:Debug --env $FASTLANE_ENV
