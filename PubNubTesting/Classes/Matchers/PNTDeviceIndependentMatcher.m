@@ -16,7 +16,8 @@ typedef NSArray<NSURLQueryItem *> PNTQueryItemArray;
     NSMutableDictionary *superComparisonOptions = [super requestComparisonOptions].mutableCopy;
     // ignored query items won't be passed to the override method
     superComparisonOptions[kBKRIgnoreQueryItemNamesOptionsKey] = @[
-                                                         @"pnsdk"
+                                                         @"pnsdk",
+                                                         @"seqn",
                                                          ];
     superComparisonOptions[kBKROverrideNSURLComponentsPropertiesOptionsKey] = @[@"path", @"queryItems"];
     return superComparisonOptions.copy;
